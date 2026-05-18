@@ -1,0 +1,195 @@
+---
+title: "aula13_Arrays atividade"
+toc: true
+---
+Arquivo original: `aula13_Arrays atividade.pdf`
+
+## Página 1
+
+![Página 1](aula13-arrays-atividade_images/page-001.png)
+
+Conteúdo 13:
+Arrays
+
+          Professor: Me. Alana Neo
+
+       Slides baseados no material do Prof. Me. Douglas Thames
+                         de Araujo
+
+                                                                                                    1
+
+## Página 2
+
+![Página 2](aula13-arrays-atividade_images/page-002.png)
+
+Arrays
+
+Em uma classe Java podemos declarar diversas variáveis.
+• Porém as vezes não se sabe ao certo a quantidade de
+variáveis necessárias.
+• Por exemplo ao solicitar vários salários para se fazer uma
+média, não se sabe quantos serão digitados.
+• Para este tipo de situação, utilizamos os Arrays, também
+conhecidos como Vetores.
+
+                                                                                                           2
+
+## Página 3
+
+![Página 3](aula13-arrays-atividade_images/page-003.png)
+
+Arrays
+
+A sintaxe para a criação e impressão de um Array de double com 10
+posições é a seguinte:
+
+                                                                                                           3
+
+## Página 4
+
+![Página 4](aula13-arrays-atividade_images/page-004.png)
+
+Exceção em Arrays
+
+• É muito comum acessar uma posição do Array além do seu limite.
+• Lembrando que a contagem de um Array de 10 posições vai de 0 a 9, as
+vezes em um laço de repetição, tentamos acessar a posição 10 por
+descuido, lançando um ArrayIndexOutOfBoundsException.
+• Pode ser tratado com um try-catch ou sempre verificando o tamanho do
+Array.
+
+                                                                                                           4
+
+## Página 5
+
+![Página 5](aula13-arrays-atividade_images/page-005.png)
+
+Arrays
+
+Um Array pode armazenar tipos primitivos e também as Classes que
+nós criamos:
+
+                                                                                                           5
+
+## Página 6
+
+![Página 6](aula13-arrays-atividade_images/page-006.png)
+
+Arrays
+
+Criando dois objetos do tipo Pessoa, inicializando seus valores, colocando
+no Array e depois imprimindo em um laço:
+
+                                                                                                           6
+
+## Página 7
+
+![Página 7](aula13-arrays-atividade_images/page-007.png)
+
+Arrays
+
+⚫Formas de percorrer um Array:
+
+                                                                                                           7
+
+## Página 8
+
+![Página 8](aula13-arrays-atividade_images/page-008.png)
+
+Arrays
+
+⚫Criando um Array inicializado:
+
+                                                                                                           8
+
+## Página 9
+
+![Página 9](aula13-arrays-atividade_images/page-009.png)
+
+Arrays
+
+• Observações importantes:
+  ⚫O tamanho de um Array não pode ser alterado
+   ⚫Para percorrer um Array com um FOR, é preciso saber o seu
+    tamanho (.lenght)
+   ⚫Para percorrer um Array usando FOR EACH, do Java 5, não
+     precisamos saber seu tamanho.
+   ⚫Para criar um Array com um tamanho digitado em tempo de
+     execução, salve o valor em uma variável:
+
+                                                                                                           9
+
+## Página 10
+
+![Página 10](aula13-arrays-atividade_images/page-010.png)
+
+Vamos praticar?
+
+1. Implemente o programa CatalogoLivros, que gerencia até 10 livros. Cada livro
+possui as funcionalidades:
+•  Cadastrar novo livro (até encher o array).
+•   Listar todos os livros cadastrados.
+•  Buscar livro por título (exibir posição ou “não encontrado”).
+•  Mostrar estatísticas: total de livros e média de ano de publicação.
+•   Sair do programa.
+                                 Atributo    Tipo              Descrição
+•  E os seguintes atributos:
+                                      titulo        String   Título do livro (texto livre)
+
+                               autor        String  Nome do autor
+
+                           ano          int     Ano de publicação
+
+                                                                                                           10
+
+## Página 11
+
+![Página 11](aula13-arrays-atividade_images/page-011.png)
+
+Vamos praticar?
+                             DICAS:
+
+Na Classe Livro, crie atributos privados, um construtor completo, métodos getters e toString().
+
+No main, crie Livro[] catalogo = new Livro[10]; e um índice posLivre = 0;.
+Monte um loop while(true) com switch para o menu.
+
+No cadastro, se posLivre < catalogo.length, leia dados via Scanner, instancie um Livro e armazene em
+catalogo[posLivre], depois incremente posLivre. Caso contrário, mostre “Catálogo cheio”.
+
+Para a listagem, percorra o array com um for (int  i = 0;  i < catalogo.length; i++) e exiba somente
+posições não‐nulas.
+
+Para buscar, leia o título, percorra com for indexado comparando equalsIgnoreCase.
+Se achar, mostre posição; se não, informe que não encontrou.
+
+Para as estatísticas, conte quantos elementos não são null usando for indexado.
+Some os anos para calcular a média (double). Se total for 0, avise que não há livros.
+Para encerrar o programa, ao escolher  Sair, exiba mensagem “Programa encerrado — X  livros
+cadastrados”.
+                                                                                                         11
+
+## Página 12
+
+![Página 12](aula13-arrays-atividade_images/page-012.png)
+
+Vamos praticar?
+
+•  A atividade poderá ser realizada em dupla.
+
+•  Esta atividade vale 2 pontos.
+
+•  Enviar o código compactado em um único arquivo.
+
+                                                                                                         12
+
+## Página 13
+
+![Página 13](aula13-arrays-atividade_images/page-013.png)
+
+Dúvidas e
+Questionamentos
+
+                alana.neo @ifms.edu.br
+
+                                                                           13

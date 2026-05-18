@@ -1,0 +1,271 @@
+---
+title: "Aula 07 Loops"
+toc: true
+---
+Arquivo original: `Aula 07 Loops.pdf`
+
+## Página 1
+
+![Página 1](aula-07-loops_images/page-001.png)
+
+Orientação a Objetos
+
+Variáveis Primitivas e Controle de
+         Fluxo (Loops)
+
+                                   Profa. Alana Neo
+
+## Página 2
+
+![Página 2](aula-07-loops_images/page-002.png)
+
+O WHILE
+
+➔O while é um comando usado para fazer um laço (loop),
+  isto é, repetir um trecho de código algumas vezes.
+
+➔A  ideia é que esse trecho de código seja repetido
+ enquanto  uma  determinada  condição  permanecer
+ verdadeira.
+
+## Página 3
+
+![Página 3](aula-07-loops_images/page-003.png)
+
+O WHILE
+
+➔O trecho dentro do bloco do while será executado até o
+ momento em que a condição idade < 18 passe a ser falsa.
+
+➔Isso ocorrerá exatamente no momento em que idade == 18,
+ o que não o fará imprimir 18.
+
+## Página 4
+
+![Página 4](aula-07-loops_images/page-004.png)
+
+O WHILE
+
+➔Exemplo:
+
+       ➔O que você acha que irá imprimir?
+
+## Página 5
+
+![Página 5](aula-07-loops_images/page-005.png)
+
+O WHILE
+
+➔Exemplo:
+
+       ➔O que você acha que irá imprimir?
+
+        ➔O while acima imprime de 0 a 9.
+
+## Página 6
+
+![Página 6](aula-07-loops_images/page-006.png)
+
+O FOR
+
+➔Outro comando de loop extremamente utilizado é o for.
+➔A ideia é a mesma do while: fazer um trecho de código
+ ser  repetido  enquanto  uma  condição  continuar
+ verdadeira.
+➔Mas além disso, o for isola também um espaço para
+  inicialização  de  variáveis  e o  modificador  dessas
+ variáveis.
+➔Isso faz com que fiquem mais legíveis, as variáveis que são
+ relacionadas ao loop:
+
+## Página 7
+
+![Página 7](aula-07-loops_images/page-007.png)
+
+O FOR
+
+➔Exemplo:
+
+## Página 8
+
+![Página 8](aula-07-loops_images/page-008.png)
+
+O FOR
+
+➔Esse for poderia ser trocado por:
+
+➔Porém, o código do for indica claramente que a variável  i
+ serve, em especial, para controlar a quantidade de laços
+ executados.
+➔Quando usar o for? Quando usar o while? Depende do
+ gosto e da ocasião.
+
+## Página 9
+
+![Página 9](aula-07-loops_images/page-009.png)
+
+PRÉ e PÓS INCREMENTO ++
+
+➔i =  i + 1 pode realmente ser substituído por i++ quando
+  isolado, porém, em alguns casos, temos essa instrução
+ envolvida em, por exemplo, uma atribuição:
+
+                ➔Qual é o valor de x ?
+
+                ➔Qual é o valor de i ?
+
+## Página 10
+
+![Página 10](aula-07-loops_images/page-010.png)
+
+PRÉ e PÓS INCREMENTO ++
+
+➔O de i , após essa linha, é 6.
+
+➔O operador ++  , quando vem após a variável, retorna o
+  valor antigo, e incrementa (pós incremento), fazendo x valer
+  5.
+
+➔Usando o ++ antes da variável (pré incremento), o resultado
+ é 6:
+
+## Página 11
+
+![Página 11](aula-07-loops_images/page-011.png)
+
+CONTROLANDO LOOPS
+
+➔Apesar de termos condições booleanas nos nossos laços,
+ em algum momento, podemos decidir parar o loop por
+ algum motivo  especial sem que o  resto do  laço  seja
+ executado.
+
+➔O código acima vai percorrer os números de x a y e parar
+ quando encontrar um número divisível por 19, uma vez que
+  foi utilizada a palavra chave break .
+
+## Página 12
+
+![Página 12](aula-07-loops_images/page-012.png)
+
+CONTROLANDO LOOPS
+
+➔Da mesma maneira, é possível obrigar o loop a executar o
+ próximo laço.
+
+➔Para isso usamos a palavra chave continue.
+
+➔O código acima não vai imprimir alguns números. (Quais
+ exatamente?)
+
+## Página 13
+
+![Página 13](aula-07-loops_images/page-013.png)
+
+ESCOPO DAS VARIÁVEIS
+
+➔No Java, podemos declarar variáveis a qualquer momento.
+ Porém, dependendo de onde você as declarou, ela vai valer
+ de um determinado ponto a outro.
+
+➔O escopo da variável é o nome dado ao trecho de código
+ em que aquela variável existe e onde é possível acessá-la.
+
+## Página 14
+
+![Página 14](aula-07-loops_images/page-014.png)
+
+ESCOPO DAS VARIÁVEIS
+
+➔Quando  abrimos um novo  bloco com  as  chaves,  as
+  variáveis declaradas ali dentro só valem até o fim daquele
+  bloco.
+
+➔No bloco acima, a variável j para de existir quando termina
+ o bloco onde ela foi declarada.
+
+## Página 15
+
+![Página 15](aula-07-loops_images/page-015.png)
+
+ESCOPO DAS VARIÁVEIS
+
+➔Se você tentar acessar uma variável fora de seu escopo,
+ ocorrerá um erro de compilação.
+
+## Página 16
+
+![Página 16](aula-07-loops_images/page-016.png)
+
+ESCOPO DAS VARIÁVEIS
+
+➔O mesmo vale para um if:
+
+➔Aqui a variável i não existe fora do if e do else !
+
+➔Se você declarar a variável antes do if , vai haver outro erro
+ de compilação: dentro do if e do else a variável está sendo
+ redeclarada!
+
+## Página 17
+
+![Página 17](aula-07-loops_images/page-017.png)
+
+ESCOPO DAS VARIÁVEIS
+
+➔Então o código para compilar e fazer sentido fica:
+
+## Página 18
+
+![Página 18](aula-07-loops_images/page-018.png)
+
+ESCOPO DAS VARIÁVEIS
+
+➔Uma situação parecida pode ocorrer com o for :
+
+➔Neste for , a variável  i morre ao seu término, não podendo
+ ser  acessada  de  fora  do   for,  gerando um  erro  de
+ compilação.
+➔Se você realmente quer acessar o contador depois do loop
+  terminar, precisa de algo como:
+
+## Página 19
+
+![Página 19](aula-07-loops_images/page-019.png)
+
+UM BLOCO DENTRO DO OUTRO
+
+➔Um bloco também pode ser declarado dentro de outro. Isto
+  é, um if dentro de um for, ou um for dentro de um for, algo
+ como:
+
+## Página 20
+
+![Página 20](aula-07-loops_images/page-020.png)
+
+Atividade
+
+1) Vimos apenas os comandos mais usados para controle de fluxo. O
+Java ainda possui o do..while e o switch. Pesquise sobre eles e diga
+quando é interessante usar cada um deles.
+
+2) Algumas vezes, temos vários laços encadeados, podemos utilizar o
+break para quebrar o laço mais interno. Mas, se quisermos quebrar um
+laço mais externo, teremos de encadear diversos ifs e seu código ficará
+uma bagunça. O Java  possui um  artifício chamado  labeled  loops;
+pesquise sobre eles.
+
+3) O que acontece se você tentar dividir um número inteiro por 0? E por
+0.0? Explique.
+
+4) Além dos operadores de incremento, existem os de decremento, como
+--i e i-- . Além desses, você pode usar instruções do tipo i += x e i -= x , o
+que essas instruções fazem?
+
+## Página 21
+
+![Página 21](aula-07-loops_images/page-021.png)
+
+Dúvidas
+
+  alana.neo@ifms.edu.br

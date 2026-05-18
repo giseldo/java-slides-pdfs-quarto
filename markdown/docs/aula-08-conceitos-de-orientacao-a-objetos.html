@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Aula 08 Conceitos de Orientação a Objetos – Curso Java - Slides Convertidos</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./aula-09-modificadores-de-classe-encapsulamento-e-atributos-de-classe.html" rel="next">
+<link href="./aula-07-loops.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-f2c6d6e2b784ddc5de38779acc06f37d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./aula-08-conceitos-de-orientacao-a-objetos.html"><span class="chapter-title">Aula 08 Conceitos de Orientação a Objetos</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Curso Java - Slides Convertidos</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Procurar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Curso Java - Slides Convertidos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aula-00-orientacao-a-objetos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 00 Orientação a Objetos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aula-01-introducao-a-programacao-orientada-a-objetos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 01 Introdução à Programação Orientada a Objetos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aula-02-primeiros-passos-no-ambiente-de-programacao.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 02 Primeiros passos no ambiente de programação</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aula-03-fundamentos-java.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 03 Fundamentos Java</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aula-04-variaveis-e-tipos-primitivos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 04 Variáveis e Tipos Primitivos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aula-05-casting-e-promocao.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 05 Casting e Promoção</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aula-06-condicionais.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 06 Condicionais</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aula-07-loops.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 07 Loops</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aula-08-conceitos-de-orientacao-a-objetos.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Aula 08 Conceitos de Orientação a Objetos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aula-09-modificadores-de-classe-encapsulamento-e-atributos-de-classe.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 09 Modificadores de Classe, Encapsulamento e Atributos de Classe</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aula-heranca.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula Herança</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aula10-polimorfismo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula10 Polimorfismo</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aula12-strings.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula12 Strings</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aula13-arrays-atividade.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">aula13_Arrays atividade</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aula13-arrays.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula13 Arrays</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aula14-collections.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula14 Collections</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#página-1" id="toc-página-1" class="nav-link active" data-scroll-target="#página-1">Página 1</a></li>
+  <li><a href="#página-2" id="toc-página-2" class="nav-link" data-scroll-target="#página-2">Página 2</a></li>
+  <li><a href="#página-3" id="toc-página-3" class="nav-link" data-scroll-target="#página-3">Página 3</a></li>
+  <li><a href="#página-4" id="toc-página-4" class="nav-link" data-scroll-target="#página-4">Página 4</a></li>
+  <li><a href="#página-5" id="toc-página-5" class="nav-link" data-scroll-target="#página-5">Página 5</a></li>
+  <li><a href="#página-6" id="toc-página-6" class="nav-link" data-scroll-target="#página-6">Página 6</a></li>
+  <li><a href="#página-7" id="toc-página-7" class="nav-link" data-scroll-target="#página-7">Página 7</a></li>
+  <li><a href="#página-8" id="toc-página-8" class="nav-link" data-scroll-target="#página-8">Página 8</a></li>
+  <li><a href="#página-9" id="toc-página-9" class="nav-link" data-scroll-target="#página-9">Página 9</a></li>
+  <li><a href="#página-10" id="toc-página-10" class="nav-link" data-scroll-target="#página-10">Página 10</a></li>
+  <li><a href="#página-11" id="toc-página-11" class="nav-link" data-scroll-target="#página-11">Página 11</a></li>
+  <li><a href="#página-12" id="toc-página-12" class="nav-link" data-scroll-target="#página-12">Página 12</a></li>
+  <li><a href="#página-13" id="toc-página-13" class="nav-link" data-scroll-target="#página-13">Página 13</a></li>
+  <li><a href="#página-14" id="toc-página-14" class="nav-link" data-scroll-target="#página-14">Página 14</a></li>
+  <li><a href="#página-15" id="toc-página-15" class="nav-link" data-scroll-target="#página-15">Página 15</a></li>
+  <li><a href="#página-16" id="toc-página-16" class="nav-link" data-scroll-target="#página-16">Página 16</a></li>
+  <li><a href="#página-17" id="toc-página-17" class="nav-link" data-scroll-target="#página-17">Página 17</a></li>
+  <li><a href="#página-18" id="toc-página-18" class="nav-link" data-scroll-target="#página-18">Página 18</a></li>
+  <li><a href="#página-19" id="toc-página-19" class="nav-link" data-scroll-target="#página-19">Página 19</a></li>
+  <li><a href="#página-20" id="toc-página-20" class="nav-link" data-scroll-target="#página-20">Página 20</a></li>
+  <li><a href="#página-21" id="toc-página-21" class="nav-link" data-scroll-target="#página-21">Página 21</a></li>
+  <li><a href="#página-22" id="toc-página-22" class="nav-link" data-scroll-target="#página-22">Página 22</a></li>
+  <li><a href="#página-23" id="toc-página-23" class="nav-link" data-scroll-target="#página-23">Página 23</a></li>
+  <li><a href="#página-24" id="toc-página-24" class="nav-link" data-scroll-target="#página-24">Página 24</a></li>
+  <li><a href="#página-25" id="toc-página-25" class="nav-link" data-scroll-target="#página-25">Página 25</a></li>
+  <li><a href="#página-26" id="toc-página-26" class="nav-link" data-scroll-target="#página-26">Página 26</a></li>
+  <li><a href="#página-27" id="toc-página-27" class="nav-link" data-scroll-target="#página-27">Página 27</a></li>
+  <li><a href="#página-28" id="toc-página-28" class="nav-link" data-scroll-target="#página-28">Página 28</a></li>
+  <li><a href="#página-29" id="toc-página-29" class="nav-link" data-scroll-target="#página-29">Página 29</a></li>
+  <li><a href="#página-30" id="toc-página-30" class="nav-link" data-scroll-target="#página-30">Página 30</a></li>
+  <li><a href="#página-31" id="toc-página-31" class="nav-link" data-scroll-target="#página-31">Página 31</a></li>
+  <li><a href="#página-32" id="toc-página-32" class="nav-link" data-scroll-target="#página-32">Página 32</a></li>
+  <li><a href="#página-33" id="toc-página-33" class="nav-link" data-scroll-target="#página-33">Página 33</a></li>
+  <li><a href="#página-34" id="toc-página-34" class="nav-link" data-scroll-target="#página-34">Página 34</a></li>
+  <li><a href="#página-35" id="toc-página-35" class="nav-link" data-scroll-target="#página-35">Página 35</a></li>
+  <li><a href="#página-36" id="toc-página-36" class="nav-link" data-scroll-target="#página-36">Página 36</a></li>
+  <li><a href="#página-37" id="toc-página-37" class="nav-link" data-scroll-target="#página-37">Página 37</a></li>
+  <li><a href="#página-38" id="toc-página-38" class="nav-link" data-scroll-target="#página-38">Página 38</a></li>
+  <li><a href="#página-39" id="toc-página-39" class="nav-link" data-scroll-target="#página-39">Página 39</a></li>
+  <li><a href="#página-40" id="toc-página-40" class="nav-link" data-scroll-target="#página-40">Página 40</a></li>
+  <li><a href="#página-41" id="toc-página-41" class="nav-link" data-scroll-target="#página-41">Página 41</a></li>
+  <li><a href="#página-42" id="toc-página-42" class="nav-link" data-scroll-target="#página-42">Página 42</a></li>
+  <li><a href="#página-43" id="toc-página-43" class="nav-link" data-scroll-target="#página-43">Página 43</a></li>
+  <li><a href="#página-44" id="toc-página-44" class="nav-link" data-scroll-target="#página-44">Página 44</a></li>
+  <li><a href="#página-45" id="toc-página-45" class="nav-link" data-scroll-target="#página-45">Página 45</a></li>
+  <li><a href="#página-46" id="toc-página-46" class="nav-link" data-scroll-target="#página-46">Página 46</a></li>
+  <li><a href="#página-47" id="toc-página-47" class="nav-link" data-scroll-target="#página-47">Página 47</a></li>
+  <li><a href="#página-48" id="toc-página-48" class="nav-link" data-scroll-target="#página-48">Página 48</a></li>
+  <li><a href="#página-49" id="toc-página-49" class="nav-link" data-scroll-target="#página-49">Página 49</a></li>
+  <li><a href="#página-50" id="toc-página-50" class="nav-link" data-scroll-target="#página-50">Página 50</a></li>
+  <li><a href="#página-51" id="toc-página-51" class="nav-link" data-scroll-target="#página-51">Página 51</a></li>
+  <li><a href="#página-52" id="toc-página-52" class="nav-link" data-scroll-target="#página-52">Página 52</a></li>
+  <li><a href="#página-53" id="toc-página-53" class="nav-link" data-scroll-target="#página-53">Página 53</a></li>
+  <li><a href="#página-54" id="toc-página-54" class="nav-link" data-scroll-target="#página-54">Página 54</a></li>
+  <li><a href="#página-55" id="toc-página-55" class="nav-link" data-scroll-target="#página-55">Página 55</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Aula 08 Conceitos de Orientação a Objetos</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Arquivo original: <code>Aula 08 Conceitos de Orientação a Objetos.pdf</code></p>
+<section id="página-1" class="level2">
+<h2 class="anchored" data-anchor-id="página-1">Página 1</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-001.png" class="img-fluid figure-img"></p>
+<figcaption>Página 1</figcaption>
+</figure>
+</div>
+<p>Orientação a Objetos</p>
+<pre><code>Conceitos Básicos
+
+                         Profa. Alana Neo
+                                           2025</code></pre>
+</section>
+<section id="página-2" class="level2">
+<h2 class="anchored" data-anchor-id="página-2">Página 2</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-002.png" class="img-fluid figure-img"></p>
+<figcaption>Página 2</figcaption>
+</figure>
+</div>
+<p>Introdução</p>
+<p>➔Um paradigma de programação, seja ele estruturado ou orientado a objetos é a forma como a solução para um determinado problema é desenvolvida.</p>
+<p>➔Por exemplo, em Orientação a Objetos os problemas são resolvidos pensando-se em interações entre diferentes objetos.</p>
+<p>➔Já no paradigma Estruturado, procura-se resolver os problemas decompondo-os em funções e dados que somados formarão um programa.</p>
+</section>
+<section id="página-3" class="level2">
+<h2 class="anchored" data-anchor-id="página-3">Página 3</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-003.png" class="img-fluid figure-img"></p>
+<figcaption>Página 3</figcaption>
+</figure>
+</div>
+<p>Introdução</p>
+<p>➔Durante muito tempo, a programação Estruturada foi o paradigma mais difundido; porém, à medida que os programas foram tornando-se mais complexos, surgiu a necessidade de resolver os problemas de uma maneira diferente. Nesse contexto surge o paradigma da Programação Orientada a Objetos.</p>
+<p>➔Nesse paradigma os dados e as operações que serão realizadas sobre estes, formam um conjunto único (objeto), e a resolução de um problema é dada em termos de interações realizadas entre esses objetos.</p>
+<p>➔Um objeto encapsula a lógica de negócios concentrando a responsabilidade em pontos únicos do sistema, viabilizando um maior reuso do código pela modularidade dessa abordagem.</p>
+</section>
+<section id="página-4" class="level2">
+<h2 class="anchored" data-anchor-id="página-4">Página 4</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-004.png" class="img-fluid figure-img"></p>
+<figcaption>Página 4</figcaption>
+</figure>
+</div>
+<p>Introdução</p>
+<p>➔Benefícios da abordagem orientada a objetos:</p>
+<pre><code>• modularidade: uma vez criado, um objeto pode ser</code></pre>
+<p>passado por todo o sistema;</p>
+<pre><code>• encapsulamento: detalhes de implementação ficam</code></pre>
+<p>ocultos externamente ao objeto;</p>
+<pre><code>• reuso: uma vez criado, um objeto pode ser utilizado em</code></pre>
+<p>outros programas;</p>
+<pre><code>• manutenibilidade: manutenção é realizada em pontos</code></pre>
+<p>específicos do programa (objetos).</p>
+</section>
+<section id="página-5" class="level2">
+<h2 class="anchored" data-anchor-id="página-5">Página 5</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-005.png" class="img-fluid figure-img"></p>
+<figcaption>Página 5</figcaption>
+</figure>
+</div>
+<p>Modelos</p>
+<p>➔São representações simplificadas de objetos, pessoas, itens, tarefas, processos, conceitos, ideias, etc., usados comumente por pessoas no seu dia a dia, independentemente do uso de computadores.</p>
+<p>➔Um modelo comumente possui dados (informações) e operações (procedimentos) associados a ele.</p>
+<p>➔Exemplo: uma lâmpada comum.</p>
+</section>
+<section id="página-6" class="level2">
+<h2 class="anchored" data-anchor-id="página-6">Página 6</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-006.png" class="img-fluid figure-img"></p>
+<figcaption>Página 6</figcaption>
+</figure>
+</div>
+<p>Modelos</p>
+<p>Exemplo: uma lâmpada comum.</p>
+<p>➔Dado básico: estado (“ligada” ou “desligada”).</p>
+<p>➔Operações que podemos efetuar nessa lâmpada: podemos ligá-la ou desligá-la.</p>
+<p>➔O ato de ligar a lâmpada equivale a modificar seu estado para “ligada”, enquanto que desligar a lâmpada significa modificar seu estado para “desligada”.</p>
+</section>
+<section id="página-7" class="level2">
+<h2 class="anchored" data-anchor-id="página-7">Página 7</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-007.png" class="img-fluid figure-img"></p>
+<figcaption>Página 7</figcaption>
+</figure>
+</div>
+<p>Modelos</p>
+<p>➔Para saber se uma lâmpada está ligada ou desligada, podemos pedir que uma operação mostre o valor do estado.</p>
+<p>➔Neste exemplo a modelagem de entidades do mundo real pode ser muito diferente da que vai ser usada em programas de computador.</p>
+<p>➔No mundo real, para saber se a lâmpada está ligada ou não, basta observá-la; enquanto que na modelagem para uso em um computador, precisamos de uma operação para saber se ela está ou não ligada.</p>
+</section>
+<section id="página-8" class="level2">
+<h2 class="anchored" data-anchor-id="página-8">Página 8</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-008.png" class="img-fluid figure-img"></p>
+<figcaption>Página 8</figcaption>
+</figure>
+</div>
+<p>Modelos</p>
+<pre><code> ➔Nesse  diagrama,  o  retângulo
+    superior  mostra  o nome  do
+  modelo,  o  retângulo   central
+   mostra dados do modelo a ser
+   manipulados  e  o   retângulo
+     inferior mostra que operações
+  do modelo podem ser usadas.
+
+➔Os nomes das operações ou
+  métodos  são   seguidos  de
+   parênteses,     e     quando
+   argumentos   ou   parâmetros
+  devem ser especificados para as
+   operações,  eles  são  listados
+   dentro dos parênteses.</code></pre>
+</section>
+<section id="página-9" class="level2">
+<h2 class="anchored" data-anchor-id="página-9">Página 9</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-009.png" class="img-fluid figure-img"></p>
+<figcaption>Página 9</figcaption>
+</figure>
+</div>
+<p>Modelos</p>
+<pre><code>➔O exemplo ao lado mostra os
+   dados e operações.
+
+➔O   modelo   deste   exemplo
+    representa uma conta bancária
+     simplificada,   que   somente
+    representa    o   nome    do
+      correntista, o saldo da conta e se
+   a conta é especial ou não.</code></pre>
+</section>
+<section id="página-10" class="level2">
+<h2 class="anchored" data-anchor-id="página-10">Página 10</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-010.png" class="img-fluid figure-img"></p>
+<figcaption>Página 10</figcaption>
+</figure>
+</div>
+<p>Modelos</p>
+<p>➔Modelos podem conter submodelos e ser parte de outros modelos. ➔Por exemplo, um modelo de casa poderia ser composto por diversos modelos de lâmpada. Um modelo de lâmpada pode fazer parte tanto de um modelo de casa quanto de um modelo de carro, etc.</p>
+<p>➔A simplificação inerente aos modelos é, em muitos casos, necessária: dependendo do contexto, algumas informações devem ser ocultas ou ignoradas. ➔Por exemplo, a representação das informações sobre uma pessoa pode ser feita de maneira diferente, dependendo do contexto.</p>
+</section>
+<section id="página-11" class="level2">
+<h2 class="anchored" data-anchor-id="página-11">Página 11</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-011.png" class="img-fluid figure-img"></p>
+<figcaption>Página 11</figcaption>
+</figure>
+</div>
+<p>Modelos</p>
+<p>➔Pessoa como Empregado de Empresa:</p>
+<pre><code>➔Para uma pessoa como empregada de uma empresa,
+  para fins de processamento de folha de pagamento,
+   seria necessária a representação:
+
+➔nome, cargo, salário e horasExtrasTrabalhadas, entre
+   outros dados.
+
+➔Esse   modelo   poderia   conter   as   operações
+   calculaSalario e aumentaSalario.</code></pre>
+</section>
+<section id="página-12" class="level2">
+<h2 class="anchored" data-anchor-id="página-12">Página 12</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-012.png" class="img-fluid figure-img"></p>
+<figcaption>Página 12</figcaption>
+</figure>
+</div>
+<p>Modelos</p>
+<p>➔Pessoa como Paciente de uma Clínica Médica:</p>
+<pre><code>➔Para um  modelo  de  paciente  seria  necessário
+   representar: o nome, o sexo, a idade, a altura, o peso
+  e o historicoDeConsultas do paciente.
+
+➔Esse   modelo   poderia   conter   as   operações
+   verificaObesidade, que usaria os dados sexo, altura e
+  peso para verificar se aquela pessoa está com o peso
+   ideal       para       sua        categoria      e
+  adicionaInformacaoAoHistorico,   que    adicionaria
+  informações recentes ao histórico do paciente.</code></pre>
+</section>
+<section id="página-13" class="level2">
+<h2 class="anchored" data-anchor-id="página-13">Página 13</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-013.png" class="img-fluid figure-img"></p>
+<figcaption>Página 13</figcaption>
+</figure>
+</div>
+<p>Modelos</p>
+<p>➔Pessoa como Contato Comercial:</p>
+<pre><code>➔Para esse modelo,  seria necessário representar o
+  nome, o telefone, o cargo e empresa da pessoa.
+
+➔Algumas operações úteis para esse modelo seriam
+  mostraTelefone, que retornaria o telefone de uma certa
+  pessoa, e trabalhaEmEmpresa, que informaria se a
+  pessoa trabalha em uma certa empresa.</code></pre>
+</section>
+<section id="página-14" class="level2">
+<h2 class="anchored" data-anchor-id="página-14">Página 14</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-014.png" class="img-fluid figure-img"></p>
+<figcaption>Página 14</figcaption>
+</figure>
+</div>
+<p>Modelos</p>
+<p>➔As três maneiras de representarmos os dados de uma pessoa e operações nesses dados (ou os três modelos de representação de pessoas) são dependentes de contexto: alguns dados e operações que podem ser úteis para um modelo de representação de pessoas podem ser irrelevantes para outro.</p>
+<p>➔Por essa razão, e apesar dos três exemplos representarem pessoas de forma genérica, é difícil, se não impossível, elaborar um “supermodelo” capaz de representar todos os dados e operações relativos a uma pessoa, independentemente do contexto, e usar esse modelo no lugar de todos os outros mais especializados ou dependentes de contexto.</p>
+</section>
+<section id="página-15" class="level2">
+<h2 class="anchored" data-anchor-id="página-15">Página 15</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-015.png" class="img-fluid figure-img"></p>
+<figcaption>Página 15</figcaption>
+</figure>
+</div>
+<p>Modelos</p>
+<p>➔Modelos podem ser reutilizados para representar diferentes objetos, pessoas ou itens.</p>
+<p>➔O mesmo modelo PacienteDeClinica poderia ser utilizado para representar cada um dos pacientes de uma clínica.</p>
+<p>➔Os pacientes podem ser representados pelo mesmo modelo, mas os dados individuais de cada um podem ser diferentes, conforme a necessidade dos diversos exemplos de cada modelo.</p>
+<p>➔Assim, João, Pedro e Maria seriam exemplos do modelo Paciente, cada um contendo dados de um paciente, provavelmente diferentes entre si.</p>
+</section>
+<section id="página-16" class="level2">
+<h2 class="anchored" data-anchor-id="página-16">Página 16</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-016.png" class="img-fluid figure-img"></p>
+<figcaption>Página 16</figcaption>
+</figure>
+</div>
+<p>Modelos</p>
+<p>➔A criação e uso de modelos é uma tarefa natural, e a extensão dessa abordagem à programação deu origem ao paradigma Orientação a Objetos.</p>
+</section>
+<section id="página-17" class="level2">
+<h2 class="anchored" data-anchor-id="página-17">Página 17</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-017.png" class="img-fluid figure-img"></p>
+<figcaption>Página 17</figcaption>
+</figure>
+</div>
+<p>Objetos</p>
+<p>➔A resolução de um problema passa pela análise de uma determinada situação real, tendo-se por objetivo a construção de um modelo que represente essa situação. Isso caracteriza o processo de abstração.</p>
+<p>➔Esse modelo deverá considerar os objetos (entidades) que integram o problema. Mas o que seria mesmo um objeto?</p>
+<p>➔Objetos são um conjunto de dados e procedimentos que representam a estrutura e o comportamento inerentes às entidades, concretas ou abstratas, do mundo real. ➔Em outras palavras, são qualquer coisa que tenha algum significado dentro do contexto do problema, seja ela concreta ou abstrata.</p>
+</section>
+<section id="página-18" class="level2">
+<h2 class="anchored" data-anchor-id="página-18">Página 18</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-018.png" class="img-fluid figure-img"></p>
+<figcaption>Página 18</figcaption>
+</figure>
+</div>
+<p>Objetos</p>
+<p>➔Alguns exemplos de objetos:</p>
+<p>➔Um livro. ➔Uma data. ➔Uma festa. ➔Um carro. ➔Um pedido de compra de material.</p>
+<p>➔Olhando à sua volta é possível perceber muitos exemplos de objetos do mundo real: seu cachorro, sua mesa, sua televisão, sua bicicleta.</p>
+</section>
+<section id="página-19" class="level2">
+<h2 class="anchored" data-anchor-id="página-19">Página 19</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-019.png" class="img-fluid figure-img"></p>
+<figcaption>Página 19</figcaption>
+</figure>
+</div>
+<p>Objetos</p>
+<p>➔Os objetos têm duas características básicas, que são o estado e o comportamento.</p>
+<p>➔Alguns exemplos:</p>
+</section>
+<section id="página-20" class="level2">
+<h2 class="anchored" data-anchor-id="página-20">Página 20</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-020.png" class="img-fluid figure-img"></p>
+<figcaption>Página 20</figcaption>
+</figure>
+</div>
+<p>Objetos</p>
+<p>➔Cada objeto consiste em uma entidade com identidade própria.</p>
+<p>➔Assim, mesmo que a partir de uma observação simples se diga que dois objetos são iguais, tem-se dois objetos distintos.</p>
+<p>➔Se analisarmos dois exemplares de um livro, por exemplo, veremos que se constituem em dois objetos distintos, apesar de terem a mesma quantidade de páginas, mesmo conteúdo, etc.</p>
+</section>
+<section id="página-21" class="level2">
+<h2 class="anchored" data-anchor-id="página-21">Página 21</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-021.png" class="img-fluid figure-img"></p>
+<figcaption>Página 21</figcaption>
+</figure>
+</div>
+<p>Objetos</p>
+<p>➔Em termos de programação, podemos definir um objeto como a abstração de uma entidade do mundo real, que apresenta sua própria existência, identificação, características de composição e que tem alguma utilidade, isto é, pode executar determinados serviços quando solicitado.</p>
+<p>➔Todo objeto deve ter uma identificação. A identificação de um objeto refere-se ao nome que apresenta, o qual será definido pelo projetista do modelo.</p>
+<p>➔As características de composição de um objeto estão associadas à sua constituição e definem a sua estrutura. Essas características são denominadas Atributos.</p>
+</section>
+<section id="página-22" class="level2">
+<h2 class="anchored" data-anchor-id="página-22">Página 22</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-022.png" class="img-fluid figure-img"></p>
+<figcaption>Página 22</figcaption>
+</figure>
+</div>
+<p>Objetos</p>
+<p>➔Por exemplo, um objeto que seja a abstração de um celular, digamos o objeto identificado pelo nome meuCelular, pode ter como atributos, dependendo da abstração feita, a sua cor, a sua marca, o seu peso, seu comprimento, seu preço, a bateria etc.</p>
+<p>➔Os atributos de um objeto definem a composição deste e podem ser modelados, dependendo do contexto, como simples valores ou como outros objetos.</p>
+<p>➔Pode-se tratar o atributo de um objeto como um simples valor quando este constitui-se em uma informação que pode ser expressa por um único valor.</p>
+</section>
+<section id="página-23" class="level2">
+<h2 class="anchored" data-anchor-id="página-23">Página 23</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-023.png" class="img-fluid figure-img"></p>
+<figcaption>Página 23</figcaption>
+</figure>
+</div>
+<p>Objetos</p>
+<p>➔No caso do objeto umCelular, o atributo que define o comprimento do Celular pode ser expresso por um simples valor, por exemplo, 8.0.</p>
+<p>➔Já o atributo que representa a bateria, dadas as suas características, deve ser modelado como outro objeto.</p>
+<p>➔Os atributos de um objeto definem a sua estrutura e podem ser modificados durante a vida útil do objeto.</p>
+<p>➔Por exemplo, no caso do objeto umCelular, o valor do atributo que especifica o preço muda durante a sua vida útil.</p>
+</section>
+<section id="página-24" class="level2">
+<h2 class="anchored" data-anchor-id="página-24">Página 24</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-024.png" class="img-fluid figure-img"></p>
+<figcaption>Página 24</figcaption>
+</figure>
+</div>
+<p>Objetos</p>
+<p>➔Além das características de composição, ou seja, os atributos, um objeto apresenta também as características de utilidade. Essas características dizem respeito às ações ou serviços que o objeto pode executar.</p>
+<p>➔Denominamos Comportamento, o conjunto de ações ou serviços que um objeto pode prestar.</p>
+<p>➔Conforme ocorre no mundo real, para que um objeto execute determinado serviço, é necessário que haja uma solicitação. A denominação de comportamento para o conjunto de serviços que o objeto pode executar se justifica, uma vez que esses serviços definem a forma como ele reage às solicitações.</p>
+</section>
+<section id="página-25" class="level2">
+<h2 class="anchored" data-anchor-id="página-25">Página 25</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-025.png" class="img-fluid figure-img"></p>
+<figcaption>Página 25</figcaption>
+</figure>
+</div>
+<p>Objetos</p>
+<p>➔Um objeto é uma entidade que tem uma identificação e que apresenta atributos e/ou comportamento.</p>
+<p>➔No caso do objeto umCelular, a abstração pode considerar um comportamento formado por serviços, tais como ligar, desligar, fazer uma chamada, etc.</p>
+<p>➔Lembre-se que uma abstração é dependente de quem a executa, ou seja, é dependente do problema que se quer resolver.</p>
+<p>➔Em termos de programação, um objeto é a abstração de uma entidade presente no problema a ser resolvido.</p>
+</section>
+<section id="página-26" class="level2">
+<h2 class="anchored" data-anchor-id="página-26">Página 26</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-026.png" class="img-fluid figure-img"></p>
+<figcaption>Página 26</figcaption>
+</figure>
+</div>
+<p>Objetos</p>
+<p>Exemplo: Seja o objeto resultante de uma abstração da porta de determinada sala, digamos o objeto umaPorta, pode-se nessa abstração identificar, por exemplo os seguintes atributos e serviços:</p>
+<p>➔Atributos (Estado): ➔Cor. (pode ser expresso por um valor); ➔Altura. (pode ser expresso por um valor); ➔Largura (pode ser expresso por um valor); ➔A fechadura (expresso como outro objeto).</p>
+<p>➔Serviços (Comportamento) ➔Abrir; Fechar.</p>
+</section>
+<section id="página-27" class="level2">
+<h2 class="anchored" data-anchor-id="página-27">Página 27</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-027.png" class="img-fluid figure-img"></p>
+<figcaption>Página 27</figcaption>
+</figure>
+</div>
+<p>Objetos</p>
+<p>➔Veja que nesse exemplo os atributos cor, altura e largura podem ser expressos como valores.</p>
+<p>➔Assim, o objeto identificado por umaPorta pode ter, por exemplo, o valor 2.1 para o atributo altura ou o valor “cinza” para o atributo cor.</p>
+<p>➔Já o atributo que representa a fechadura da porta constitui- se em outro objeto que, obviamente, apresenta características diferentes de uma porta.</p>
+</section>
+<section id="página-28" class="level2">
+<h2 class="anchored" data-anchor-id="página-28">Página 28</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-028.png" class="img-fluid figure-img"></p>
+<figcaption>Página 28</figcaption>
+</figure>
+</div>
+<p>Criando um Tipo</p>
+<p>➔Em um programa para um banco, é bem fácil perceber que uma entidade extremamente importante para o nosso sistema é a conta.</p>
+<p>➔O que toda conta tem e é importante para nós?</p>
+<pre><code>➔número da conta
+➔nome do titular da conta
+➔saldo</code></pre>
+</section>
+<section id="página-29" class="level2">
+<h2 class="anchored" data-anchor-id="página-29">Página 29</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-029.png" class="img-fluid figure-img"></p>
+<figcaption>Página 29</figcaption>
+</figure>
+</div>
+<p>Criando um Tipo</p>
+<p>➔O que toda conta faz e é importante para nós?</p>
+<p>➔O que gostaríamos de “pedir à conta”?</p>
+<pre><code>➔saca uma quantidade x
+ ➔deposita uma quantidade x
+➔imprime o nome do titular da conta
+➔devolve o saldo atual
+ ➔transfere uma quantidade x para uma outra conta y
+➔devolve o tipo de conta</code></pre>
+</section>
+<section id="página-30" class="level2">
+<h2 class="anchored" data-anchor-id="página-30">Página 30</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-030.png" class="img-fluid figure-img"></p>
+<figcaption>Página 30</figcaption>
+</figure>
+</div>
+<p>Criando um Tipo</p>
+<p>➔Com isso, temos o projeto de uma conta bancária.</p>
+<p>➔Podemos pegar esse projeto e acessar seu saldo?</p>
+<p>➔Não.</p>
+<p>➔O que temos ainda é o projeto.</p>
+<p>➔Antes, precisamos construir uma conta, para poder acessar o que ela tem, e pedir a ela que faça algo.</p>
+</section>
+<section id="página-31" class="level2">
+<h2 class="anchored" data-anchor-id="página-31">Página 31</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-031.png" class="img-fluid figure-img"></p>
+<figcaption>Página 31</figcaption>
+</figure>
+</div>
+<p>Criando um Tipo</p>
+<p>➔Repare na figura: apesar do lado esquerdo especificar uma Conta, essa especificação é uma Conta? ➔Nós depositamos e sacamos dinheiro nessa especificação? ➔Não. ➔Utilizamos a especificação da Conta para poder criar instâncias que realmente são contas, onde podemos realizar as operações que criamos.</p>
+</section>
+<section id="página-32" class="level2">
+<h2 class="anchored" data-anchor-id="página-32">Página 32</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-032.png" class="img-fluid figure-img"></p>
+<figcaption>Página 32</figcaption>
+</figure>
+</div>
+<p>Criando um Tipo</p>
+<p>➔Apesar de declararmos que toda conta tem um saldo, um número e uma agência, como na figura ao lado, são nas instâncias desse projeto que realmente há espaço para armazenar esses valores. ➔Ao projeto da conta, isto é, a definição da conta, damos o nome de classe. ➔Ao que podemos construir a partir desse projeto, as contas de verdade, damos o nome de objetos.</p>
+</section>
+<section id="página-33" class="level2">
+<h2 class="anchored" data-anchor-id="página-33">Página 33</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-033.png" class="img-fluid figure-img"></p>
+<figcaption>Página 33</figcaption>
+</figure>
+</div>
+<p>Criando um Tipo</p>
+<p>➔A palavra classe vem da taxonomia da biologia. Todos os seres vivos de uma mesma classe biológica têm uma série de atributos e comportamentos em comum, mas não são iguais, podem variar nos valores desses atributos e como realizam esses comportamentos.</p>
+<p>➔Homo Sapiens define um grupo de seres que possuem características em comum, porém a definição (a ideia, o conceito) de um Homo Sapiens é um ser humano? Não.</p>
+<p>➔Tudo está especificado na classe Homo Sapiens, mas se quisermos mandar alguém correr, comer, pular, precisaremos de uma instância de Homo Sapiens, ou então de um objeto do tipo Homo Sapiens.</p>
+</section>
+<section id="página-34" class="level2">
+<h2 class="anchored" data-anchor-id="página-34">Página 34</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-034.png" class="img-fluid figure-img"></p>
+<figcaption>Página 34</figcaption>
+</figure>
+</div>
+<p>Criando um Tipo</p>
+<p>➔Exemplo: uma receita de bolo.</p>
+<p>➔Você come uma receita de bolo?</p>
+<p>➔Precisamos instanciá-la, criar um objeto bolo a partir dessa especificação (a classe) para utilizá-la.</p>
+<p>➔Podemos criar centenas de bolos a partir dessa classe (a receita, no caso), eles podem ser bem semelhantes, alguns até idênticos, mas são objetos diferentes.</p>
+</section>
+<section id="página-35" class="level2">
+<h2 class="anchored" data-anchor-id="página-35">Página 35</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-035.png" class="img-fluid figure-img"></p>
+<figcaption>Página 35</figcaption>
+</figure>
+</div>
+<p>Criando um Tipo</p>
+<p>➔Podemos fazer milhares de analogias semelhantes. A planta de uma casa é uma casa? ➔Definitivamente não. Não podemos morar dentro da planta de uma casa, nem podemos abrir sua porta ou pintar suas paredes. ➔Precisamos, antes, construir instâncias a partir dessa planta. Essas instâncias, sim, podemos pintar, decorar ou morar dentro. ➔Pode parecer óbvio, mas a dificuldade inicial do paradigma da orientação a objetos é justo saber distinguir o que é classe e o que é objeto. ➔É comum o iniciante utilizar, obviamente de forma errada, essas duas palavras como sinônimos.</p>
+</section>
+<section id="página-36" class="level2">
+<h2 class="anchored" data-anchor-id="página-36">Página 36</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-036.png" class="img-fluid figure-img"></p>
+<figcaption>Página 36</figcaption>
+</figure>
+</div>
+<p>Uma Classe em Java</p>
+<p>➔Vamos começar apenas com o que uma Conta tem, e não com o que ela faz.</p>
+<p>➔Um tipo desses, como o especificado de Conta acima, pode ser facilmente traduzido para Java:</p>
+</section>
+<section id="página-37" class="level2">
+<h2 class="anchored" data-anchor-id="página-37">Página 37</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-037.png" class="img-fluid figure-img"></p>
+<figcaption>Página 37</figcaption>
+</figure>
+</div>
+<p>Uma Classe em Java</p>
+<p>➔Por enquanto, declaramos o que toda conta deve ter. Estes são os atributos que toda conta, quando criada, vai ter, essas variáveis foram declaradas fora de um bloco, diferente do que fazíamos quando tinha aquele main.</p>
+<p>➔Quando uma variável é declarada diretamente dentro do escopo da classe, é chamada de variável de objeto, ou atributo.</p>
+</section>
+<section id="página-38" class="level2">
+<h2 class="anchored" data-anchor-id="página-38">Página 38</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-038.png" class="img-fluid figure-img"></p>
+<figcaption>Página 38</figcaption>
+</figure>
+</div>
+<p>Criando e usando um Objeto</p>
+<p>➔Já temos uma classe em Java que especifica o que todo objeto dessa classe deve ter. Mas como usá-la?</p>
+<p>➔Além dessa classe, ainda teremos o Programa.java e a partir dele é que vamos utilizar a classe Conta.</p>
+<p>➔Para criar (construir, instanciar) uma Conta, basta usar a palavra chave new e utilizar também os parênteses,</p>
+</section>
+<section id="página-39" class="level2">
+<h2 class="anchored" data-anchor-id="página-39">Página 39</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-039.png" class="img-fluid figure-img"></p>
+<figcaption>Página 39</figcaption>
+</figure>
+</div>
+<p>Criando e usando um Objeto</p>
+<p>➔O código acima cria um objeto do tipo Conta, mas como acessar esse objeto que foi criado? ➔Precisamos ter alguma forma de nos referenciarmos a esse objeto. Precisamos de uma variável:</p>
+</section>
+<section id="página-40" class="level2">
+<h2 class="anchored" data-anchor-id="página-40">Página 40</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-040.png" class="img-fluid figure-img"></p>
+<figcaption>Página 40</figcaption>
+</figure>
+</div>
+<p>Criando e usando um Objeto</p>
+<p>➔Pode parecer estranho escrevermos duas vezes Conta: uma vez na declaração da variável e outra vez no uso do new. Mas há um motivo, que em breve entenderemos.</p>
+</section>
+<section id="página-41" class="level2">
+<h2 class="anchored" data-anchor-id="página-41">Página 41</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-041.png" class="img-fluid figure-img"></p>
+<figcaption>Página 41</figcaption>
+</figure>
+</div>
+<p>Criando e usando um Objeto</p>
+<p>➔Através da variável minhaConta, podemos acessar o objeto recém criado para alterar seu numero, seu titular, seu saldo, etc:</p>
+</section>
+<section id="página-42" class="level2">
+<h2 class="anchored" data-anchor-id="página-42">Página 42</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-042.png" class="img-fluid figure-img"></p>
+<figcaption>Página 42</figcaption>
+</figure>
+</div>
+<p>Criando e usando um Objeto</p>
+<p>➔É importante fixar que o ponto foi utilizado para acessar algo em minhaConta. ➔A minhaConta possui número 1234, pertence ao Duke, e tem saldo de mil reais.</p>
+</section>
+<section id="página-43" class="level2">
+<h2 class="anchored" data-anchor-id="página-43">Página 43</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-043.png" class="img-fluid figure-img"></p>
+<figcaption>Página 43</figcaption>
+</figure>
+</div>
+<p>Métodos</p>
+<p>➔Dentro da classe, também declararemos o que cada conta faz e como isto é feito – os comportamentos que cada classe tem, isto é, o que ela faz.</p>
+<p>➔Por exemplo, de que maneira que uma Conta saca dinheiro?</p>
+<p>➔Especificaremos isso dentro da própria classe Conta, e não em um local desatrelado das informações da própria Conta.</p>
+<p>➔É por isso que essas “funções” são chamadas de métodos, pois é a maneira de fazer uma operação com um objeto.</p>
+</section>
+<section id="página-44" class="level2">
+<h2 class="anchored" data-anchor-id="página-44">Página 44</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-044.png" class="img-fluid figure-img"></p>
+<figcaption>Página 44</figcaption>
+</figure>
+</div>
+<p>Métodos</p>
+<p>➔Queremos criar um método que saca uma determinada quantidade e não devolve nenhuma informação para quem acionar esse método:</p>
+<p>➔A palavra chave void diz que, quando você pedir para a conta sacar uma quantia, nenhuma informação será enviada de volta a quem pediu.</p>
+</section>
+<section id="página-45" class="level2">
+<h2 class="anchored" data-anchor-id="página-45">Página 45</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-045.png" class="img-fluid figure-img"></p>
+<figcaption>Página 45</figcaption>
+</figure>
+</div>
+<p>Métodos</p>
+<p>➔Quando alguém pedir para sacar, ele também vai dizer quanto quer sacar. ➔Por isso precisamos declarar o método com algo dentro dos parênteses - o que vai aí dentro é chamado de argumento do método (ou parâmetro). ➔Essa variável é uma variável comum, chamada também de temporária ou local, pois, ao final da execução desse método, ela deixa de existir.</p>
+</section>
+<section id="página-46" class="level2">
+<h2 class="anchored" data-anchor-id="página-46">Página 46</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-046.png" class="img-fluid figure-img"></p>
+<figcaption>Página 46</figcaption>
+</figure>
+</div>
+<p>Métodos</p>
+<p>➔Dentro do método, estamos declarando uma nova variável. ➔Essa variável, assim como o argumento, vai morrer no fim do método, pois este é seu escopo. ➔No momento que vamos acessar nosso atributo, usamos a palavra chave this para mostrar que esse é um atributo, e não uma simples variável. ➔Nesse caso, a conta poderia estourar um limite fixado pelo banco. Mais para frente, evitaremos essa situação, e de uma maneira muito elegante.</p>
+</section>
+<section id="página-47" class="level2">
+<h2 class="anchored" data-anchor-id="página-47">Página 47</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-047.png" class="img-fluid figure-img"></p>
+<figcaption>Página 47</figcaption>
+</figure>
+</div>
+<p>Métodos</p>
+<p>➔Da mesma forma, temos o método para depositar alguma quantia:</p>
+<p>➔Observe que não usamos uma variável auxiliar e, além disso, usamos a abreviação += para deixar o método bem simples. ➔O += soma quantidade ao valor antigo do saldo e guarda no próprio saldo, o valor resultante. ➔Para mandar uma mensagem ao objeto e pedir que ele execute um método, também usamos o ponto. O termo usado para isso é invocação de método.</p>
+</section>
+<section id="página-48" class="level2">
+<h2 class="anchored" data-anchor-id="página-48">Página 48</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-048.png" class="img-fluid figure-img"></p>
+<figcaption>Página 48</figcaption>
+</figure>
+</div>
+<p>Métodos</p>
+<p>➔O código ao lado saca dinheiro e depois deposita outra quantia na nossa conta:</p>
+<p>➔Uma vez que seu saldo inicial é 1000 reais, se sacarmos 200 reais, depositarmos 500 reais e imprimirmos o valor do saldo, o que será impresso?</p>
+</section>
+<section id="página-49" class="level2">
+<h2 class="anchored" data-anchor-id="página-49">Página 49</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-049.png" class="img-fluid figure-img"></p>
+<figcaption>Página 49</figcaption>
+</figure>
+</div>
+<p>Métodos com retorno</p>
+<p>➔Um método sempre tem que definir o que retorna, nem que defina que não há retorno, como nos exemplos anteriores onde estávamos usando o void. ➔Um método pode retornar um valor para o código que o chamou. ➔No caso do nosso método saca, podemos devolver um valor booleano indicando se a operação foi bem sucedida.</p>
+</section>
+<section id="página-50" class="level2">
+<h2 class="anchored" data-anchor-id="página-50">Página 50</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-050.png" class="img-fluid figure-img"></p>
+<figcaption>Página 50</figcaption>
+</figure>
+</div>
+<p>Métodos com retorno</p>
+<p>➔A declaração do método mudou! O método saca não tem void na frente. ➔Isto quer dizer que, quando é acessado, ele devolve algum tipo de informação. No caso, um boolean. ➔A palavra chave return indica que o método vai terminar ali, retornando tal informação.</p>
+</section>
+<section id="página-51" class="level2">
+<h2 class="anchored" data-anchor-id="página-51">Página 51</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-051.png" class="img-fluid figure-img"></p>
+<figcaption>Página 51</figcaption>
+</figure>
+</div>
+<p>Métodos com retorno</p>
+<p>➔Exemplo de uso:</p>
+</section>
+<section id="página-52" class="level2">
+<h2 class="anchored" data-anchor-id="página-52">Página 52</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-052.png" class="img-fluid figure-img"></p>
+<figcaption>Página 52</figcaption>
+</figure>
+</div>
+<p>Métodos com retorno</p>
+<pre><code>        ➔Ou então, posso eliminar
+           a variável temporária, se
+              desejado:</code></pre>
+</section>
+<section id="página-53" class="level2">
+<h2 class="anchored" data-anchor-id="página-53">Página 53</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-053.png" class="img-fluid figure-img"></p>
+<figcaption>Página 53</figcaption>
+</figure>
+</div>
+<p>Métodos com retorno</p>
+<p>➔Mais adiante, veremos que algumas vezes é mais interessante lançar uma exceção (exception) nesses casos.</p>
+<p>➔Meu programa pode manter na memória não apenas uma conta, como mais de uma:</p>
+</section>
+<section id="página-54" class="level2">
+<h2 class="anchored" data-anchor-id="página-54">Página 54</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-054.png" class="img-fluid figure-img"></p>
+<figcaption>Página 54</figcaption>
+</figure>
+</div>
+<p>Exercício</p>
+<p>➔1. Escreva uma classe para representar uma lâmpada que está à venda em um supermercado. ➔2. Crie uma classe Livro que represente os dados básicos de um livro, sem se preocupar com a sua finalidade. ➔3. Usando o resultado do exercício anterior como base, crie uma classe “LivroDeLivraria” que represente os dados básicos de um livro que está à venda em uma livraria. ➔4. Usando o resultado do modelo “Livro” como base, crie uma classe “LivroDeBiblioteca” que represente os dados básicos de um livro de uma biblioteca, que pode ser emprestado a leitores. ➔5. Cria uma classe para representar uma conta corrente que possui um número, um saldo, um status que informa se ela é especial ou não, um limite. ➔6. Crie uma classe que represente um contato da agenda do seu celular.</p>
+</section>
+<section id="página-55" class="level2">
+<h2 class="anchored" data-anchor-id="página-55">Página 55</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-08-conceitos-de-orientacao-a-objetos_images/page-055.png" class="img-fluid figure-img"></p>
+<figcaption>Página 55</figcaption>
+</figure>
+</div>
+<p>Dúvidas</p>
+<p>alana.neo@ifms.edu.br</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+(() => {
+  function isTypingTarget(el) {
+    if (!el) return false;
+    const tag = (el.tagName || "").toLowerCase();
+    return el.isContentEditable || tag === "input" || tag === "textarea" || tag === "select";
+  }
+
+  function navigateTo(rel) {
+    const headLink = document.querySelector(`link[rel='${rel}']`);
+    if (headLink && headLink.href) {
+      window.location.href = headLink.href;
+      return true;
+    }
+
+    const navSelector =
+      rel === "prev"
+        ? ".nav-page-previous a[href], a.prev-page[href], a[rel='prev'][href]"
+        : ".nav-page-next a[href], a.next-page[href], a[rel='next'][href]";
+    const navLink = document.querySelector(navSelector);
+    if (navLink && navLink.href) {
+      window.location.href = navLink.href;
+      return true;
+    }
+
+    return false;
+  }
+
+  document.addEventListener("keydown", (event) => {
+    if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (isTypingTarget(document.activeElement)) return;
+
+    if (event.key === "ArrowLeft") {
+      if (navigateTo("prev")) {
+        event.preventDefault();
+      }
+    }
+
+    if (event.key === "ArrowRight") {
+      if (navigateTo("next")) {
+        event.preventDefault();
+      }
+    }
+  });
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiada");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiada");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./aula-07-loops.html" class="pagination-link" aria-label="Aula 07 Loops">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Aula 07 Loops</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./aula-09-modificadores-de-classe-encapsulamento-e-atributos-de-classe.html" class="pagination-link" aria-label="Aula 09 Modificadores de Classe, Encapsulamento e Atributos de Classe">
+        <span class="nav-page-text"><span class="chapter-title">Aula 09 Modificadores de Classe, Encapsulamento e Atributos de Classe</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
