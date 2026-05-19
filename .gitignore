@@ -1,3 +1,2 @@
-markdown/_book/
-markdown/.quarto/
-.quarto/
+/.quarto/
+**/*.quarto_ipynb
