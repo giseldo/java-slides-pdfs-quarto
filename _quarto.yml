@@ -7,22 +7,22 @@ book:
   language: "pt-BR"
   chapters:
     - index.qmd
-    - aula-00-orientacao-a-objetos.qmd
-    - aula-01-introducao-a-programacao-orientada-a-objetos.qmd
-    - aula-02-primeiros-passos-no-ambiente-de-programacao.qmd
-    - aula-03-fundamentos-java.qmd
-    - aula-04-variaveis-e-tipos-primitivos.qmd
-    - aula-05-casting-e-promocao.qmd
-    - aula-06-condicionais.qmd
-    - aula-07-loops.qmd
-    - aula-08-conceitos-de-orientacao-a-objetos.qmd
-    - aula-09-modificadores-de-classe-encapsulamento-e-atributos-de-classe.qmd
-    - aula-heranca.qmd
-    - aula10-polimorfismo.qmd
-    - aula12-strings.qmd
-    - aula13-arrays-atividade.qmd
-    - aula13-arrays.qmd
-    - aula14-collections.qmd
+    - chapters/aula-00-orientacao-a-objetos.qmd
+    - chapters/aula-01-introducao-a-programacao-orientada-a-objetos.qmd
+    - chapters/aula-02-primeiros-passos-no-ambiente-de-programacao.qmd
+    - chapters/aula-03-fundamentos-java.qmd
+    - chapters/aula-04-variaveis-e-tipos-primitivos.qmd
+    - chapters/aula-05-casting-e-promocao.qmd
+    - chapters/aula-06-condicionais.qmd
+    - chapters/aula-07-loops.qmd
+    - chapters/aula-08-conceitos-de-orientacao-a-objetos.qmd
+    - chapters/aula-09-modificadores-de-classe-encapsulamento-e-atributos-de-classe.qmd
+    - chapters/aula-heranca.qmd
+    - chapters/aula10-polimorfismo.qmd
+    - chapters/aula12-strings.qmd
+    - chapters/aula13-arrays-atividade.qmd
+    - chapters/aula13-arrays.qmd
+    - chapters/aula14-collections.qmd
 
 format:
   html:

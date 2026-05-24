@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Curso Java - Slides Convertidos</title>
+<title>Orientação a Objetos – Curso Java - Slides Convertidos</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,24 +26,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./chapters/aula-00-orientacao-a-objetos.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-832e3d7b6b94ddcc90a000f8fabe51a9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/aula-01-introducao-a-programacao-orientada-a-objetos.html" rel="next">
+<link href="../index.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-832e3d7b6b94ddcc90a000f8fabe51a9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -75,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating fullcontent quarto-light">
+<body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -84,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-title">Curso Java</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/aula-00-orientacao-a-objetos.html"><span class="chapter-title">Orientação a Objetos</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -99,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Curso Java - Slides Convertidos</a> 
+      <a href="../">Curso Java - Slides Convertidos</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -111,87 +112,87 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Curso Java</span></a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Curso Java</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-00-orientacao-a-objetos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Orientação a Objetos</span></a>
+  <a href="../chapters/aula-00-orientacao-a-objetos.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Orientação a Objetos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-01-introducao-a-programacao-orientada-a-objetos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introdução à Programação Orientada a Objetos</span></a>
+  <a href="../chapters/aula-01-introducao-a-programacao-orientada-a-objetos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introdução à Programação Orientada a Objetos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-02-primeiros-passos-no-ambiente-de-programacao.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 02 Primeiros passos no ambiente de programação</span></a>
+  <a href="../chapters/aula-02-primeiros-passos-no-ambiente-de-programacao.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 02 Primeiros passos no ambiente de programação</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-03-fundamentos-java.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 03 Fundamentos Java</span></a>
+  <a href="../chapters/aula-03-fundamentos-java.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 03 Fundamentos Java</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-04-variaveis-e-tipos-primitivos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 04 Variáveis e Tipos Primitivos</span></a>
+  <a href="../chapters/aula-04-variaveis-e-tipos-primitivos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 04 Variáveis e Tipos Primitivos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-05-casting-e-promocao.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 05 Casting e Promoção</span></a>
+  <a href="../chapters/aula-05-casting-e-promocao.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 05 Casting e Promoção</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-06-condicionais.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 06 Condicionais</span></a>
+  <a href="../chapters/aula-06-condicionais.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 06 Condicionais</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-07-loops.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 07 Loops</span></a>
+  <a href="../chapters/aula-07-loops.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 07 Loops</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-08-conceitos-de-orientacao-a-objetos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 08 Conceitos de Orientação a Objetos</span></a>
+  <a href="../chapters/aula-08-conceitos-de-orientacao-a-objetos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 08 Conceitos de Orientação a Objetos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-09-modificadores-de-classe-encapsulamento-e-atributos-de-classe.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 09 Modificadores de Classe, Encapsulamento e Atributos de Classe</span></a>
+  <a href="../chapters/aula-09-modificadores-de-classe-encapsulamento-e-atributos-de-classe.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 09 Modificadores de Classe, Encapsulamento e Atributos de Classe</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-heranca.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula Herança</span></a>
+  <a href="../chapters/aula-heranca.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula Herança</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula10-polimorfismo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula10 Polimorfismo</span></a>
+  <a href="../chapters/aula10-polimorfismo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula10 Polimorfismo</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula12-strings.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula12 Strings</span></a>
+  <a href="../chapters/aula12-strings.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula12 Strings</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula13-arrays-atividade.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">aula13_Arrays atividade</span></a>
+  <a href="../chapters/aula13-arrays-atividade.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">aula13_Arrays atividade</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula13-arrays.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula13 Arrays</span></a>
+  <a href="../chapters/aula13-arrays.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula13 Arrays</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula14-collections.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula14 Collections</span></a>
+  <a href="../chapters/aula14-collections.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula14 Collections</span></a>
   </div>
 </li>
     </ul>
@@ -199,13 +200,38 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução">Introdução</a></li>
+  <li><a href="#apresentação-pessoal" id="toc-apresentação-pessoal" class="nav-link" data-scroll-target="#apresentação-pessoal">Apresentação Pessoal</a></li>
+  <li><a href="#apresentação-pessoal-1" id="toc-apresentação-pessoal-1" class="nav-link" data-scroll-target="#apresentação-pessoal-1">Apresentação Pessoal</a></li>
+  <li><a href="#expectativas" id="toc-expectativas" class="nav-link" data-scroll-target="#expectativas">Expectativas</a></li>
+  <li><a href="#apresentação-dos-alunos" id="toc-apresentação-dos-alunos" class="nav-link" data-scroll-target="#apresentação-dos-alunos">Apresentação dos Alunos</a></li>
+  <li><a href="#horário-das-aulas" id="toc-horário-das-aulas" class="nav-link" data-scroll-target="#horário-das-aulas">Horário das Aulas</a></li>
+  <li><a href="#objetivos-da-disciplina" id="toc-objetivos-da-disciplina" class="nav-link" data-scroll-target="#objetivos-da-disciplina">Objetivos da disciplina</a></li>
+  <li><a href="#ementa-da-disciplina" id="toc-ementa-da-disciplina" class="nav-link" data-scroll-target="#ementa-da-disciplina">Ementa da Disciplina</a></li>
+  <li><a href="#bibliografia-básica" id="toc-bibliografia-básica" class="nav-link" data-scroll-target="#bibliografia-básica">Bibliografia Básica</a></li>
+  <li><a href="#acordo-de-convivência" id="toc-acordo-de-convivência" class="nav-link" data-scroll-target="#acordo-de-convivência">Acordo de Convivência</a></li>
+  <li><a href="#metodologia-de-ensino" id="toc-metodologia-de-ensino" class="nav-link" data-scroll-target="#metodologia-de-ensino">Metodologia de Ensino</a></li>
+  <li><a href="#ferramentas-que-utilizaremos-para-nossas-aulas" id="toc-ferramentas-que-utilizaremos-para-nossas-aulas" class="nav-link" data-scroll-target="#ferramentas-que-utilizaremos-para-nossas-aulas">Ferramentas que utilizaremos para nossas aulas</a></li>
+  <li><a href="#formas-de-avaliação" id="toc-formas-de-avaliação" class="nav-link" data-scroll-target="#formas-de-avaliação">Formas de Avaliação</a></li>
+  <li><a href="#tira-dúvidas" id="toc-tira-dúvidas" class="nav-link" data-scroll-target="#tira-dúvidas">Tira Dúvidas</a></li>
+  <li><a href="#dúvidas" id="toc-dúvidas" class="nav-link" data-scroll-target="#dúvidas">Dúvidas</a></li>
+  <li><a href="#atividade-conhecimentos-de-programação" id="toc-atividade-conhecimentos-de-programação" class="nav-link" data-scroll-target="#atividade-conhecimentos-de-programação">Atividade: Conhecimentos de Programação</a></li>
+  <li><a href="#próxima-aula" id="toc-próxima-aula" class="nav-link" data-scroll-target="#próxima-aula">Próxima Aula</a></li>
+  <li><a href="#obrigado" id="toc-obrigado" class="nav-link" data-scroll-target="#obrigado">Obrigado</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Curso Java - Slides Convertidos</h1>
+<h1 class="title"><span class="chapter-title">Orientação a Objetos</span></h1>
 </div>
 
 
@@ -222,9 +248,193 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Bem vindo.</p>
+<section id="introdução" class="level2">
+<h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
+<p>Disciplina: Orientação a Objetos</p>
+<p>Profa. Alana Neo</p>
+<p>Roteiro: O que veremos nesta aula ?</p>
+<ul>
+<li>Apresentação Pessoal</li>
+<li>Expectativas</li>
+<li>Objetivos da Disciplina</li>
+<li>Ementa / Conteúdo Programático</li>
+<li>Bibliografia</li>
+<li>Regras de convivência</li>
+<li>Metodologia</li>
+<li>Ferramentas que utilizaremos para nossas aulas</li>
+<li>Formas de Avaliação</li>
+<li>Tira Dúvidas (PE)</li>
+<li>Horário das Aulas</li>
+<li>Dúvidas</li>
+</ul>
+</section>
+<section id="apresentação-pessoal" class="level2">
+<h2 class="anchored" data-anchor-id="apresentação-pessoal">Apresentação Pessoal</h2>
+<p>Profa. Alana Neo</p>
+<ul>
+<li>Formação Acadêmica:
+<ul>
+<li>Graduada em Análise e Desenvolvimento de Sistemas</li>
+<li>Bacharelado em Sistemas de Informação</li>
+<li>Licenciatura em Computação</li>
+<li>Especialização em Desenvolvimento de Software</li>
+<li>Especialização em Segurança da Informação</li>
+<li>Especialização em Estratégias Didáticas na Educação Básica com o uso das TIC</li>
+<li>Mestrado em Modelagem Computacional do Conhecimento</li>
+<li>Doutoranda em Ciência da Computação</li>
+</ul></li>
+</ul>
+</section>
+<section id="apresentação-pessoal-1" class="level2">
+<h2 class="anchored" data-anchor-id="apresentação-pessoal-1">Apresentação Pessoal</h2>
+<ul>
+<li>Pessoal:
+<ul>
+<li>Alagoana</li>
+<li>Filmes e séries</li>
+<li>Leitura</li>
+<li>Viagens</li>
+<li>Estudar</li>
+</ul></li>
+</ul>
+</section>
+<section id="expectativas" class="level2">
+<h2 class="anchored" data-anchor-id="expectativas">Expectativas</h2>
+<ul>
+<li>Qual o seu sentimento, neste momento, com o início das aulas do ano letivo 2024?</li>
+<li>Atividade no Menti</li>
+</ul>
+<p>https://www.menti.com/alhckxq6r49j 5887 1635</p>
+</section>
+<section id="apresentação-dos-alunos" class="level2">
+<h2 class="anchored" data-anchor-id="apresentação-dos-alunos">Apresentação dos Alunos</h2>
+<ul>
+<li>Meu nome é…</li>
+<li>Cidade/bairro onde mora;</li>
+<li>O que mais gosto de fazer…</li>
+<li>O que menos gosto de fazer….</li>
+<li>O aluno precisa para concluir com êxito a disciplina…</li>
+<li>Trabalha? Onde? Qual profissão deseja seguir?</li>
+<li>Já desenvolveu algum software, sistema web?</li>
+</ul>
+</section>
+<section id="horário-das-aulas" class="level2">
+<h2 class="anchored" data-anchor-id="horário-das-aulas">Horário das Aulas</h2>
+</section>
+<section id="objetivos-da-disciplina" class="level2">
+<h2 class="anchored" data-anchor-id="objetivos-da-disciplina">Objetivos da disciplina</h2>
+<ul>
+<li>Entender os principais conceitos do paradigma de Orientação a Objetos e sua importância no processo de desenvolvimento de software.</li>
+<li>Estudar uma linguagem de programação que suporte os conceitos de Programação Orientada a Objetos.</li>
+</ul>
+</section>
+<section id="ementa-da-disciplina" class="level2">
+<h2 class="anchored" data-anchor-id="ementa-da-disciplina">Ementa da Disciplina</h2>
+<ol type="1">
+<li>O paradigma orientado a objetos.</li>
+<li>Conceitos iniciais sobre classe e objeto.</li>
+<li>Características e comportamento de um objeto.</li>
+<li>Encapsulamento.</li>
+<li>Métodos e atributos de classe.</li>
+<li>Troca de mensagens.</li>
+<li>Modificadores de acesso.</li>
+<li>Construtores.</li>
+<li>Polimorfismo.</li>
+<li>Herança.</li>
+</ol>
+</section>
+<section id="bibliografia-básica" class="level2">
+<h2 class="anchored" data-anchor-id="bibliografia-básica">Bibliografia Básica</h2>
+<ul>
+<li>Bibliografia Básica
+<ul>
+<li>BEZERRA, E. Princípios de análise e projeto de sistemas com UML. 2. ed.&nbsp;Rio de Janeiro: Elsevier, 2007.</li>
+<li>CORNEL, G.; HORSTMAN, C. Core Java - Fundamentos. 8. ed.&nbsp;Pearson Education, 2009. 1 v.</li>
+<li>DEITEL, P.; DEITEL, H. Java: como programar. 8. ed.&nbsp;São Paulo: Pearson Prentice Hall, 2010.</li>
+</ul></li>
+<li>Bibliografia Complementar
+<ul>
+<li>GUEDES, G. UML 2 Uma abordagem prática. São Paulo: Novatec, 2009.</li>
+<li>SBROCCO, J. H. UML 2.3 Teoria e Prática. São Paulo: Érica, 2011.</li>
+<li>SIERRA, Kathy; BATES, Bert. Use a cabeça! Java. Rio de Janeiro: Alta Books,
+<ol start="2010" type="1">
+<li>484 p.&nbsp;(Use a cabeça!). ISBN 9788576081739 (broch.)</li>
+</ol></li>
+</ul></li>
+</ul>
+</section>
+<section id="acordo-de-convivência" class="level2">
+<h2 class="anchored" data-anchor-id="acordo-de-convivência">Acordo de Convivência</h2>
+<ul>
+<li>Regras de Convivência
+<ul>
+<li>Entregar as atividades no prazo e formatos estabelecidos.</li>
+<li>Comparecer às aulas no horário estabelecido.</li>
+<li>Evitar conversas paralelas.</li>
+</ul></li>
+</ul>
+</section>
+<section id="metodologia-de-ensino" class="level2">
+<h2 class="anchored" data-anchor-id="metodologia-de-ensino">Metodologia de Ensino</h2>
+<ul>
+<li>Aulas expositivas e práticas</li>
+<li>Listas de exercício</li>
+<li>Questionários</li>
+<li>Seminários</li>
+<li>Atividades práticas individuais</li>
+<li>Atividades práticas em grupo</li>
+</ul>
+</section>
+<section id="ferramentas-que-utilizaremos-para-nossas-aulas" class="level2">
+<h2 class="anchored" data-anchor-id="ferramentas-que-utilizaremos-para-nossas-aulas">Ferramentas que utilizaremos para nossas aulas</h2>
+<ul>
+<li>Sistema Acadêmico do IFMS</li>
+<li>Google Sala de aula</li>
+</ul>
+</section>
+<section id="formas-de-avaliação" class="level2">
+<h2 class="anchored" data-anchor-id="formas-de-avaliação">Formas de Avaliação</h2>
+<ul>
+<li>Listas de exercícios</li>
+<li>Seminários</li>
+<li>Atividades práticas individuais</li>
+<li>Atividades práticas em grupo</li>
+<li>Atividades no Google Forms, Mentimeter, Wordwall, Quizizz e Kahoot!.</li>
+</ul>
+</section>
+<section id="tira-dúvidas" class="level2">
+<h2 class="anchored" data-anchor-id="tira-dúvidas">Tira Dúvidas</h2>
+<p>(Horário de Permanência do Estudante - PE)</p>
+</section>
+<section id="dúvidas" class="level2">
+<h2 class="anchored" data-anchor-id="dúvidas">Dúvidas</h2>
+<p>Quais são as dúvidas?</p>
+</section>
+<section id="atividade-conhecimentos-de-programação" class="level2">
+<h2 class="anchored" data-anchor-id="atividade-conhecimentos-de-programação">Atividade: Conhecimentos de Programação</h2>
+<ul>
+<li><p>Escrever :</p></li>
+<li><p>Mínimo de 8 linhas</p>
+<ul>
+<li>Máximo de 15 linhas</li>
+<li>Dificuldades e facilidades de Programação (especificar as linguagens e frameworks já utilizados)</li>
+<li>Dificuldades e facilidades de Programação (Linguagem de Programação Java)</li>
+</ul></li>
+</ul>
+</section>
+<section id="próxima-aula" class="level2">
+<h2 class="anchored" data-anchor-id="próxima-aula">Próxima Aula</h2>
+<ul>
+<li>Revisão Conhecimentos de Programação</li>
+</ul>
+</section>
+<section id="obrigado" class="level2">
+<h2 class="anchored" data-anchor-id="obrigado">Obrigado</h2>
+<p>Profa. Alana Neo</p>
+<p>alana.neo@ifms.edu.br</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script>
@@ -721,10 +931,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../index.html" class="pagination-link" aria-label="Curso Java">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Curso Java</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./chapters/aula-00-orientacao-a-objetos.html" class="pagination-link" aria-label="Orientação a Objetos">
-        <span class="nav-page-text"><span class="chapter-title">Orientação a Objetos</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/aula-01-introducao-a-programacao-orientada-a-objetos.html" class="pagination-link" aria-label="Introdução à Programação Orientada a Objetos">
+        <span class="nav-page-text"><span class="chapter-title">Introdução à Programação Orientada a Objetos</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

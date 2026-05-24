@@ -1,0 +1,165 @@
+---
+title: "Orientação a Objetos"
+toc: true
+---
+
+## Introdução
+
+Disciplina: Orientação a Objetos
+
+Profa. Alana Neo
+
+Roteiro: O que veremos nesta aula ?
+
+- Apresentação Pessoal
+- Expectativas
+- Objetivos da Disciplina
+- Ementa / Conteúdo Programático
+- Bibliografia
+- Regras de convivência
+- Metodologia
+- Ferramentas que utilizaremos para nossas aulas
+- Formas de Avaliação
+- Tira Dúvidas (PE)
+- Horário das Aulas
+- Dúvidas
+
+## Apresentação Pessoal
+
+Profa. Alana Neo
+
+* Formação Acadêmica:
+  - Graduada em Análise e Desenvolvimento de Sistemas
+  - Bacharelado em Sistemas de Informação
+  - Licenciatura em Computação
+  - Especialização em Desenvolvimento de Software
+  - Especialização em Segurança da Informação
+  - Especialização em Estratégias Didáticas na Educação Básica com o
+    uso das TIC
+  - Mestrado em Modelagem Computacional do Conhecimento
+  - Doutoranda em Ciência da Computação
+
+## Apresentação Pessoal
+
+* Pessoal:
+  - Alagoana
+  - Filmes e séries
+  - Leitura
+  - Viagens
+  - Estudar
+
+## Expectativas
+
+
+- Qual o seu sentimento, neste momento, com o início das aulas do ano letivo 2024?
+- Atividade no Menti
+
+https://www.menti.com/alhckxq6r49j 5887 1635
+
+## Apresentação dos Alunos
+
+- Meu nome é...
+- Cidade/bairro onde mora;
+- O que mais gosto de fazer...
+- O que menos gosto de fazer....
+- O aluno precisa para concluir com êxito a disciplina...
+- Trabalha? Onde? Qual profissão deseja seguir?
+- Já desenvolveu algum software, sistema web?
+
+## Horário das Aulas
+
+
+## Objetivos da disciplina
+
+- Entender os principais conceitos do paradigma de Orientação
+a Objetos e sua importância no processo de desenvolvimento
+de software.
+- Estudar uma linguagem de programação que suporte os
+conceitos de Programação Orientada a Objetos.
+
+## Ementa da Disciplina
+
+1. O paradigma orientado a objetos.
+2. Conceitos iniciais sobre classe e objeto.
+3. Características e comportamento de um objeto.
+4. Encapsulamento.
+5. Métodos e atributos de classe.
+6. Troca de mensagens.
+7. Modificadores de acesso.
+8. Construtores.
+9. Polimorfismo.
+10. Herança.
+
+## Bibliografia Básica
+
+* Bibliografia Básica
+  - BEZERRA, E. Princípios de análise e projeto de sistemas com UML. 2. ed. Rio de
+    Janeiro: Elsevier, 2007.
+  - CORNEL,  G.; HORSTMAN, C. Core Java  - Fundamentos.  8.  ed. Pearson
+    Education, 2009. 1 v.
+  - DEITEL,  P.; DEITEL, H. Java: como programar.  8. ed. São Paulo: Pearson
+    Prentice Hall, 2010.
+
+* Bibliografia Complementar
+  - GUEDES, G. UML 2 Uma abordagem prática. São Paulo: Novatec, 2009.
+  - SBROCCO, J. H. UML 2.3 Teoria e Prática. São Paulo: Érica, 2011.
+  - SIERRA, Kathy; BATES, Bert. Use a cabeça! Java. Rio de Janeiro: Alta Books,
+    2010. 484 p. (Use a cabeça!). ISBN 9788576081739 (broch.)
+
+## Acordo de Convivência
+
+* Regras de Convivência
+  - Entregar as atividades no prazo e formatos estabelecidos.
+  - Comparecer às aulas no horário estabelecido.
+  - Evitar conversas paralelas.
+
+## Metodologia de Ensino
+
+- Aulas expositivas e práticas
+- Listas de exercício
+- Questionários
+- Seminários
+- Atividades práticas individuais
+- Atividades práticas em grupo
+
+## Ferramentas que utilizaremos para nossas aulas
+
+- Sistema Acadêmico do IFMS
+- Google Sala de aula
+
+## Formas de Avaliação
+
+- Listas de exercícios
+- Seminários
+- Atividades práticas individuais
+- Atividades práticas em grupo
+- Atividades no Google Forms, Mentimeter, Wordwall, Quizizz e Kahoot!.
+
+## Tira Dúvidas
+
+(Horário de Permanência do Estudante - PE)
+
+## Dúvidas
+
+Quais são as dúvidas?
+
+## Atividade: Conhecimentos de Programação
+
+* Escrever :
+
+* Mínimo de 8 linhas
+  - Máximo de 15 linhas
+  - Dificuldades e facilidades de Programação (especificar as
+linguagens e frameworks já utilizados)
+  - Dificuldades e facilidades de Programação (Linguagem
+de Programação Java)
+
+## Próxima Aula
+
+- Revisão Conhecimentos de Programação
+
+## Obrigado
+
+Profa. Alana Neo
+
+alana.neo@ifms.edu.br

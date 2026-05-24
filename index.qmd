@@ -1,28 +1,6 @@
 ---
-title: "Curso Java - Slides Convertidos"
+title: "Curso Java"
 toc: false
 ---
 
-# Curso Java - Slides Convertidos
-
-Este projeto Quarto foi gerado a partir dos PDFs da pasta original.
-Cada aula foi organizada como um capítulo, mantendo a imagem de cada página e o texto extraído logo abaixo.
-
-## Aulas
-
-- [Aula 00 Orientação a Objetos](aula-00-orientacao-a-objetos.qmd)
-- [Aula 01 Introdução à Programação Orientada a Objetos](aula-01-introducao-a-programacao-orientada-a-objetos.qmd)
-- [Aula 02 Primeiros passos no ambiente de programação](aula-02-primeiros-passos-no-ambiente-de-programacao.qmd)
-- [Aula 03 Fundamentos Java](aula-03-fundamentos-java.qmd)
-- [Aula 04 Variáveis e Tipos Primitivos](aula-04-variaveis-e-tipos-primitivos.qmd)
-- [Aula 05 Casting e Promoção](aula-05-casting-e-promocao.qmd)
-- [Aula 06 Condicionais](aula-06-condicionais.qmd)
-- [Aula 07 Loops](aula-07-loops.qmd)
-- [Aula 08 Conceitos de Orientação a Objetos](aula-08-conceitos-de-orientacao-a-objetos.qmd)
-- [Aula 09 Modificadores de Classe, Encapsulamento e Atributos de Classe](aula-09-modificadores-de-classe-encapsulamento-e-atributos-de-classe.qmd)
-- [Aula Herança](aula-heranca.qmd)
-- [Aula10 Polimorfismo](aula10-polimorfismo.qmd)
-- [Aula12 Strings](aula12-strings.qmd)
-- [aula13_Arrays atividade](aula13-arrays-atividade.qmd)
-- [Aula13 Arrays](aula13-arrays.qmd)
-- [Aula14 Collections](aula14-collections.qmd)
+Bem vindo.

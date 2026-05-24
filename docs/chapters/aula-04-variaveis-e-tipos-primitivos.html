@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Aula 04 Variáveis e Tipos Primitivos – Curso Java - Slides Convertidos</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/aula-05-casting-e-promocao.html" rel="next">
+<link href="../chapters/aula-03-fundamentos-java.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-832e3d7b6b94ddcc90a000f8fabe51a9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/aula-04-variaveis-e-tipos-primitivos.html"><span class="chapter-title">Aula 04 Variáveis e Tipos Primitivos</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Curso Java - Slides Convertidos</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Procurar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Curso Java</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/aula-00-orientacao-a-objetos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Orientação a Objetos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/aula-01-introducao-a-programacao-orientada-a-objetos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introdução à Programação Orientada a Objetos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/aula-02-primeiros-passos-no-ambiente-de-programacao.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 02 Primeiros passos no ambiente de programação</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/aula-03-fundamentos-java.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 03 Fundamentos Java</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/aula-04-variaveis-e-tipos-primitivos.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Aula 04 Variáveis e Tipos Primitivos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/aula-05-casting-e-promocao.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 05 Casting e Promoção</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/aula-06-condicionais.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 06 Condicionais</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/aula-07-loops.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 07 Loops</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/aula-08-conceitos-de-orientacao-a-objetos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 08 Conceitos de Orientação a Objetos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/aula-09-modificadores-de-classe-encapsulamento-e-atributos-de-classe.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 09 Modificadores de Classe, Encapsulamento e Atributos de Classe</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/aula-heranca.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula Herança</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/aula10-polimorfismo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula10 Polimorfismo</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/aula12-strings.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula12 Strings</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/aula13-arrays-atividade.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">aula13_Arrays atividade</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/aula13-arrays.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula13 Arrays</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/aula14-collections.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula14 Collections</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#página-1" id="toc-página-1" class="nav-link active" data-scroll-target="#página-1">Página 1</a></li>
+  <li><a href="#página-2" id="toc-página-2" class="nav-link" data-scroll-target="#página-2">Página 2</a></li>
+  <li><a href="#página-3" id="toc-página-3" class="nav-link" data-scroll-target="#página-3">Página 3</a></li>
+  <li><a href="#página-4" id="toc-página-4" class="nav-link" data-scroll-target="#página-4">Página 4</a></li>
+  <li><a href="#página-5" id="toc-página-5" class="nav-link" data-scroll-target="#página-5">Página 5</a></li>
+  <li><a href="#página-6" id="toc-página-6" class="nav-link" data-scroll-target="#página-6">Página 6</a></li>
+  <li><a href="#página-7" id="toc-página-7" class="nav-link" data-scroll-target="#página-7">Página 7</a></li>
+  <li><a href="#página-8" id="toc-página-8" class="nav-link" data-scroll-target="#página-8">Página 8</a></li>
+  <li><a href="#página-9" id="toc-página-9" class="nav-link" data-scroll-target="#página-9">Página 9</a></li>
+  <li><a href="#página-10" id="toc-página-10" class="nav-link" data-scroll-target="#página-10">Página 10</a></li>
+  <li><a href="#página-11" id="toc-página-11" class="nav-link" data-scroll-target="#página-11">Página 11</a></li>
+  <li><a href="#página-12" id="toc-página-12" class="nav-link" data-scroll-target="#página-12">Página 12</a></li>
+  <li><a href="#página-13" id="toc-página-13" class="nav-link" data-scroll-target="#página-13">Página 13</a></li>
+  <li><a href="#página-14" id="toc-página-14" class="nav-link" data-scroll-target="#página-14">Página 14</a></li>
+  <li><a href="#página-15" id="toc-página-15" class="nav-link" data-scroll-target="#página-15">Página 15</a></li>
+  <li><a href="#página-16" id="toc-página-16" class="nav-link" data-scroll-target="#página-16">Página 16</a></li>
+  <li><a href="#página-17" id="toc-página-17" class="nav-link" data-scroll-target="#página-17">Página 17</a></li>
+  <li><a href="#página-18" id="toc-página-18" class="nav-link" data-scroll-target="#página-18">Página 18</a></li>
+  <li><a href="#página-19" id="toc-página-19" class="nav-link" data-scroll-target="#página-19">Página 19</a></li>
+  <li><a href="#página-20" id="toc-página-20" class="nav-link" data-scroll-target="#página-20">Página 20</a></li>
+  <li><a href="#página-21" id="toc-página-21" class="nav-link" data-scroll-target="#página-21">Página 21</a></li>
+  <li><a href="#página-22" id="toc-página-22" class="nav-link" data-scroll-target="#página-22">Página 22</a></li>
+  <li><a href="#página-23" id="toc-página-23" class="nav-link" data-scroll-target="#página-23">Página 23</a></li>
+  <li><a href="#página-24" id="toc-página-24" class="nav-link" data-scroll-target="#página-24">Página 24</a></li>
+  <li><a href="#página-25" id="toc-página-25" class="nav-link" data-scroll-target="#página-25">Página 25</a></li>
+  <li><a href="#página-26" id="toc-página-26" class="nav-link" data-scroll-target="#página-26">Página 26</a></li>
+  <li><a href="#página-27" id="toc-página-27" class="nav-link" data-scroll-target="#página-27">Página 27</a></li>
+  <li><a href="#página-28" id="toc-página-28" class="nav-link" data-scroll-target="#página-28">Página 28</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Aula 04 Variáveis e Tipos Primitivos</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Arquivo original: <code>Aula 04 Variáveis e Tipos Primitivos.pdf</code></p>
+<section id="página-1" class="level2">
+<h2 class="anchored" data-anchor-id="página-1">Página 1</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-001.png" class="img-fluid figure-img"></p>
+<figcaption>Página 1</figcaption>
+</figure>
+</div>
+<p>Orientação a Objetos</p>
+<p>Variáveis e Tipos Primitivos</p>
+<pre><code>                          Profa. Alana Neo
+                                         Março/2024</code></pre>
+</section>
+<section id="página-2" class="level2">
+<h2 class="anchored" data-anchor-id="página-2">Página 2</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-002.png" class="img-fluid figure-img"></p>
+<figcaption>Página 2</figcaption>
+</figure>
+</div>
+<p>Introdução</p>
+<p>➔Vamos fazer um programa que imprime uma linha simples.</p>
+<p>➔Para mostrar uma linha, podemos fazer:</p>
+<p>➔Você acha que esse código acima, será aceito pelo compilador java?</p>
+</section>
+<section id="página-3" class="level2">
+<h2 class="anchored" data-anchor-id="página-3">Página 3</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-003.png" class="img-fluid figure-img"></p>
+<figcaption>Página 3</figcaption>
+</figure>
+</div>
+<p>Introdução</p>
+<p>➔O código não será aceito pelo compilador java. ➔O Java é uma linguagem bastante burocrática, e precisa de mais do que isso para iniciar uma execução. ➔O mínimo que precisaríamos escrever é algo como:</p>
+</section>
+<section id="página-4" class="level2">
+<h2 class="anchored" data-anchor-id="página-4">Página 4</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-004.png" class="img-fluid figure-img"></p>
+<figcaption>Página 4</figcaption>
+</figure>
+</div>
+<p>Introdução</p>
+<p>➔O miolo do programa é o que será executado quando chamamos a máquina virtual.</p>
+<p>➔Por enquanto, todas as linhas anteriores, onde há a declaração de uma classe e a de um método, não importam para nós nesse momento.</p>
+</section>
+<section id="página-5" class="level2">
+<h2 class="anchored" data-anchor-id="página-5">Página 5</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-005.png" class="img-fluid figure-img"></p>
+<figcaption>Página 5</figcaption>
+</figure>
+</div>
+<p>Introdução</p>
+<p>➔Devemos saber que toda aplicação Java começa por um ponto de entrada, e este ponto de entrada é o método main. ➔Sempre que um exercício for feito, o código que nos importa sempre estará nesse miolo. ➔No caso do nosso código, a linha do System.out.println faz com que o conteúdo entre aspas seja colocado na tela.</p>
+</section>
+<section id="página-6" class="level2">
+<h2 class="anchored" data-anchor-id="página-6">Página 6</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-006.png" class="img-fluid figure-img"></p>
+<figcaption>Página 6</figcaption>
+</figure>
+</div>
+<p>O QUE PODE DAR ERRADO?</p>
+<p>➔Muitos erros podem ocorrer no momento que você rodar seu primeiro código. Vamos ver alguns deles:</p>
+<pre><code>  ➔Código:</code></pre>
+</section>
+<section id="página-7" class="level2">
+<h2 class="anchored" data-anchor-id="página-7">Página 7</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-007.png" class="img-fluid figure-img"></p>
+<figcaption>Página 7</figcaption>
+</figure>
+</div>
+<p>O QUE PODE DAR ERRADO?</p>
+<p>➔Muitos erros podem ocorrer no momento que você rodar seu primeiro código. Vamos ver alguns deles: ➔Erro:</p>
+<p>➔Esse é o erro de compilação mais comum: aquele onde um ponto e vírgula foi esquecido. ➔O compilador é explícito em dizer que a linha 4 está com problemas.</p>
+</section>
+<section id="página-8" class="level2">
+<h2 class="anchored" data-anchor-id="página-8">Página 8</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-008.png" class="img-fluid figure-img"></p>
+<figcaption>Página 8</figcaption>
+</figure>
+</div>
+<p>O QUE PODE DAR ERRADO?</p>
+<p>➔Outros erros de compilação podem ocorrer se você escreveu palavras chaves (as que colocamos em negrito) em maiúsculas, esqueceu de abrir e fechar as { } , etc.</p>
+<p>➔Durante a execução, outros erros podem aparecer:</p>
+<pre><code> ➔Se você declarar a classe como X, compilá-la e depois
+     tentar usá-la como x minúsculo (java x), o Java te
+     avisa:</code></pre>
+</section>
+<section id="página-9" class="level2">
+<h2 class="anchored" data-anchor-id="página-9">Página 9</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-009.png" class="img-fluid figure-img"></p>
+<figcaption>Página 9</figcaption>
+</figure>
+</div>
+<p>O QUE PODE DAR ERRADO?</p>
+<p>➔Se esquecer de colocar static ou o argumento String [ ] args no método main:</p>
+<p>➔Por exemplo:</p>
+</section>
+<section id="página-10" class="level2">
+<h2 class="anchored" data-anchor-id="página-10">Página 10</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-010.png" class="img-fluid figure-img"></p>
+<figcaption>Página 10</figcaption>
+</figure>
+</div>
+<p>O QUE PODE DAR ERRADO?</p>
+<p>➔Se não colocar o método main como public :</p>
+<p>➔Por exemplo:</p>
+</section>
+<section id="página-11" class="level2">
+<h2 class="anchored" data-anchor-id="página-11">Página 11</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-011.png" class="img-fluid figure-img"></p>
+<figcaption>Página 11</figcaption>
+</figure>
+</div>
+<p>COMENTÁRIOS EM JAVA</p>
+<p>➔Para fazer um comentário em java, você pode usar o // para comentar até o final da linha, ou então usar o /* */ para comentar o que estiver entre eles.</p>
+</section>
+<section id="página-12" class="level2">
+<h2 class="anchored" data-anchor-id="página-12">Página 12</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-012.png" class="img-fluid figure-img"></p>
+<figcaption>Página 12</figcaption>
+</figure>
+</div>
+<p>Declaração de Variáveis e Tipos Primitivos</p>
+<p>➔Dentro de um bloco, podemos declarar variáveis e usá-las.</p>
+<p>➔Em Java, toda variável tem um tipo que não pode ser mudado, uma vez que declarado:</p>
+<pre><code>            tipoDaVariavel nomeDaVariavel;</code></pre>
+<p>➔Por exemplo, é possível ter uma idade que guarda um número inteiro:</p>
+</section>
+<section id="página-13" class="level2">
+<h2 class="anchored" data-anchor-id="página-13">Página 13</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-013.png" class="img-fluid figure-img"></p>
+<figcaption>Página 13</figcaption>
+</figure>
+</div>
+<p>Declaração de Variáveis e Tipos Primitivos</p>
+<p>➔Com isso, você declara a variável idade, que passa a existir a partir desta linha.</p>
+<p>➔Ela é do tipo int, que guarda um número inteiro.</p>
+<p>➔A partir daí, você pode usá-la, primeiramente atribuindo valores.</p>
+<p>➔A linha a seguir é a tradução de: ” idade deve valer quinze”.</p>
+</section>
+<section id="página-14" class="level2">
+<h2 class="anchored" data-anchor-id="página-14">Página 14</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-014.png" class="img-fluid figure-img"></p>
+<figcaption>Página 14</figcaption>
+</figure>
+</div>
+<p>Declaração de Variáveis e Tipos Primitivos</p>
+<p>➔Além de atribuir, você pode utilizar esse valor. ➔O código a seguir declara novamente a variável idade com valor 15 e imprime seu valor na saída padrão através da chamada a System.out.println.</p>
+</section>
+<section id="página-15" class="level2">
+<h2 class="anchored" data-anchor-id="página-15">Página 15</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-015.png" class="img-fluid figure-img"></p>
+<figcaption>Página 15</figcaption>
+</figure>
+</div>
+<p>Declaração de Variáveis e Tipos Primitivos</p>
+<p>➔Por fim, podemos utilizar o valor de uma variável para algum outro propósito, como alterar ou definir uma segunda variável.</p>
+<p>➔O código a seguir cria uma variável chamada idadeNoAnoQueVem com valor de idade mais um.</p>
+</section>
+<section id="página-16" class="level2">
+<h2 class="anchored" data-anchor-id="página-16">Página 16</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-016.png" class="img-fluid figure-img"></p>
+<figcaption>Página 16</figcaption>
+</figure>
+</div>
+<p>Declaração de Variáveis e Tipos Primitivos</p>
+</section>
+<section id="página-17" class="level2">
+<h2 class="anchored" data-anchor-id="página-17">Página 17</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-017.png" class="img-fluid figure-img"></p>
+<figcaption>Página 17</figcaption>
+</figure>
+</div>
+<p>Declaração de Variáveis e Tipos Primitivos</p>
+<p>➔No mesmo momento que você declara uma variável, também é possível inicializá-la por praticidade:</p>
+</section>
+<section id="página-18" class="level2">
+<h2 class="anchored" data-anchor-id="página-18">Página 18</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-018.png" class="img-fluid figure-img"></p>
+<figcaption>Página 18</figcaption>
+</figure>
+</div>
+<p>Declaração de Variáveis e Tipos Primitivos</p>
+<p>➔Você pode usar os operadores +, -, / e * para operar com números.</p>
+<pre><code>                 + adição
+                                - subtração
+                                         / divisão
+                         * multiplicação</code></pre>
+<p>➔Além desses operadores básicos, há o operador % (módulo) que é o resto de uma divisão inteira.</p>
+</section>
+<section id="página-19" class="level2">
+<h2 class="anchored" data-anchor-id="página-19">Página 19</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-019.png" class="img-fluid figure-img"></p>
+<figcaption>Página 19</figcaption>
+</figure>
+</div>
+<p>Declaração de Variáveis e Tipos Primitivos</p>
+<p>➔Exemplos:</p>
+<p>➔Lembre-se que para rodar esses códigos, você deve colocar esses trechos de código dentro do bloco main, isto é, isso deve ficar no miolo do programa. ➔Para imprimir use o System.out.println, caso contrário, ao executar a aplicação, nada aparecerá.</p>
+</section>
+<section id="página-20" class="level2">
+<h2 class="anchored" data-anchor-id="página-20">Página 20</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-020.png" class="img-fluid figure-img"></p>
+<figcaption>Página 20</figcaption>
+</figure>
+</div>
+<p>Declaração de Variáveis e Tipos Primitivos</p>
+<p>➔Representar números inteiros é fácil, mas como guardar valores reais, tais como frações de números inteiros e outros?</p>
+<p>➔Outro tipo de variável muito utilizado é o double , que armazena um número com ponto flutuante (e que também pode armazenar um número inteiro).</p>
+</section>
+<section id="página-21" class="level2">
+<h2 class="anchored" data-anchor-id="página-21">Página 21</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-021.png" class="img-fluid figure-img"></p>
+<figcaption>Página 21</figcaption>
+</figure>
+</div>
+<p>Declaração de Variáveis e Tipos Primitivos</p>
+<p>➔O tipo boolean armazena um valor verdadeiro ou falso, e só: nada de números, palavras ou endereços, como em algumas outras linguagens.</p>
+<p>➔true e false são palavras reservadas do Java.</p>
+</section>
+<section id="página-22" class="level2">
+<h2 class="anchored" data-anchor-id="página-22">Página 22</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-022.png" class="img-fluid figure-img"></p>
+<figcaption>Página 22</figcaption>
+</figure>
+</div>
+<p>Declaração de Variáveis e Tipos Primitivos</p>
+<p>➔É comum que um boolean seja determinado através de uma expressão booleana, isto é, um trecho de código que retorna um booleano, como o exemplo:</p>
+</section>
+<section id="página-23" class="level2">
+<h2 class="anchored" data-anchor-id="página-23">Página 23</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-023.png" class="img-fluid figure-img"></p>
+<figcaption>Página 23</figcaption>
+</figure>
+</div>
+<p>Declaração de Variáveis e Tipos Primitivos</p>
+<p>➔O tipo char guarda um, apenas um caractere.</p>
+<p>➔Esse caractere deve estar entre aspas simples.</p>
+<p>➔Por exemplo, ela não pode guardar um código como ‘ ’ pois o vazio não é um caractere!</p>
+<p>➔Variáveis do tipo char são pouco usadas no dia a dia.</p>
+</section>
+<section id="página-24" class="level2">
+<h2 class="anchored" data-anchor-id="página-24">Página 24</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-024.png" class="img-fluid figure-img"></p>
+<figcaption>Página 24</figcaption>
+</figure>
+</div>
+<p>Declaração de Variáveis e Tipos Primitivos</p>
+<p>➔Esses tipos de variáveis são tipos primitivos do Java: o valor que elas guardam são o real conteúdo da variável. ➔Quando você utilizar o operador de atribuição = o valor será copiado.</p>
+<p>➔Aqui, i fica com o valor de 6. ➔Mas e j ? ➔Na segunda linha, j está valendo 5. ➔Quando i passa a valer 6, será que j também muda de valor?</p>
+</section>
+<section id="página-25" class="level2">
+<h2 class="anchored" data-anchor-id="página-25">Página 25</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-025.png" class="img-fluid figure-img"></p>
+<figcaption>Página 25</figcaption>
+</figure>
+</div>
+<p>Declaração de Variáveis e Tipos Primitivos</p>
+<p>➔Quando i passa a valer 6, será que j também muda de valor?</p>
+<p>➔Não, pois o valor de um tipo primitivo sempre é copiado.</p>
+<p>➔Apesar da linha 2 fazer j = i , a partir desse momento essas variáveis não tem relação nenhuma: o que acontece com uma, não reflete em nada com a outra.</p>
+</section>
+<section id="página-26" class="level2">
+<h2 class="anchored" data-anchor-id="página-26">Página 26</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-026.png" class="img-fluid figure-img"></p>
+<figcaption>Página 26</figcaption>
+</figure>
+</div>
+<p>Declaração de Variáveis e Tipos Primitivos</p>
+<p>➔Atividade 1 (lembre-se de adicionar comentários para explicar o seu programa):</p>
+<pre><code> ➔1) Faça um programa, para imprimir a sua idade atual
+   e a sua idade no próximo ano.
+
+ ➔2) Faça um programa utilizando os operadores +, -, /, *
+   e %. Utilize o System.out.println.</code></pre>
+</section>
+<section id="página-27" class="level2">
+<h2 class="anchored" data-anchor-id="página-27">Página 27</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-027.png" class="img-fluid figure-img"></p>
+<figcaption>Página 27</figcaption>
+</figure>
+</div>
+<p>Declaração de Variáveis e Tipos Primitivos</p>
+<pre><code>     ➔Atividade 2 Kahoot.it
+
+    PIN de jogo: 09406057</code></pre>
+</section>
+<section id="página-28" class="level2">
+<h2 class="anchored" data-anchor-id="página-28">Página 28</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-04-variaveis-e-tipos-primitivos_images/page-028.png" class="img-fluid figure-img"></p>
+<figcaption>Página 28</figcaption>
+</figure>
+</div>
+<p>Dúvidas</p>
+<pre><code>alana.neo@ifms.edu.br</code></pre>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+
+(() => {
+
+  function isTypingTarget(el) {
+
+    if (!el) return false;
+
+    const tag = (el.tagName || "").toLowerCase();
+
+    return el.isContentEditable || tag === "input" || tag === "textarea" || tag === "select";
+
+  }
+
+
+
+  function navigateTo(rel) {
+
+    const headLink = document.querySelector(`link[rel='${rel}']`);
+
+    if (headLink && headLink.href) {
+
+      window.location.href = headLink.href;
+
+      return true;
+
+    }
+
+
+
+    const navSelector =
+
+      rel === "prev"
+
+        ? ".nav-page-previous a[href], a.prev-page[href], a[rel='prev'][href]"
+
+        : ".nav-page-next a[href], a.next-page[href], a[rel='next'][href]";
+
+    const navLink = document.querySelector(navSelector);
+
+    if (navLink && navLink.href) {
+
+      window.location.href = navLink.href;
+
+      return true;
+
+    }
+
+
+
+    return false;
+
+  }
+
+
+
+  document.addEventListener("keydown", (event) => {
+
+    if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+
+    if (isTypingTarget(document.activeElement)) return;
+
+
+
+    if (event.key === "ArrowLeft") {
+
+      if (navigateTo("prev")) {
+
+        event.preventDefault();
+
+      }
+
+    }
+
+
+
+    if (event.key === "ArrowRight") {
+
+      if (navigateTo("next")) {
+
+        event.preventDefault();
+
+      }
+
+    }
+
+  });
+
+})();
+
+</script>
+
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiada");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiada");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/aula-03-fundamentos-java.html" class="pagination-link" aria-label="Aula 03 Fundamentos Java">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Aula 03 Fundamentos Java</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/aula-05-casting-e-promocao.html" class="pagination-link" aria-label="Aula 05 Casting e Promoção">
+        <span class="nav-page-text"><span class="chapter-title">Aula 05 Casting e Promoção</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

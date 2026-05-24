@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Curso Java - Slides Convertidos</title>
+<title>Aula 05 Casting e Promoção – Curso Java - Slides Convertidos</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,24 +26,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./chapters/aula-00-orientacao-a-objetos.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-832e3d7b6b94ddcc90a000f8fabe51a9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/aula-06-condicionais.html" rel="next">
+<link href="../chapters/aula-04-variaveis-e-tipos-primitivos.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-832e3d7b6b94ddcc90a000f8fabe51a9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -75,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating fullcontent quarto-light">
+<body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -84,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-title">Curso Java</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/aula-05-casting-e-promocao.html"><span class="chapter-title">Aula 05 Casting e Promoção</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -99,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Curso Java - Slides Convertidos</a> 
+      <a href="../">Curso Java - Slides Convertidos</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -111,87 +112,87 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Curso Java</span></a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Curso Java</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-00-orientacao-a-objetos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Orientação a Objetos</span></a>
+  <a href="../chapters/aula-00-orientacao-a-objetos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Orientação a Objetos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-01-introducao-a-programacao-orientada-a-objetos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introdução à Programação Orientada a Objetos</span></a>
+  <a href="../chapters/aula-01-introducao-a-programacao-orientada-a-objetos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introdução à Programação Orientada a Objetos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-02-primeiros-passos-no-ambiente-de-programacao.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 02 Primeiros passos no ambiente de programação</span></a>
+  <a href="../chapters/aula-02-primeiros-passos-no-ambiente-de-programacao.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 02 Primeiros passos no ambiente de programação</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-03-fundamentos-java.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 03 Fundamentos Java</span></a>
+  <a href="../chapters/aula-03-fundamentos-java.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 03 Fundamentos Java</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-04-variaveis-e-tipos-primitivos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 04 Variáveis e Tipos Primitivos</span></a>
+  <a href="../chapters/aula-04-variaveis-e-tipos-primitivos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 04 Variáveis e Tipos Primitivos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-05-casting-e-promocao.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 05 Casting e Promoção</span></a>
+  <a href="../chapters/aula-05-casting-e-promocao.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Aula 05 Casting e Promoção</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-06-condicionais.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 06 Condicionais</span></a>
+  <a href="../chapters/aula-06-condicionais.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 06 Condicionais</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-07-loops.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 07 Loops</span></a>
+  <a href="../chapters/aula-07-loops.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 07 Loops</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-08-conceitos-de-orientacao-a-objetos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 08 Conceitos de Orientação a Objetos</span></a>
+  <a href="../chapters/aula-08-conceitos-de-orientacao-a-objetos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 08 Conceitos de Orientação a Objetos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-09-modificadores-de-classe-encapsulamento-e-atributos-de-classe.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 09 Modificadores de Classe, Encapsulamento e Atributos de Classe</span></a>
+  <a href="../chapters/aula-09-modificadores-de-classe-encapsulamento-e-atributos-de-classe.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 09 Modificadores de Classe, Encapsulamento e Atributos de Classe</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-heranca.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula Herança</span></a>
+  <a href="../chapters/aula-heranca.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula Herança</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula10-polimorfismo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula10 Polimorfismo</span></a>
+  <a href="../chapters/aula10-polimorfismo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula10 Polimorfismo</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula12-strings.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula12 Strings</span></a>
+  <a href="../chapters/aula12-strings.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula12 Strings</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula13-arrays-atividade.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">aula13_Arrays atividade</span></a>
+  <a href="../chapters/aula13-arrays-atividade.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">aula13_Arrays atividade</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula13-arrays.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula13 Arrays</span></a>
+  <a href="../chapters/aula13-arrays.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula13 Arrays</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula14-collections.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula14 Collections</span></a>
+  <a href="../chapters/aula14-collections.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula14 Collections</span></a>
   </div>
 </li>
     </ul>
@@ -199,13 +200,33 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#página-1" id="toc-página-1" class="nav-link active" data-scroll-target="#página-1">Página 1</a></li>
+  <li><a href="#página-2" id="toc-página-2" class="nav-link" data-scroll-target="#página-2">Página 2</a></li>
+  <li><a href="#página-3" id="toc-página-3" class="nav-link" data-scroll-target="#página-3">Página 3</a></li>
+  <li><a href="#página-4" id="toc-página-4" class="nav-link" data-scroll-target="#página-4">Página 4</a></li>
+  <li><a href="#página-5" id="toc-página-5" class="nav-link" data-scroll-target="#página-5">Página 5</a></li>
+  <li><a href="#página-6" id="toc-página-6" class="nav-link" data-scroll-target="#página-6">Página 6</a></li>
+  <li><a href="#página-7" id="toc-página-7" class="nav-link" data-scroll-target="#página-7">Página 7</a></li>
+  <li><a href="#página-8" id="toc-página-8" class="nav-link" data-scroll-target="#página-8">Página 8</a></li>
+  <li><a href="#página-9" id="toc-página-9" class="nav-link" data-scroll-target="#página-9">Página 9</a></li>
+  <li><a href="#página-10" id="toc-página-10" class="nav-link" data-scroll-target="#página-10">Página 10</a></li>
+  <li><a href="#página-11" id="toc-página-11" class="nav-link" data-scroll-target="#página-11">Página 11</a></li>
+  <li><a href="#página-12" id="toc-página-12" class="nav-link" data-scroll-target="#página-12">Página 12</a></li>
+  <li><a href="#página-13" id="toc-página-13" class="nav-link" data-scroll-target="#página-13">Página 13</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Curso Java - Slides Convertidos</h1>
+<h1 class="title"><span class="chapter-title">Aula 05 Casting e Promoção</span></h1>
 </div>
 
 
@@ -222,9 +243,173 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Bem vindo.</p>
+<p>Arquivo original: <code>Aula 05 Casting e Promoção.pdf</code></p>
+<section id="página-1" class="level2">
+<h2 class="anchored" data-anchor-id="página-1">Página 1</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-05-casting-e-promocao_images/page-001.png" class="img-fluid figure-img"></p>
+<figcaption>Página 1</figcaption>
+</figure>
+</div>
+<p>Orientação a Objetos</p>
+<pre><code>Variáveis Primitivas</code></pre>
+<p>(Casting e Promoção)</p>
+</section>
+<section id="página-2" class="level2">
+<h2 class="anchored" data-anchor-id="página-2">Página 2</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-05-casting-e-promocao_images/page-002.png" class="img-fluid figure-img"></p>
+<figcaption>Página 2</figcaption>
+</figure>
+</div>
+<p>Casting e Promoção</p>
+<p>➔Casting é a mudança de um tipo de variável para outro de forma explícita através do operador de casting (o nome do tipo da variável entre parênteses).</p>
+<p>➔Pode haver uma mudança de representação do valor ou não, e nesta conversão pode haver perda de dados.</p>
+<p>➔Um erro em tempo de execução ocorrerá se não for possível realizar a conversão ou o compilador pode detectar antes a impossibilidade da operação.</p>
+</section>
+<section id="página-3" class="level2">
+<h2 class="anchored" data-anchor-id="página-3">Página 3</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-05-casting-e-promocao_images/page-003.png" class="img-fluid figure-img"></p>
+<figcaption>Página 3</figcaption>
+</figure>
+</div>
+<p>Casting e Promoção</p>
+<p>➔Promoção é a elevação dos tipos numéricos existentes na linguagem para um tipo que pode representar uma maior grandeza.</p>
+<p>➔Indicam que uma variável primitiva de menor capacidade numérica pode ser usado em um lugar onde será necessário um tipo com maior capacidade.</p>
+<p>➔A promoção nunca provoca perda de dados, ela é feita implicitamente pelo compilador.</p>
+</section>
+<section id="página-4" class="level2">
+<h2 class="anchored" data-anchor-id="página-4">Página 4</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-05-casting-e-promocao_images/page-004.png" class="img-fluid figure-img"></p>
+<figcaption>Página 4</figcaption>
+</figure>
+</div>
+<p>Casting e Promoção</p>
+<p>➔Alguns valores são incompatíveis se você tentar fazer uma atribuição direta. ➔Enquanto um número real costuma ser representado em uma variável do tipo double, tentar atribuir ele a uma variável int não funciona porque é um código que diz: “i deve valer d”, mas não se sabe se d realmente é um número inteiro ou não.</p>
+<p>➔O mesmo ocorre no seguinte trecho:</p>
+</section>
+<section id="página-5" class="level2">
+<h2 class="anchored" data-anchor-id="página-5">Página 5</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-05-casting-e-promocao_images/page-005.png" class="img-fluid figure-img"></p>
+<figcaption>Página 5</figcaption>
+</figure>
+</div>
+<p>Casting e Promoção</p>
+<p>➔Nem mesmo o seguinte código compila:</p>
+<p>➔Apesar de 5 ser um bom valor para um int, o compilador não tem como saber que valor estará dentro desse double no momento da execução.</p>
+<p>➔Esse valor pode ter sido digitado pelo usuário, e ninguém vai garantir que essa conversão ocorra sem perda de valores.</p>
+</section>
+<section id="página-6" class="level2">
+<h2 class="anchored" data-anchor-id="página-6">Página 6</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-05-casting-e-promocao_images/page-006.png" class="img-fluid figure-img"></p>
+<figcaption>Página 6</figcaption>
+</figure>
+</div>
+<p>Casting e Promoção</p>
+<p>➔Já no caso a seguir, é o contrário:</p>
+<p>➔O código acima compila sem problemas, já que um double pode guardar um número com ou sem ponto flutuante.</p>
+<p>➔Todos os inteiros representados por uma variável do tipo int podem ser guardados em uma variável double, então não existem problemas no código acima.</p>
+</section>
+<section id="página-7" class="level2">
+<h2 class="anchored" data-anchor-id="página-7">Página 7</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-05-casting-e-promocao_images/page-007.png" class="img-fluid figure-img"></p>
+<figcaption>Página 7</figcaption>
+</figure>
+</div>
+<p>Casting e Promoção</p>
+<p>➔Às vezes, precisamos que um número quebrado seja arredondado e armazenado num número inteiro.</p>
+<p>➔Para fazer isso sem que haja o erro de compilação, é preciso ordenar que o número quebrado seja moldado (casted) como um número inteiro, esse processo recebe o nome de casting.</p>
+<p>➔O casting foi feito para moldar a variável d3 como um int .</p>
+<p>➔O valor de i agora é 3.</p>
+</section>
+<section id="página-8" class="level2">
+<h2 class="anchored" data-anchor-id="página-8">Página 8</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-05-casting-e-promocao_images/page-008.png" class="img-fluid figure-img"></p>
+<figcaption>Página 8</figcaption>
+</figure>
+</div>
+<p>Casting e Promoção</p>
+<p>➔O mesmo ocorre entre valores int e long.</p>
+<p>➔E, se quisermos realmente fazer isso, fazemos o casting:</p>
+</section>
+<section id="página-9" class="level2">
+<h2 class="anchored" data-anchor-id="página-9">Página 9</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-05-casting-e-promocao_images/page-009.png" class="img-fluid figure-img"></p>
+<figcaption>Página 9</figcaption>
+</figure>
+</div>
+<p>Casos não tão comuns de Casting e Atribuição</p>
+<p>➔Alguns castings aparecem também:</p>
+<p>➔O código acima não compila pois todos os literais com ponto flutuante são considerados double pelo Java.</p>
+<p>➔E float não pode receber um double sem perda de informação, para fazer isso funcionar podemos escrever o seguinte:</p>
+<p>➔A letra f, que pode ser maiúscula ou minúscula, indica que aquele literal deve ser tratado como float.</p>
+</section>
+<section id="página-10" class="level2">
+<h2 class="anchored" data-anchor-id="página-10">Página 10</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-05-casting-e-promocao_images/page-010.png" class="img-fluid figure-img"></p>
+<figcaption>Página 10</figcaption>
+</figure>
+</div>
+<p>Casos não tão comuns de Casting e Atribuição</p>
+<p>➔Outro caso, que é mais comum:</p>
+<p>➔Você precisa do casting porque o Java faz as contas e vai armazenando sempre no maior tipo que apareceu durante as operações, no caso o double.</p>
+<p>➔Observação: no mínimo, o Java armazena o resultado em um int, na hora de fazer as contas.</p>
+<p>➔O único tipo primitivo que não pode ser atribuído a nenhum outro tipo é o boolean.</p>
+</section>
+<section id="página-11" class="level2">
+<h2 class="anchored" data-anchor-id="página-11">Página 11</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-05-casting-e-promocao_images/page-011.png" class="img-fluid figure-img"></p>
+<figcaption>Página 11</figcaption>
+</figure>
+</div>
+<p>Castings possíveis</p>
+<p>➔Abaixo estão relacionados todos os casts possíveis na linguagem Java, mostrando a conversão de um valor para outro. A indicação Impl. quer dizer que aquele cast é implícito e automático, ou seja, você não precisa indicar o cast explicitamente.</p>
+</section>
+<section id="página-12" class="level2">
+<h2 class="anchored" data-anchor-id="página-12">Página 12</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-05-casting-e-promocao_images/page-012.png" class="img-fluid figure-img"></p>
+<figcaption>Página 12</figcaption>
+</figure>
+</div>
+<p>Tamanho dos tipos</p>
+<p>➔Na tabela abaixo, estão os tamanhos de cada tipo primitivo do Java.</p>
+<p>*1 bit representa 2 valores (0 ou 1). **1 byte = possui 8 bits, consegue representar até 256 valores, 28 = 256.</p>
+</section>
+<section id="página-13" class="level2">
+<h2 class="anchored" data-anchor-id="página-13">Página 13</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula-05-casting-e-promocao_images/page-013.png" class="img-fluid figure-img"></p>
+<figcaption>Página 13</figcaption>
+</figure>
+</div>
+<p>Dúvidas</p>
+<p>alana.neo@ifms.edu.br</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script>
@@ -721,10 +906,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../chapters/aula-04-variaveis-e-tipos-primitivos.html" class="pagination-link" aria-label="Aula 04 Variáveis e Tipos Primitivos">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Aula 04 Variáveis e Tipos Primitivos</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./chapters/aula-00-orientacao-a-objetos.html" class="pagination-link" aria-label="Orientação a Objetos">
-        <span class="nav-page-text"><span class="chapter-title">Orientação a Objetos</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/aula-06-condicionais.html" class="pagination-link" aria-label="Aula 06 Condicionais">
+        <span class="nav-page-text"><span class="chapter-title">Aula 06 Condicionais</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

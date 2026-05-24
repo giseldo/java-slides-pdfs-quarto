@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Curso Java - Slides Convertidos</title>
+<title>aula13_Arrays atividade – Curso Java - Slides Convertidos</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,24 +26,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./chapters/aula-00-orientacao-a-objetos.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-832e3d7b6b94ddcc90a000f8fabe51a9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/aula13-arrays.html" rel="next">
+<link href="../chapters/aula12-strings.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-832e3d7b6b94ddcc90a000f8fabe51a9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -75,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating fullcontent quarto-light">
+<body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -84,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-title">Curso Java</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/aula13-arrays-atividade.html"><span class="chapter-title">aula13_Arrays atividade</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -99,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Curso Java - Slides Convertidos</a> 
+      <a href="../">Curso Java - Slides Convertidos</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -111,87 +112,87 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Curso Java</span></a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Curso Java</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-00-orientacao-a-objetos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Orientação a Objetos</span></a>
+  <a href="../chapters/aula-00-orientacao-a-objetos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Orientação a Objetos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-01-introducao-a-programacao-orientada-a-objetos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introdução à Programação Orientada a Objetos</span></a>
+  <a href="../chapters/aula-01-introducao-a-programacao-orientada-a-objetos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introdução à Programação Orientada a Objetos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-02-primeiros-passos-no-ambiente-de-programacao.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 02 Primeiros passos no ambiente de programação</span></a>
+  <a href="../chapters/aula-02-primeiros-passos-no-ambiente-de-programacao.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 02 Primeiros passos no ambiente de programação</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-03-fundamentos-java.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 03 Fundamentos Java</span></a>
+  <a href="../chapters/aula-03-fundamentos-java.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 03 Fundamentos Java</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-04-variaveis-e-tipos-primitivos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 04 Variáveis e Tipos Primitivos</span></a>
+  <a href="../chapters/aula-04-variaveis-e-tipos-primitivos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 04 Variáveis e Tipos Primitivos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-05-casting-e-promocao.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 05 Casting e Promoção</span></a>
+  <a href="../chapters/aula-05-casting-e-promocao.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 05 Casting e Promoção</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-06-condicionais.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 06 Condicionais</span></a>
+  <a href="../chapters/aula-06-condicionais.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 06 Condicionais</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-07-loops.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 07 Loops</span></a>
+  <a href="../chapters/aula-07-loops.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 07 Loops</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-08-conceitos-de-orientacao-a-objetos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 08 Conceitos de Orientação a Objetos</span></a>
+  <a href="../chapters/aula-08-conceitos-de-orientacao-a-objetos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 08 Conceitos de Orientação a Objetos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-09-modificadores-de-classe-encapsulamento-e-atributos-de-classe.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 09 Modificadores de Classe, Encapsulamento e Atributos de Classe</span></a>
+  <a href="../chapters/aula-09-modificadores-de-classe-encapsulamento-e-atributos-de-classe.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula 09 Modificadores de Classe, Encapsulamento e Atributos de Classe</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula-heranca.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula Herança</span></a>
+  <a href="../chapters/aula-heranca.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula Herança</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula10-polimorfismo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula10 Polimorfismo</span></a>
+  <a href="../chapters/aula10-polimorfismo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula10 Polimorfismo</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula12-strings.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula12 Strings</span></a>
+  <a href="../chapters/aula12-strings.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula12 Strings</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula13-arrays-atividade.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">aula13_Arrays atividade</span></a>
+  <a href="../chapters/aula13-arrays-atividade.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">aula13_Arrays atividade</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula13-arrays.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula13 Arrays</span></a>
+  <a href="../chapters/aula13-arrays.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula13 Arrays</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/aula14-collections.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula14 Collections</span></a>
+  <a href="../chapters/aula14-collections.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aula14 Collections</span></a>
   </div>
 </li>
     </ul>
@@ -199,13 +200,33 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#página-1" id="toc-página-1" class="nav-link active" data-scroll-target="#página-1">Página 1</a></li>
+  <li><a href="#página-2" id="toc-página-2" class="nav-link" data-scroll-target="#página-2">Página 2</a></li>
+  <li><a href="#página-3" id="toc-página-3" class="nav-link" data-scroll-target="#página-3">Página 3</a></li>
+  <li><a href="#página-4" id="toc-página-4" class="nav-link" data-scroll-target="#página-4">Página 4</a></li>
+  <li><a href="#página-5" id="toc-página-5" class="nav-link" data-scroll-target="#página-5">Página 5</a></li>
+  <li><a href="#página-6" id="toc-página-6" class="nav-link" data-scroll-target="#página-6">Página 6</a></li>
+  <li><a href="#página-7" id="toc-página-7" class="nav-link" data-scroll-target="#página-7">Página 7</a></li>
+  <li><a href="#página-8" id="toc-página-8" class="nav-link" data-scroll-target="#página-8">Página 8</a></li>
+  <li><a href="#página-9" id="toc-página-9" class="nav-link" data-scroll-target="#página-9">Página 9</a></li>
+  <li><a href="#página-10" id="toc-página-10" class="nav-link" data-scroll-target="#página-10">Página 10</a></li>
+  <li><a href="#página-11" id="toc-página-11" class="nav-link" data-scroll-target="#página-11">Página 11</a></li>
+  <li><a href="#página-12" id="toc-página-12" class="nav-link" data-scroll-target="#página-12">Página 12</a></li>
+  <li><a href="#página-13" id="toc-página-13" class="nav-link" data-scroll-target="#página-13">Página 13</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Curso Java - Slides Convertidos</h1>
+<h1 class="title"><span class="chapter-title">aula13_Arrays atividade</span></h1>
 </div>
 
 
@@ -222,9 +243,182 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Bem vindo.</p>
+<p>Arquivo original: <code>aula13_Arrays atividade.pdf</code></p>
+<section id="página-1" class="level2">
+<h2 class="anchored" data-anchor-id="página-1">Página 1</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula13-arrays-atividade_images/page-001.png" class="img-fluid figure-img"></p>
+<figcaption>Página 1</figcaption>
+</figure>
+</div>
+<p>Conteúdo 13: Arrays</p>
+<pre><code>      Professor: Me. Alana Neo
+
+   Slides baseados no material do Prof. Me. Douglas Thames
+                     de Araujo
+
+                                                                                                1</code></pre>
+</section>
+<section id="página-2" class="level2">
+<h2 class="anchored" data-anchor-id="página-2">Página 2</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula13-arrays-atividade_images/page-002.png" class="img-fluid figure-img"></p>
+<figcaption>Página 2</figcaption>
+</figure>
+</div>
+<p>Arrays</p>
+<p>Em uma classe Java podemos declarar diversas variáveis. • Porém as vezes não se sabe ao certo a quantidade de variáveis necessárias. • Por exemplo ao solicitar vários salários para se fazer uma média, não se sabe quantos serão digitados. • Para este tipo de situação, utilizamos os Arrays, também conhecidos como Vetores.</p>
+<pre><code>                                                                                                       2</code></pre>
+</section>
+<section id="página-3" class="level2">
+<h2 class="anchored" data-anchor-id="página-3">Página 3</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula13-arrays-atividade_images/page-003.png" class="img-fluid figure-img"></p>
+<figcaption>Página 3</figcaption>
+</figure>
+</div>
+<p>Arrays</p>
+<p>A sintaxe para a criação e impressão de um Array de double com 10 posições é a seguinte:</p>
+<pre><code>                                                                                                       3</code></pre>
+</section>
+<section id="página-4" class="level2">
+<h2 class="anchored" data-anchor-id="página-4">Página 4</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula13-arrays-atividade_images/page-004.png" class="img-fluid figure-img"></p>
+<figcaption>Página 4</figcaption>
+</figure>
+</div>
+<p>Exceção em Arrays</p>
+<p>• É muito comum acessar uma posição do Array além do seu limite. • Lembrando que a contagem de um Array de 10 posições vai de 0 a 9, as vezes em um laço de repetição, tentamos acessar a posição 10 por descuido, lançando um ArrayIndexOutOfBoundsException. • Pode ser tratado com um try-catch ou sempre verificando o tamanho do Array.</p>
+<pre><code>                                                                                                       4</code></pre>
+</section>
+<section id="página-5" class="level2">
+<h2 class="anchored" data-anchor-id="página-5">Página 5</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula13-arrays-atividade_images/page-005.png" class="img-fluid figure-img"></p>
+<figcaption>Página 5</figcaption>
+</figure>
+</div>
+<p>Arrays</p>
+<p>Um Array pode armazenar tipos primitivos e também as Classes que nós criamos:</p>
+<pre><code>                                                                                                       5</code></pre>
+</section>
+<section id="página-6" class="level2">
+<h2 class="anchored" data-anchor-id="página-6">Página 6</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula13-arrays-atividade_images/page-006.png" class="img-fluid figure-img"></p>
+<figcaption>Página 6</figcaption>
+</figure>
+</div>
+<p>Arrays</p>
+<p>Criando dois objetos do tipo Pessoa, inicializando seus valores, colocando no Array e depois imprimindo em um laço:</p>
+<pre><code>                                                                                                       6</code></pre>
+</section>
+<section id="página-7" class="level2">
+<h2 class="anchored" data-anchor-id="página-7">Página 7</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula13-arrays-atividade_images/page-007.png" class="img-fluid figure-img"></p>
+<figcaption>Página 7</figcaption>
+</figure>
+</div>
+<p>Arrays</p>
+<p>⚫Formas de percorrer um Array:</p>
+<pre><code>                                                                                                       7</code></pre>
+</section>
+<section id="página-8" class="level2">
+<h2 class="anchored" data-anchor-id="página-8">Página 8</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula13-arrays-atividade_images/page-008.png" class="img-fluid figure-img"></p>
+<figcaption>Página 8</figcaption>
+</figure>
+</div>
+<p>Arrays</p>
+<p>⚫Criando um Array inicializado:</p>
+<pre><code>                                                                                                       8</code></pre>
+</section>
+<section id="página-9" class="level2">
+<h2 class="anchored" data-anchor-id="página-9">Página 9</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula13-arrays-atividade_images/page-009.png" class="img-fluid figure-img"></p>
+<figcaption>Página 9</figcaption>
+</figure>
+</div>
+<p>Arrays</p>
+<p>• Observações importantes: ⚫O tamanho de um Array não pode ser alterado ⚫Para percorrer um Array com um FOR, é preciso saber o seu tamanho (.lenght) ⚫Para percorrer um Array usando FOR EACH, do Java 5, não precisamos saber seu tamanho. ⚫Para criar um Array com um tamanho digitado em tempo de execução, salve o valor em uma variável:</p>
+<pre><code>                                                                                                       9</code></pre>
+</section>
+<section id="página-10" class="level2">
+<h2 class="anchored" data-anchor-id="página-10">Página 10</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula13-arrays-atividade_images/page-010.png" class="img-fluid figure-img"></p>
+<figcaption>Página 10</figcaption>
+</figure>
+</div>
+<p>Vamos praticar?</p>
+<ol type="1">
+<li><p>Implemente o programa CatalogoLivros, que gerencia até 10 livros. Cada livro possui as funcionalidades: • Cadastrar novo livro (até encher o array). • Listar todos os livros cadastrados. • Buscar livro por título (exibir posição ou “não encontrado”). • Mostrar estatísticas: total de livros e média de ano de publicação. • Sair do programa. Atributo Tipo Descrição • E os seguintes atributos: titulo String Título do livro (texto livre)</p>
+<pre><code>                        autor        String  Nome do autor
+
+                    ano          int     Ano de publicação
+
+                                                                                                    10</code></pre></li>
+</ol>
+</section>
+<section id="página-11" class="level2">
+<h2 class="anchored" data-anchor-id="página-11">Página 11</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula13-arrays-atividade_images/page-011.png" class="img-fluid figure-img"></p>
+<figcaption>Página 11</figcaption>
+</figure>
+</div>
+<p>Vamos praticar? DICAS:</p>
+<p>Na Classe Livro, crie atributos privados, um construtor completo, métodos getters e toString().</p>
+<p>No main, crie Livro[] catalogo = new Livro[10]; e um índice posLivre = 0;. Monte um loop while(true) com switch para o menu.</p>
+<p>No cadastro, se posLivre &lt; catalogo.length, leia dados via Scanner, instancie um Livro e armazene em catalogo[posLivre], depois incremente posLivre. Caso contrário, mostre “Catálogo cheio”.</p>
+<p>Para a listagem, percorra o array com um for (int i = 0; i &lt; catalogo.length; i++) e exiba somente posições não‐nulas.</p>
+<p>Para buscar, leia o título, percorra com for indexado comparando equalsIgnoreCase. Se achar, mostre posição; se não, informe que não encontrou.</p>
+<p>Para as estatísticas, conte quantos elementos não são null usando for indexado. Some os anos para calcular a média (double). Se total for 0, avise que não há livros. Para encerrar o programa, ao escolher Sair, exiba mensagem “Programa encerrado — X livros cadastrados”. 11</p>
+</section>
+<section id="página-12" class="level2">
+<h2 class="anchored" data-anchor-id="página-12">Página 12</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula13-arrays-atividade_images/page-012.png" class="img-fluid figure-img"></p>
+<figcaption>Página 12</figcaption>
+</figure>
+</div>
+<p>Vamos praticar?</p>
+<p>• A atividade poderá ser realizada em dupla.</p>
+<p>• Esta atividade vale 2 pontos.</p>
+<p>• Enviar o código compactado em um único arquivo.</p>
+<pre><code>                                                                                                     12</code></pre>
+</section>
+<section id="página-13" class="level2">
+<h2 class="anchored" data-anchor-id="página-13">Página 13</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aula13-arrays-atividade_images/page-013.png" class="img-fluid figure-img"></p>
+<figcaption>Página 13</figcaption>
+</figure>
+</div>
+<p>Dúvidas e Questionamentos</p>
+<pre><code>            alana.neo @ifms.edu.br
+
+                                                                       13</code></pre>
 
 
+</section>
 
 </main> <!-- /main -->
 <script>
@@ -721,10 +915,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../chapters/aula12-strings.html" class="pagination-link" aria-label="Aula12 Strings">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Aula12 Strings</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./chapters/aula-00-orientacao-a-objetos.html" class="pagination-link" aria-label="Orientação a Objetos">
-        <span class="nav-page-text"><span class="chapter-title">Orientação a Objetos</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/aula13-arrays.html" class="pagination-link" aria-label="Aula13 Arrays">
+        <span class="nav-page-text"><span class="chapter-title">Aula13 Arrays</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
