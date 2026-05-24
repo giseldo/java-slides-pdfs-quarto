@@ -21,10 +21,10 @@ Variáveis Primitivas e Controle de
 
 O WHILE
 
-➔O while é um comando usado para fazer um laço (loop),
+- O while é um comando usado para fazer um laço (loop),
   isto é, repetir um trecho de código algumas vezes.
 
-➔A  ideia é que esse trecho de código seja repetido
+- A  ideia é que esse trecho de código seja repetido
  enquanto  uma  determinada  condição  permanecer
  verdadeira.
 
@@ -34,10 +34,10 @@ O WHILE
 
 O WHILE
 
-➔O trecho dentro do bloco do while será executado até o
+- O trecho dentro do bloco do while será executado até o
  momento em que a condição idade < 18 passe a ser falsa.
 
-➔Isso ocorrerá exatamente no momento em que idade == 18,
+- Isso ocorrerá exatamente no momento em que idade == 18,
  o que não o fará imprimir 18.
 
 ## Página 4
@@ -46,9 +46,9 @@ O WHILE
 
 O WHILE
 
-➔Exemplo:
+- Exemplo:
 
-       ➔O que você acha que irá imprimir?
+       - O que você acha que irá imprimir?
 
 ## Página 5
 
@@ -56,11 +56,11 @@ O WHILE
 
 O WHILE
 
-➔Exemplo:
+- Exemplo:
 
-       ➔O que você acha que irá imprimir?
+       - O que você acha que irá imprimir?
 
-        ➔O while acima imprime de 0 a 9.
+        - O while acima imprime de 0 a 9.
 
 ## Página 6
 
@@ -68,14 +68,14 @@ O WHILE
 
 O FOR
 
-➔Outro comando de loop extremamente utilizado é o for.
-➔A ideia é a mesma do while: fazer um trecho de código
+- Outro comando de loop extremamente utilizado é o for.
+- A ideia é a mesma do while: fazer um trecho de código
  ser  repetido  enquanto  uma  condição  continuar
  verdadeira.
-➔Mas além disso, o for isola também um espaço para
+- Mas além disso, o for isola também um espaço para
   inicialização  de  variáveis  e o  modificador  dessas
  variáveis.
-➔Isso faz com que fiquem mais legíveis, as variáveis que são
+- Isso faz com que fiquem mais legíveis, as variáveis que são
  relacionadas ao loop:
 
 ## Página 7
@@ -84,7 +84,7 @@ O FOR
 
 O FOR
 
-➔Exemplo:
+- Exemplo:
 
 ## Página 8
 
@@ -92,12 +92,12 @@ O FOR
 
 O FOR
 
-➔Esse for poderia ser trocado por:
+- Esse for poderia ser trocado por:
 
-➔Porém, o código do for indica claramente que a variável  i
+- Porém, o código do for indica claramente que a variável  i
  serve, em especial, para controlar a quantidade de laços
  executados.
-➔Quando usar o for? Quando usar o while? Depende do
+- Quando usar o for? Quando usar o while? Depende do
  gosto e da ocasião.
 
 ## Página 9
@@ -106,13 +106,13 @@ O FOR
 
 PRÉ e PÓS INCREMENTO ++
 
-➔i =  i + 1 pode realmente ser substituído por i++ quando
+- i =  i + 1 pode realmente ser substituído por i++ quando
   isolado, porém, em alguns casos, temos essa instrução
  envolvida em, por exemplo, uma atribuição:
 
-                ➔Qual é o valor de x ?
+                - Qual é o valor de x ?
 
-                ➔Qual é o valor de i ?
+                - Qual é o valor de i ?
 
 ## Página 10
 
@@ -120,13 +120,13 @@ PRÉ e PÓS INCREMENTO ++
 
 PRÉ e PÓS INCREMENTO ++
 
-➔O de i , após essa linha, é 6.
+- O de i , após essa linha, é 6.
 
-➔O operador ++  , quando vem após a variável, retorna o
+- O operador ++  , quando vem após a variável, retorna o
   valor antigo, e incrementa (pós incremento), fazendo x valer
   5.
 
-➔Usando o ++ antes da variável (pré incremento), o resultado
+- Usando o ++ antes da variável (pré incremento), o resultado
  é 6:
 
 ## Página 11
@@ -135,12 +135,12 @@ PRÉ e PÓS INCREMENTO ++
 
 CONTROLANDO LOOPS
 
-➔Apesar de termos condições booleanas nos nossos laços,
+- Apesar de termos condições booleanas nos nossos laços,
  em algum momento, podemos decidir parar o loop por
  algum motivo  especial sem que o  resto do  laço  seja
  executado.
 
-➔O código acima vai percorrer os números de x a y e parar
+- O código acima vai percorrer os números de x a y e parar
  quando encontrar um número divisível por 19, uma vez que
   foi utilizada a palavra chave break .
 
@@ -150,12 +150,12 @@ CONTROLANDO LOOPS
 
 CONTROLANDO LOOPS
 
-➔Da mesma maneira, é possível obrigar o loop a executar o
+- Da mesma maneira, é possível obrigar o loop a executar o
  próximo laço.
 
-➔Para isso usamos a palavra chave continue.
+- Para isso usamos a palavra chave continue.
 
-➔O código acima não vai imprimir alguns números. (Quais
+- O código acima não vai imprimir alguns números. (Quais
  exatamente?)
 
 ## Página 13
@@ -164,11 +164,11 @@ CONTROLANDO LOOPS
 
 ESCOPO DAS VARIÁVEIS
 
-➔No Java, podemos declarar variáveis a qualquer momento.
+- No Java, podemos declarar variáveis a qualquer momento.
  Porém, dependendo de onde você as declarou, ela vai valer
  de um determinado ponto a outro.
 
-➔O escopo da variável é o nome dado ao trecho de código
+- O escopo da variável é o nome dado ao trecho de código
  em que aquela variável existe e onde é possível acessá-la.
 
 ## Página 14
@@ -177,11 +177,11 @@ ESCOPO DAS VARIÁVEIS
 
 ESCOPO DAS VARIÁVEIS
 
-➔Quando  abrimos um novo  bloco com  as  chaves,  as
+- Quando  abrimos um novo  bloco com  as  chaves,  as
   variáveis declaradas ali dentro só valem até o fim daquele
   bloco.
 
-➔No bloco acima, a variável j para de existir quando termina
+- No bloco acima, a variável j para de existir quando termina
  o bloco onde ela foi declarada.
 
 ## Página 15
@@ -190,7 +190,7 @@ ESCOPO DAS VARIÁVEIS
 
 ESCOPO DAS VARIÁVEIS
 
-➔Se você tentar acessar uma variável fora de seu escopo,
+- Se você tentar acessar uma variável fora de seu escopo,
  ocorrerá um erro de compilação.
 
 ## Página 16
@@ -199,11 +199,11 @@ ESCOPO DAS VARIÁVEIS
 
 ESCOPO DAS VARIÁVEIS
 
-➔O mesmo vale para um if:
+- O mesmo vale para um if:
 
-➔Aqui a variável i não existe fora do if e do else !
+- Aqui a variável i não existe fora do if e do else !
 
-➔Se você declarar a variável antes do if , vai haver outro erro
+- Se você declarar a variável antes do if , vai haver outro erro
  de compilação: dentro do if e do else a variável está sendo
  redeclarada!
 
@@ -213,7 +213,7 @@ ESCOPO DAS VARIÁVEIS
 
 ESCOPO DAS VARIÁVEIS
 
-➔Então o código para compilar e fazer sentido fica:
+- Então o código para compilar e fazer sentido fica:
 
 ## Página 18
 
@@ -221,12 +221,12 @@ ESCOPO DAS VARIÁVEIS
 
 ESCOPO DAS VARIÁVEIS
 
-➔Uma situação parecida pode ocorrer com o for :
+- Uma situação parecida pode ocorrer com o for :
 
-➔Neste for , a variável  i morre ao seu término, não podendo
+- Neste for , a variável  i morre ao seu término, não podendo
  ser  acessada  de  fora  do   for,  gerando um  erro  de
  compilação.
-➔Se você realmente quer acessar o contador depois do loop
+- Se você realmente quer acessar o contador depois do loop
   terminar, precisa de algo como:
 
 ## Página 19
@@ -235,7 +235,7 @@ ESCOPO DAS VARIÁVEIS
 
 UM BLOCO DENTRO DO OUTRO
 
-➔Um bloco também pode ser declarado dentro de outro. Isto
+- Um bloco também pode ser declarado dentro de outro. Isto
   é, um if dentro de um for, ou um for dentro de um for, algo
  como:
 

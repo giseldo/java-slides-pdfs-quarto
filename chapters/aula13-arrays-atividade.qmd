@@ -25,11 +25,11 @@ Arrays
 Arrays
 
 Em uma classe Java podemos declarar diversas variáveis.
-• Porém as vezes não se sabe ao certo a quantidade de
+- Porém as vezes não se sabe ao certo a quantidade de
 variáveis necessárias.
-• Por exemplo ao solicitar vários salários para se fazer uma
+- Por exemplo ao solicitar vários salários para se fazer uma
 média, não se sabe quantos serão digitados.
-• Para este tipo de situação, utilizamos os Arrays, também
+- Para este tipo de situação, utilizamos os Arrays, também
 conhecidos como Vetores.
 
                                                                                                            2
@@ -51,11 +51,11 @@ posições é a seguinte:
 
 Exceção em Arrays
 
-• É muito comum acessar uma posição do Array além do seu limite.
-• Lembrando que a contagem de um Array de 10 posições vai de 0 a 9, as
+- É muito comum acessar uma posição do Array além do seu limite.
+- Lembrando que a contagem de um Array de 10 posições vai de 0 a 9, as
 vezes em um laço de repetição, tentamos acessar a posição 10 por
 descuido, lançando um ArrayIndexOutOfBoundsException.
-• Pode ser tratado com um try-catch ou sempre verificando o tamanho do
+- Pode ser tratado com um try-catch ou sempre verificando o tamanho do
 Array.
 
                                                                                                            4
@@ -108,7 +108,7 @@ Arrays
 
 Arrays
 
-• Observações importantes:
+- Observações importantes:
   ⚫O tamanho de um Array não pode ser alterado
    ⚫Para percorrer um Array com um FOR, é preciso saber o seu
     tamanho (.lenght)
@@ -127,13 +127,13 @@ Vamos praticar?
 
 1. Implemente o programa CatalogoLivros, que gerencia até 10 livros. Cada livro
 possui as funcionalidades:
-•  Cadastrar novo livro (até encher o array).
-•   Listar todos os livros cadastrados.
-•  Buscar livro por título (exibir posição ou “não encontrado”).
-•  Mostrar estatísticas: total de livros e média de ano de publicação.
-•   Sair do programa.
+-  Cadastrar novo livro (até encher o array).
+-   Listar todos os livros cadastrados.
+-  Buscar livro por título (exibir posição ou “não encontrado”).
+-  Mostrar estatísticas: total de livros e média de ano de publicação.
+-   Sair do programa.
                                  Atributo    Tipo              Descrição
-•  E os seguintes atributos:
+-  E os seguintes atributos:
                                       titulo        String   Título do livro (texto livre)
 
                                autor        String  Nome do autor
@@ -175,11 +175,11 @@ cadastrados”.
 
 Vamos praticar?
 
-•  A atividade poderá ser realizada em dupla.
+-  A atividade poderá ser realizada em dupla.
 
-•  Esta atividade vale 2 pontos.
+-  Esta atividade vale 2 pontos.
 
-•  Enviar o código compactado em um único arquivo.
+-  Enviar o código compactado em um único arquivo.
 
                                                                                                          12
 

@@ -41,10 +41,10 @@ Collections
 
 Collections
 
-• Aprendemos a utilizar Arrays, então porque aprender Coleções?
-• Coleções são mais fáceis de usar e já possuem métodos prontos de
+- Aprendemos a utilizar Arrays, então porque aprender Coleções?
+- Coleções são mais fáceis de usar e já possuem métodos prontos de
 inserção, remoção, busca e outros
-• Além disso, Coleções possuem tamanho dinâmico, enquanto Arrays
+- Além disso, Coleções possuem tamanho dinâmico, enquanto Arrays
 não podem ter seu tamanho alterado, só isso já facilita muito a vida
 do programador!
 
@@ -56,12 +56,12 @@ do programador!
 
 List
 
-• Uma Lista é uma Interface de Coleção que permite elementos
+- Uma Lista é uma Interface de Coleção que permite elementos
 duplicados
-• Listas mantém uma ordenação específica dos elementos
-• Já possui todos os métodos padrão implementados: busca,
+- Listas mantém uma ordenação específica dos elementos
+- Já possui todos os métodos padrão implementados: busca,
 remoção, inserção...
-• Sua principal implementação é o ArrayList<tipo>, onde “tipo” é o
+- Sua principal implementação é o ArrayList<tipo>, onde “tipo” é o
 tipo de objeto que esta coleção vai conter.
 
                                                                                                           4
@@ -115,11 +115,11 @@ Ordenando um ArrayList de nomes:
 
 Set
 
-• A a Interface Set representa um conjunto que não permite elementos
+- A a Interface Set representa um conjunto que não permite elementos
 duplicados, similar aos conjuntos da matemática.
-• O Set não garante que os elementos vão ser resgatados na ordem em
+- O Set não garante que os elementos vão ser resgatados na ordem em
 que foram inseridos.
-• Suas principais implementações são:
+- Suas principais implementações são:
              – HashSet
              – LinkedHashSet
              – TreeSet
@@ -142,13 +142,13 @@ Exemplo de adição de elementos repetidos em um Set:
 
 Map
 
-• Um Map é composto por um conjunto de objetos e um valor chave
+- Um Map é composto por um conjunto de objetos e um valor chave
 para cada objeto.
-• Por exemplo um conjunto de objetos carro é representado pelas suas
+- Por exemplo um conjunto de objetos carro é representado pelas suas
 placas, assim fica mais fácil encontrar cada carro específico.
-• Diferente das outras Coleções, o método para inserir é o put(chave,
+- Diferente das outras Coleções, o método para inserir é o put(chave,
 objeto) e para resgatar é o get(chave).
-• Suas principais implementações são o HashMap, TreeMap e HashTable.
+- Suas principais implementações são o HashMap, TreeMap e HashTable.
 
                                                                                                          11
 
@@ -169,14 +169,14 @@ imprimindo:
 
 Vamos praticar?
 
-•  Criem um menu da seguinte maneira:
+-  Criem um menu da seguinte maneira:
      1.  Cadastrar Funcionário
      2.  Remover Funcionário
      3.   Editar Funcionário
      4.   Listar Funcionários cadastrados
      5.   Sair do sistema
 
-•  Faça um programa que solicite os dados de N funcionários (com atributos
+-  Faça um programa que solicite os dados de N funcionários (com atributos
    de código do funcionário e salário), configure através de métodos SET para
    preencher os dados do Funcionario(entrada pelo teclado).
 
@@ -188,16 +188,16 @@ Vamos praticar?
 
 Vamos praticar?
 
-•  Crie também um método construtor para facilitar a criação dos registros.
+-  Crie também um método construtor para facilitar a criação dos registros.
    UTILIZEM a  classe   Pessoa (com  atributos de nome,  cpf e  altura).
    Importante lembrar: Funcionário é uma pessoa certo?
-•  Ao iniciar a execução é necessário já ter preenchido pelo menos 3 registros
+-  Ao iniciar a execução é necessário já ter preenchido pelo menos 3 registros
    na lista manualmente (direto no código).
-•  Para função de remoção e edição utilizem o código do funcionário ou cpf
+-  Para função de remoção e edição utilizem o código do funcionário ou cpf
   como parâmetro de busca.
-•  Utilizem Collections (Lista) para armazenar os registros (ou seja, será um
+-  Utilizem Collections (Lista) para armazenar os registros (ou seja, será um
    valor lido do teclado).
-•  Para função de listagem, basta imprimir da lista de funcionários cadastrados
+-  Para função de listagem, basta imprimir da lista de funcionários cadastrados
    no sistema no final, com todos os dados de cada um.
 
                                                                                                          14

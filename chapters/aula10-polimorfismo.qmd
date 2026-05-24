@@ -117,11 +117,11 @@ Polimorfismo X Sobrecarga
 
 Polimorfismo
 
-• Exemplo simples: em um jogo de xadrez temos várias peças,
+- Exemplo simples: em um jogo de xadrez temos várias peças,
 cada peça se movimenta, porém cada tipo de peça se
 movimenta de uma maneira diferente (o peão vai pra frente, o
 cavalo anda em L, o bispo em diagonal e assim por diante)
-• Desta maneira, todos (peão, cavalo e bispo) são peças,
+- Desta maneira, todos (peão, cavalo e bispo) são peças,
 porém cada um se movimenta de uma maneira diferente!
 
                                                                                                            9
@@ -132,12 +132,12 @@ porém cada um se movimenta de uma maneira diferente!
 
 Polimorfismo
 
-• O polimorfismo em Java se manifesta apenas na chamada de
+- O polimorfismo em Java se manifesta apenas na chamada de
 métodos.
-• Então ao passar uma mensagem para um objeto peça,
+- Então ao passar uma mensagem para um objeto peça,
 dizendo para ele se mover, o Java identificará que tipo de peça
 é e fará o movimento de acordo com o tipo.
-• Essa decisão é tomada em tempo de execução (runtime) pelo
+- Essa decisão é tomada em tempo de execução (runtime) pelo
 Java.
 
                                                                                                          10
@@ -148,7 +148,7 @@ Java.
 
 Polimorfismo – Exemplo Xadrez
 
-• Exemplo do Xadrez:
+- Exemplo do Xadrez:
 
                                                                                                          11
 
@@ -174,9 +174,9 @@ Polimorfismo – Exemplo Xadrez
 
 Polimorfismo
 
-• Observe que os três objetos (peao, cavalo e bispo) são do
+- Observe que os três objetos (peao, cavalo e bispo) são do
 tipo Peca.
-• Isso pode ser confirmado através do uso do instance of do
+- Isso pode ser confirmado através do uso do instance of do
 Java:
 
                                                                                                          14
@@ -187,17 +187,17 @@ Java:
 
 Vamos praticar?
 
-• Crie uma estrutura de herança Animal e pelo menos 3 subclasses para
+- Crie uma estrutura de herança Animal e pelo menos 3 subclasses para
 demonstrar o polimorfismo utilizando classes de animais.
 
-• Crie o método comunicar(), movimentar() e imprimirDados() na classe Animal.
+- Crie o método comunicar(), movimentar() e imprimirDados() na classe Animal.
 Os métodos devem imprimir uma mensagem de acordo com a classe que está
 realizando a chamada do mesmo.
 
-• Nas classes descendentes de animais, sobrescreva os métodos citados de
+- Nas classes descendentes de animais, sobrescreva os métodos citados de
 acordo com os tipos de animais e insira pelo menos 4 atributos.
 
-• Confirme que todos são tipos de Animal com o uso de instance of do Java.
+- Confirme que todos são tipos de Animal com o uso de instance of do Java.
 Insira novos dados nas classes criadas e execute os métodos de cada uma.
                                                                                                            15
 

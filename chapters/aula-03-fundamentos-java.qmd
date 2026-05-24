@@ -100,16 +100,16 @@ Estrutura do arquivo de código Java
 
               Classe                                        /*
                                           * Criado em Set 25, 2020
-        • Classe é o componente                                          *
+        - Classe é o componente                                          *
         fundamental de todos os               * Primeiro Programa
        programas Java.                     */
                                          package br.ifal.poo;
                                          import java.lang.*;
-        • Cada programa Java inclui
+        - Cada programa Java inclui
         pelo menos uma definição de                                        /**
         classe pública.                                          * @author ALUNO
                                          */
-        • Uma definição de classe              public class Principal{
+        - Uma definição de classe              public class Principal{
        contém todas as variáveis e
                                             public static void main(String[] args){       métodos que fazem o
                                                   // escreve uma mensagem
@@ -119,7 +119,7 @@ Estrutura do arquivo de código Java
         indicado pelas chaves de
         abertura e fechamento.                                         }
 
-        • O nome da declaração da
+        - O nome da declaração da
         classe pública deve ser o
       mesmo que o nome do arquivo
          (diferencia maiúsculas de
@@ -135,7 +135,7 @@ Estrutura do arquivo de código Java
             Chaves                  /*
                                           * Criado em Set 25, 2020
                                           *
-          • Chaves são usados para              * Primeiro Programa
+          - Chaves são usados para              * Primeiro Programa
        agrupar declarações ou um             */
                                          package br.ifal.poo;       bloco de códigos.
                                          import java.lang.*;
@@ -359,12 +359,12 @@ Variáveis
 
 Variáveis: Inicialização
 
-     •   Inicializar as variáveis com o tipo de dados primitivo
+     -   Inicializar as variáveis com o tipo de dados primitivo
 
     Sintaxe:        <nome_do_identificador> = <valor_inicial>;
     Exemplos:      meuInteiro = 0;
 
-     •   Inicializar as variáveis com o tipo de dados de referência
+     -   Inicializar as variáveis com o tipo de dados de referência
 
     Sintaxe:        <nome_do_identificador> = <valor_inicial>;
     Exemplos:

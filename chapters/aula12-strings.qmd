@@ -24,12 +24,12 @@ Strings
 
 Strings
 
-• Strings são objetos/instâncias da classe java.lang.String.
-• String não é um tipo primitivo do Java, como int, double ou
+- Strings são objetos/instâncias da classe java.lang.String.
+- String não é um tipo primitivo do Java, como int, double ou
 boolean.
-• Elas contém sequências de caracteres e são utilizadas para
+- Elas contém sequências de caracteres e são utilizadas para
 armazenar textos
-• Strings são bastante utilizadas no Java, por isso estudaremos
+- Strings são bastante utilizadas no Java, por isso estudaremos
 alguns métodos importantes desta classe
 
                                                                                                            2
@@ -67,7 +67,7 @@ com o operador ‘+’:
 
 Strings
 
-• Vejamos alguns métodos interessantes da classe String:
+- Vejamos alguns métodos interessantes da classe String:
 
 – Remover espaços antes e depois de um texto:
 
@@ -140,7 +140,7 @@ Vejamos alguns métodos interessantes da classe String:
 
 Strings
 
-• Vejamos alguns métodos interessantes da classe String:
+- Vejamos alguns métodos interessantes da classe String:
 – Passando um texto para maiúsculo e minúsculo:
 
                                                                                                          11
@@ -171,11 +171,11 @@ Strings – Tabela ASCII
 
 Vamos praticar?
 
-• Criptografia: faremos um programa para esconder informações
-• Desenvolva uma aplicação em java que troque cada letra de um texto por outra
+- Criptografia: faremos um programa para esconder informações
+- Desenvolva uma aplicação em java que troque cada letra de um texto por outra
 do alfabeto X posições a frente, onde X pode ser escolhido por você (cifra de
 César). Fonte de exemplo: https://cryptii.com/pipes/caesar-cipher
-• Exemplo com X=2:
+- Exemplo com X=2:
 –“Douglas” passará a ser “Fqwincu”
 
 –“Alana” passará a ser “Cncpc”

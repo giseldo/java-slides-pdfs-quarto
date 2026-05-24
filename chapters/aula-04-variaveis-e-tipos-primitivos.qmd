@@ -21,11 +21,11 @@ Variáveis e Tipos Primitivos
 
 Introdução
 
- ➔Vamos fazer um programa que imprime uma linha simples.
+- Vamos fazer um programa que imprime uma linha simples.
 
- ➔Para mostrar uma linha, podemos fazer:
+- Para mostrar uma linha, podemos fazer:
 
- ➔Você acha que esse  código  acima,  será  aceito  pelo
+- Você acha que esse  código  acima,  será  aceito  pelo
    compilador java?
 
 ## Página 3
@@ -34,10 +34,10 @@ Introdução
 
 Introdução
 
- ➔O código não será aceito pelo compilador java.
- ➔O Java é uma linguagem bastante burocrática, e precisa de
+- O código não será aceito pelo compilador java.
+- O Java é uma linguagem bastante burocrática, e precisa de
    mais do que isso para iniciar uma execução.
- ➔O mínimo que precisaríamos escrever é algo como:
+- O mínimo que precisaríamos escrever é algo como:
 
 ## Página 4
 
@@ -45,10 +45,10 @@ Introdução
 
 Introdução
 
- ➔O miolo do programa é o que será executado quando
+- O miolo do programa é o que será executado quando
   chamamos a máquina virtual.
 
- ➔Por  enquanto,  todas as  linhas  anteriores, onde há a
+- Por  enquanto,  todas as  linhas  anteriores, onde há a
    declaração de uma classe e a de um método, não importam
    para nós nesse momento.
 
@@ -58,12 +58,12 @@ Introdução
 
 Introdução
 
- ➔Devemos saber que toda aplicação Java começa por um
+- Devemos saber que toda aplicação Java começa por um
    ponto de entrada, e este ponto de entrada é o método
    main.
- ➔Sempre que um exercício for feito, o código que nos importa
+- Sempre que um exercício for feito, o código que nos importa
   sempre estará nesse miolo.
- ➔No caso do nosso código, a linha do System.out.println faz
+- No caso do nosso código, a linha do System.out.println faz
   com que o conteúdo entre aspas seja colocado na tela.
 
 ## Página 6
@@ -72,10 +72,10 @@ Introdução
 
 O QUE PODE DAR ERRADO?
 
- ➔Muitos erros podem ocorrer no momento que você rodar
+- Muitos erros podem ocorrer no momento que você rodar
    seu primeiro código. Vamos ver alguns deles:
 
-      ➔Código:
+     - Código:
 
 ## Página 7
 
@@ -83,13 +83,13 @@ O QUE PODE DAR ERRADO?
 
 O QUE PODE DAR ERRADO?
 
- ➔Muitos erros podem ocorrer no momento que você rodar
+- Muitos erros podem ocorrer no momento que você rodar
    seu primeiro código. Vamos ver alguns deles:
-      ➔Erro:
+     - Erro:
 
- ➔Esse é o erro de compilação mais comum: aquele onde um
+- Esse é o erro de compilação mais comum: aquele onde um
    ponto e vírgula foi esquecido.
- ➔O compilador é explícito em dizer que a linha 4 está com
+- O compilador é explícito em dizer que a linha 4 está com
    problemas.
 
 ## Página 8
@@ -98,13 +98,13 @@ O QUE PODE DAR ERRADO?
 
 O QUE PODE DAR ERRADO?
 
- ➔Outros  erros  de  compilação podem  ocorrer  se  você
+- Outros  erros  de  compilação podem  ocorrer  se  você
    escreveu palavras chaves (as que colocamos em negrito)
   em maiúsculas, esqueceu de abrir e fechar as { } , etc.
 
- ➔Durante a execução, outros erros podem aparecer:
+- Durante a execução, outros erros podem aparecer:
 
-     ➔Se você declarar a classe como X, compilá-la e depois
+    - Se você declarar a classe como X, compilá-la e depois
          tentar usá-la como x minúsculo (java x), o Java te
          avisa:
 
@@ -114,10 +114,10 @@ O QUE PODE DAR ERRADO?
 
 O QUE PODE DAR ERRADO?
 
- ➔Se esquecer de colocar static ou o argumento String [ ]
+- Se esquecer de colocar static ou o argumento String [ ]
    args no método main:
 
- ➔Por exemplo:
+- Por exemplo:
 
 ## Página 10
 
@@ -125,9 +125,9 @@ O QUE PODE DAR ERRADO?
 
 O QUE PODE DAR ERRADO?
 
- ➔Se não colocar o método main como public :
+- Se não colocar o método main como public :
 
- ➔Por exemplo:
+- Por exemplo:
 
 ## Página 11
 
@@ -135,7 +135,7 @@ O QUE PODE DAR ERRADO?
 
 COMENTÁRIOS EM JAVA
 
- ➔Para fazer um comentário em java, você pode usar o // para
+- Para fazer um comentário em java, você pode usar o // para
    comentar até o final da linha, ou então usar o /* */ para
    comentar o que estiver entre eles.
 
@@ -145,14 +145,14 @@ COMENTÁRIOS EM JAVA
 
 Declaração de Variáveis e Tipos Primitivos
 
- ➔Dentro de um bloco, podemos declarar variáveis e usá-las.
+- Dentro de um bloco, podemos declarar variáveis e usá-las.
 
- ➔Em Java, toda variável tem um tipo que não pode ser
+- Em Java, toda variável tem um tipo que não pode ser
   mudado, uma vez que declarado:
 
                 tipoDaVariavel nomeDaVariavel;
 
- ➔Por exemplo, é possível ter uma idade que guarda um
+- Por exemplo, é possível ter uma idade que guarda um
   número inteiro:
 
 ## Página 13
@@ -161,15 +161,15 @@ Declaração de Variáveis e Tipos Primitivos
 
 Declaração de Variáveis e Tipos Primitivos
 
- ➔Com isso, você declara a variável idade, que passa a existir
+- Com isso, você declara a variável idade, que passa a existir
   a partir desta linha.
 
- ➔Ela é do tipo int, que guarda um número inteiro.
+- Ela é do tipo int, que guarda um número inteiro.
 
- ➔A partir daí, você pode usá-la, primeiramente atribuindo
+- A partir daí, você pode usá-la, primeiramente atribuindo
    valores.
 
- ➔A linha a seguir é a tradução de: " idade deve valer quinze".
+- A linha a seguir é a tradução de: " idade deve valer quinze".
 
 ## Página 14
 
@@ -177,8 +177,8 @@ Declaração de Variáveis e Tipos Primitivos
 
 Declaração de Variáveis e Tipos Primitivos
 
- ➔Além de atribuir, você pode utilizar esse valor.
- ➔O código a seguir declara novamente a variável idade com
+- Além de atribuir, você pode utilizar esse valor.
+- O código a seguir declara novamente a variável idade com
    valor 15 e imprime seu valor na saída padrão através da
   chamada a System.out.println.
 
@@ -188,11 +188,11 @@ Declaração de Variáveis e Tipos Primitivos
 
 Declaração de Variáveis e Tipos Primitivos
 
- ➔Por  fim, podemos  utilizar o valor de uma variável para
+- Por  fim, podemos  utilizar o valor de uma variável para
    algum outro propósito, como alterar ou definir uma segunda
    variável.
 
- ➔O   código  a   seguir   cria  uma   variável  chamada
+- O   código  a   seguir   cria  uma   variável  chamada
   idadeNoAnoQueVem com valor de idade mais um.
 
 ## Página 16
@@ -207,7 +207,7 @@ Declaração de Variáveis e Tipos Primitivos
 
 Declaração de Variáveis e Tipos Primitivos
 
- ➔No mesmo momento que você  declara uma  variável,
+- No mesmo momento que você  declara uma  variável,
   também é possível inicializá-la por praticidade:
 
 ## Página 18
@@ -216,7 +216,7 @@ Declaração de Variáveis e Tipos Primitivos
 
 Declaração de Variáveis e Tipos Primitivos
 
- ➔Você pode usar os operadores +, -, / e * para operar com
+- Você pode usar os operadores +, -, / e * para operar com
    números.
 
                      + adição
@@ -224,7 +224,7 @@ Declaração de Variáveis e Tipos Primitivos
                                              / divisão
                              * multiplicação
 
- ➔Além  desses  operadores  básicos,  há  o  operador %
+- Além  desses  operadores  básicos,  há  o  operador %
    (módulo) que é o resto de uma divisão inteira.
 
 ## Página 19
@@ -233,12 +233,12 @@ Declaração de Variáveis e Tipos Primitivos
 
 Declaração de Variáveis e Tipos Primitivos
 
- ➔Exemplos:
+- Exemplos:
 
- ➔Lembre-se que  para  rodar esses  códigos, você deve
+- Lembre-se que  para  rodar esses  códigos, você deve
    colocar esses trechos de código dentro do bloco main, isto
    é, isso deve ficar no miolo do programa.
- ➔Para imprimir use o System.out.println, caso contrário, ao
+- Para imprimir use o System.out.println, caso contrário, ao
    executar a aplicação, nada aparecerá.
 
 ## Página 20
@@ -247,11 +247,11 @@ Declaração de Variáveis e Tipos Primitivos
 
 Declaração de Variáveis e Tipos Primitivos
 
- ➔Representar números inteiros é  fácil, mas como guardar
+- Representar números inteiros é  fácil, mas como guardar
    valores  reais,  tais como frações de números  inteiros e
    outros?
 
- ➔Outro tipo de variável muito utilizado é o double  , que
+- Outro tipo de variável muito utilizado é o double  , que
   armazena um número com ponto flutuante (e que também
   pode armazenar um número inteiro).
 
@@ -261,11 +261,11 @@ Declaração de Variáveis e Tipos Primitivos
 
 Declaração de Variáveis e Tipos Primitivos
 
- ➔O tipo boolean armazena um valor verdadeiro ou falso, e
+- O tipo boolean armazena um valor verdadeiro ou falso, e
    só: nada de números, palavras ou endereços, como em
    algumas outras linguagens.
 
- ➔true e false são palavras reservadas do Java.
+- true e false são palavras reservadas do Java.
 
 ## Página 22
 
@@ -273,7 +273,7 @@ Declaração de Variáveis e Tipos Primitivos
 
 Declaração de Variáveis e Tipos Primitivos
 
- ➔É comum que um boolean seja determinado através de
+- É comum que um boolean seja determinado através de
   uma expressão booleana, isto é, um trecho de código que
    retorna um booleano, como o exemplo:
 
@@ -283,14 +283,14 @@ Declaração de Variáveis e Tipos Primitivos
 
 Declaração de Variáveis e Tipos Primitivos
 
- ➔O tipo char guarda um, apenas um caractere.
+- O tipo char guarda um, apenas um caractere.
 
- ➔Esse caractere deve estar entre aspas simples.
+- Esse caractere deve estar entre aspas simples.
 
- ➔Por exemplo, ela não pode guardar um código como ‘ ’ pois
+- Por exemplo, ela não pode guardar um código como ‘ ’ pois
   o vazio não é um caractere!
 
- ➔Variáveis do tipo char são pouco usadas no dia a dia.
+- Variáveis do tipo char são pouco usadas no dia a dia.
 
 ## Página 24
 
@@ -298,15 +298,15 @@ Declaração de Variáveis e Tipos Primitivos
 
 Declaração de Variáveis e Tipos Primitivos
 
- ➔Esses tipos de variáveis são tipos primitivos do Java: o
+- Esses tipos de variáveis são tipos primitivos do Java: o
    valor que elas guardam são o real conteúdo da variável.
- ➔Quando você utilizar o operador de atribuição = o valor será
+- Quando você utilizar o operador de atribuição = o valor será
    copiado.
 
- ➔Aqui, i fica com o valor de 6.
- ➔Mas e j ?
- ➔Na segunda linha, j está valendo 5.
- ➔Quando  i passa a valer 6, será que  j também muda de
+- Aqui, i fica com o valor de 6.
+- Mas e j ?
+- Na segunda linha, j está valendo 5.
+- Quando  i passa a valer 6, será que  j também muda de
    valor?
 
 ## Página 25
@@ -315,13 +315,13 @@ Declaração de Variáveis e Tipos Primitivos
 
 Declaração de Variáveis e Tipos Primitivos
 
- ➔Quando  i passa a valer 6, será que  j também muda de
+- Quando  i passa a valer 6, será que  j também muda de
    valor?
 
- ➔Não, pois o  valor de um  tipo  primitivo sempre é
+- Não, pois o  valor de um  tipo  primitivo sempre é
    copiado.
 
- ➔Apesar da linha 2 fazer j = i , a partir desse momento essas
+- Apesar da linha 2 fazer j = i , a partir desse momento essas
    variáveis não tem relação nenhuma: o que acontece com
   uma, não reflete em nada com a outra.
 
@@ -331,13 +331,13 @@ Declaração de Variáveis e Tipos Primitivos
 
 Declaração de Variáveis e Tipos Primitivos
 
- ➔Atividade 1 (lembre-se de adicionar comentários para
+- Atividade 1 (lembre-se de adicionar comentários para
    explicar o seu programa):
 
-     ➔1) Faça um programa, para imprimir a sua idade atual
+    - 1) Faça um programa, para imprimir a sua idade atual
        e a sua idade no próximo ano.
 
-     ➔2) Faça um programa utilizando os operadores +, -, /, *
+    - 2) Faça um programa utilizando os operadores +, -, /, *
        e %. Utilize o System.out.println.
 
 ## Página 27
@@ -346,7 +346,7 @@ Declaração de Variáveis e Tipos Primitivos
 
 Declaração de Variáveis e Tipos Primitivos
 
-         ➔Atividade 2 Kahoot.it
+        - Atividade 2 Kahoot.it
 
         PIN de jogo: 09406057
 

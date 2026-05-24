@@ -21,12 +21,12 @@ Orientação a Objetos
 
 O if e o else
 
-➔A sintaxe do if no Java é a seguinte:
+- A sintaxe do if no Java é a seguinte:
 
-➔Uma condição booleana é qualquer expressão que retorne
+- Uma condição booleana é qualquer expressão que retorne
  true ou false.
 
-➔Para isso, você pode usar os operadores < , > , <= , >= e
+- Para isso, você pode usar os operadores < , > , <= , >= e
   outros.
 
 ## Página 3
@@ -35,7 +35,7 @@ O if e o else
 
 O if e o else
 
-➔Exemplo:
+- Exemplo:
 
 ## Página 4
 
@@ -43,11 +43,11 @@ O if e o else
 
 O if e o else
 
-➔Além disso, você pode usar a cláusula else para indicar o
+- Além disso, você pode usar a cláusula else para indicar o
  comportamento que  deve  ser  executado no  caso da
  expressão booleana ser falsa:
 
-➔Exemplo:
+- Exemplo:
 
 ## Página 5
 
@@ -55,13 +55,13 @@ O if e o else
 
 O if e o else
 
-➔Você pode concatenar expressões booleanas através dos
+- Você pode concatenar expressões booleanas através dos
  operadores lógicos "E" e "OU".
 
-➔O "E" é representado pelo && e o "OU" é representado pelo
+- O "E" é representado pelo && e o "OU" é representado pelo
    || .
 
-➔Tabela Verdade:
+- Tabela Verdade:
 
 ## Página 6
 
@@ -69,7 +69,7 @@ O if e o else
 
 O if e o else
 
-➔Exemplo verificar se uma pessoa tem menos de 18 anos e
+- Exemplo verificar se uma pessoa tem menos de 18 anos e
  se ele não é amigo do dono da festa:
 
 ## Página 7
@@ -78,11 +78,11 @@ O if e o else
 
 O if e o else
 
-➔Esse código poderia ficar ainda mais legível, utilizando-se o
+- Esse código poderia ficar ainda mais legível, utilizando-se o
  operador de negação, o ! .
-➔Esse operador transforma o resultado de uma expressão
+- Esse operador transforma o resultado de uma expressão
  booleana de false para true e vice versa.
-➔Exemplo:
+- Exemplo:
 
 ## Página 8
 
@@ -90,11 +90,11 @@ O if e o else
 
 O if e o else
 
-➔Para comparar se uma variável tem o mesmo valor que
+- Para comparar se uma variável tem o mesmo valor que
  outra variável ou valor, utilizamos o operador == .
-➔Utilizar o operador = dentro de um if vai retornar um erro de
+- Utilizar o operador = dentro de um if vai retornar um erro de
  compilação, já que o operador = é o de atribuição.
-➔Exemplo:
+- Exemplo:
 
 ## Página 9
 
@@ -110,7 +110,7 @@ na aula.
 anos e se você pode dirigir (ter habilitação para dirigir) com a
 sua idade.
 
-➔Envie  prints da resposta com execução do código ou
+- Envie  prints da resposta com execução do código ou
  arquivo compactado com a resposta da atividade.
 
 Atenção: A resposta deverá ter o código e o resultado do
