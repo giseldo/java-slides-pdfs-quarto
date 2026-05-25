@@ -1,8 +1,8 @@
 ---
-title: "Aula 09 Modificadores de Classe, Encapsulamento e Atributos de Classe"
+title: "Modificadores de Classe, Encapsulamento e Atributos de Classe"
 toc: true
 ---
-Arquivo original: `Aula 09 Modificadores de Classe, Encapsulamento e Atributos de Classe.pdf`
+Arquivo original: `Modificadores de Classe, Encapsulamento e Atributos de Classe.pdf`
 
 ## Página 1
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Aula10 Polimorfismo – Curso Java - Slides Convertidos</title>
+<title>Aula10 Polimorfismo – Curso Java</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -100,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Curso Java - Slides Convertidos</a> 
+      <a href="../">Curso Java</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -353,8 +353,11 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>Polimorfismo</p>
-<p>• Exemplo simples: em um jogo de xadrez temos várias peças, cada peça se movimenta, porém cada tipo de peça se movimenta de uma maneira diferente (o peão vai pra frente, o cavalo anda em L, o bispo em diagonal e assim por diante) • Desta maneira, todos (peão, cavalo e bispo) são peças, porém cada um se movimenta de uma maneira diferente!</p>
-<pre><code>                                                                                                       9</code></pre>
+<ul>
+<li><p>Exemplo simples: em um jogo de xadrez temos várias peças, cada peça se movimenta, porém cada tipo de peça se movimenta de uma maneira diferente (o peão vai pra frente, o cavalo anda em L, o bispo em diagonal e assim por diante)</p></li>
+<li><p>Desta maneira, todos (peão, cavalo e bispo) são peças, porém cada um se movimenta de uma maneira diferente!</p>
+<pre><code>                                                                                                     9</code></pre></li>
+</ul>
 </section>
 <section id="página-10" class="level2">
 <h2 class="anchored" data-anchor-id="página-10">Página 10</h2>
@@ -365,8 +368,12 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>Polimorfismo</p>
-<p>• O polimorfismo em Java se manifesta apenas na chamada de métodos. • Então ao passar uma mensagem para um objeto peça, dizendo para ele se mover, o Java identificará que tipo de peça é e fará o movimento de acordo com o tipo. • Essa decisão é tomada em tempo de execução (runtime) pelo Java.</p>
-<pre><code>                                                                                                     10</code></pre>
+<ul>
+<li><p>O polimorfismo em Java se manifesta apenas na chamada de métodos.</p></li>
+<li><p>Então ao passar uma mensagem para um objeto peça, dizendo para ele se mover, o Java identificará que tipo de peça é e fará o movimento de acordo com o tipo.</p></li>
+<li><p>Essa decisão é tomada em tempo de execução (runtime) pelo Java.</p>
+<pre><code>                                                                                                   10</code></pre></li>
+</ul>
 </section>
 <section id="página-11" class="level2">
 <h2 class="anchored" data-anchor-id="página-11">Página 11</h2>
@@ -377,8 +384,10 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>Polimorfismo – Exemplo Xadrez</p>
-<p>• Exemplo do Xadrez:</p>
-<pre><code>                                                                                                     11</code></pre>
+<ul>
+<li><p>Exemplo do Xadrez:</p>
+<pre><code>                                                                                                   11</code></pre></li>
+</ul>
 </section>
 <section id="página-12" class="level2">
 <h2 class="anchored" data-anchor-id="página-12">Página 12</h2>
@@ -411,8 +420,11 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>Polimorfismo</p>
-<p>• Observe que os três objetos (peao, cavalo e bispo) são do tipo Peca. • Isso pode ser confirmado através do uso do instance of do Java:</p>
-<pre><code>                                                                                                     14</code></pre>
+<ul>
+<li><p>Observe que os três objetos (peao, cavalo e bispo) são do tipo Peca.</p></li>
+<li><p>Isso pode ser confirmado através do uso do instance of do Java:</p>
+<pre><code>                                                                                                   14</code></pre></li>
+</ul>
 </section>
 <section id="página-15" class="level2">
 <h2 class="anchored" data-anchor-id="página-15">Página 15</h2>
@@ -423,10 +435,12 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>Vamos praticar?</p>
-<p>• Crie uma estrutura de herança Animal e pelo menos 3 subclasses para demonstrar o polimorfismo utilizando classes de animais.</p>
-<p>• Crie o método comunicar(), movimentar() e imprimirDados() na classe Animal. Os métodos devem imprimir uma mensagem de acordo com a classe que está realizando a chamada do mesmo.</p>
-<p>• Nas classes descendentes de animais, sobrescreva os métodos citados de acordo com os tipos de animais e insira pelo menos 4 atributos.</p>
-<p>• Confirme que todos são tipos de Animal com o uso de instance of do Java. Insira novos dados nas classes criadas e execute os métodos de cada uma. 15</p>
+<ul>
+<li><p>Crie uma estrutura de herança Animal e pelo menos 3 subclasses para demonstrar o polimorfismo utilizando classes de animais.</p></li>
+<li><p>Crie o método comunicar(), movimentar() e imprimirDados() na classe Animal. Os métodos devem imprimir uma mensagem de acordo com a classe que está realizando a chamada do mesmo.</p></li>
+<li><p>Nas classes descendentes de animais, sobrescreva os métodos citados de acordo com os tipos de animais e insira pelo menos 4 atributos.</p></li>
+<li><p>Confirme que todos são tipos de Animal com o uso de instance of do Java. Insira novos dados nas classes criadas e execute os métodos de cada uma. 15</p></li>
+</ul>
 </section>
 <section id="página-16" class="level2">
 <h2 class="anchored" data-anchor-id="página-16">Página 16</h2>

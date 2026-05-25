@@ -1,8 +1,8 @@
 ---
-title: "Aula 02 Primeiros passos no ambiente de programação"
+title: "Primeiros passos no ambiente de programação"
 toc: true
 ---
-Arquivo original: `Aula 02 Primeiros passos no ambiente de programação.pdf`
+Arquivo original: `Primeiros passos no ambiente de programação.pdf`
 
 ## Página 1
 

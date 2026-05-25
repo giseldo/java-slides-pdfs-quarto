@@ -1,8 +1,8 @@
 ---
-title: "Aula12 Strings"
+title: "Strings"
 toc: true
 ---
-Arquivo original: `Aula12 Strings.pdf`
+Arquivo original: `Strings.pdf`
 
 ## Página 1
 
@@ -40,11 +40,11 @@ alguns métodos importantes desta classe
 
 Strings
 
-⚫Uma String pode ser inicializada com a palavra-chave ‘new’:
+- Uma String pode ser inicializada com a palavra-chave ‘new’:
 
-⚫Ou pode ser inicializada diretamente:
+- Ou pode ser inicializada diretamente:
 
-⚫Além de poder ser declarada e ter um valor inserido posteriormente:
+- Além de poder ser declarada e ter um valor inserido posteriormente:
 
                                                                                                            3
 
@@ -54,10 +54,10 @@ Strings
 
 Strings
 
-⚫Strings podem ser concatenadas
+- Strings podem ser concatenadas
 com o operador ‘+’:
 
-⚫Ou com o método concat:
+- Ou com o método concat:
 
                                                                                                            4
 
@@ -151,7 +151,7 @@ Strings
 
 Strings
 
-⚫Cada caractere é representado por um número inteiro no Java.
+- Cada caractere é representado por um número inteiro no Java.
   Vejamos a impressão de todas as letras minúsculas e maiúsculas:
 
                                                                                                          12
@@ -162,7 +162,7 @@ Strings
 
 Strings – Tabela ASCII
 
-⚫Fonte:https://upload.wikimedia.org/wikipedia/commons/d/dd/AS
+- Fonte:https://upload.wikimedia.org/wikipedia/commons/d/dd/AS
   CII-Table.svg                                                                                    13
 
 ## Página 14

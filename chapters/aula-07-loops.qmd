@@ -1,8 +1,8 @@
 ---
-title: "Aula 07 Loops"
+title: "Loops"
 toc: true
 ---
-Arquivo original: `Aula 07 Loops.pdf`
+Arquivo original: `Loops.pdf`
 
 ## Página 1
 

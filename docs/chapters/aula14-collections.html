@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Aula14 Collections – Curso Java - Slides Convertidos</title>
+<title>Aula14 Collections – Curso Java</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -99,7 +99,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Curso Java - Slides Convertidos</a> 
+      <a href="../">Curso Java</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -282,8 +282,12 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>Collections</p>
-<p>• Aprendemos a utilizar Arrays, então porque aprender Coleções? • Coleções são mais fáceis de usar e já possuem métodos prontos de inserção, remoção, busca e outros • Além disso, Coleções possuem tamanho dinâmico, enquanto Arrays não podem ter seu tamanho alterado, só isso já facilita muito a vida do programador!</p>
-<pre><code>                                                                                                      3</code></pre>
+<ul>
+<li><p>Aprendemos a utilizar Arrays, então porque aprender Coleções?</p></li>
+<li><p>Coleções são mais fáceis de usar e já possuem métodos prontos de inserção, remoção, busca e outros</p></li>
+<li><p>Além disso, Coleções possuem tamanho dinâmico, enquanto Arrays não podem ter seu tamanho alterado, só isso já facilita muito a vida do programador!</p>
+<pre><code>                                                                                                    3</code></pre></li>
+</ul>
 </section>
 <section id="página-4" class="level2">
 <h2 class="anchored" data-anchor-id="página-4">Página 4</h2>
@@ -294,8 +298,13 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>List</p>
-<p>• Uma Lista é uma Interface de Coleção que permite elementos duplicados • Listas mantém uma ordenação específica dos elementos • Já possui todos os métodos padrão implementados: busca, remoção, inserção… • Sua principal implementação é o ArrayList<tipo>, onde “tipo” é o tipo de objeto que esta coleção vai conter.</tipo></p>
-<pre><code>                                                                                                      4</code></pre>
+<ul>
+<li><p>Uma Lista é uma Interface de Coleção que permite elementos duplicados</p></li>
+<li><p>Listas mantém uma ordenação específica dos elementos</p></li>
+<li><p>Já possui todos os métodos padrão implementados: busca, remoção, inserção…</p></li>
+<li><p>Sua principal implementação é o ArrayList<tipo>, onde “tipo” é o tipo de objeto que esta coleção vai conter.</tipo></p>
+<pre><code>                                                                                                    4</code></pre></li>
+</ul>
 </section>
 <section id="página-5" class="level2">
 <h2 class="anchored" data-anchor-id="página-5">Página 5</h2>
@@ -354,8 +363,12 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>Set</p>
-<p>• A a Interface Set representa um conjunto que não permite elementos duplicados, similar aos conjuntos da matemática. • O Set não garante que os elementos vão ser resgatados na ordem em que foram inseridos. • Suas principais implementações são: – HashSet – LinkedHashSet – TreeSet</p>
-<pre><code>                                                                                                      9</code></pre>
+<ul>
+<li><p>A a Interface Set representa um conjunto que não permite elementos duplicados, similar aos conjuntos da matemática.</p></li>
+<li><p>O Set não garante que os elementos vão ser resgatados na ordem em que foram inseridos.</p></li>
+<li><p>Suas principais implementações são: – HashSet – LinkedHashSet – TreeSet</p>
+<pre><code>                                                                                                    9</code></pre></li>
+</ul>
 </section>
 <section id="página-10" class="level2">
 <h2 class="anchored" data-anchor-id="página-10">Página 10</h2>
@@ -378,8 +391,13 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>Map</p>
-<p>• Um Map é composto por um conjunto de objetos e um valor chave para cada objeto. • Por exemplo um conjunto de objetos carro é representado pelas suas placas, assim fica mais fácil encontrar cada carro específico. • Diferente das outras Coleções, o método para inserir é o put(chave, objeto) e para resgatar é o get(chave). • Suas principais implementações são o HashMap, TreeMap e HashTable.</p>
-<pre><code>                                                                                                     11</code></pre>
+<ul>
+<li><p>Um Map é composto por um conjunto de objetos e um valor chave para cada objeto.</p></li>
+<li><p>Por exemplo um conjunto de objetos carro é representado pelas suas placas, assim fica mais fácil encontrar cada carro específico.</p></li>
+<li><p>Diferente das outras Coleções, o método para inserir é o put(chave, objeto) e para resgatar é o get(chave).</p></li>
+<li><p>Suas principais implementações são o HashMap, TreeMap e HashTable.</p>
+<pre><code>                                                                                                   11</code></pre></li>
+</ul>
 </section>
 <section id="página-12" class="level2">
 <h2 class="anchored" data-anchor-id="página-12">Página 12</h2>
@@ -402,9 +420,18 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>Vamos praticar?</p>
-<p>• Criem um menu da seguinte maneira: 1. Cadastrar Funcionário 2. Remover Funcionário 3. Editar Funcionário 4. Listar Funcionários cadastrados 5. Sair do sistema</p>
-<p>• Faça um programa que solicite os dados de N funcionários (com atributos de código do funcionário e salário), configure através de métodos SET para preencher os dados do Funcionario(entrada pelo teclado).</p>
-<pre><code>                                                                                                     13</code></pre>
+<ul>
+<li><p>Criem um menu da seguinte maneira:</p>
+<ol type="1">
+<li>Cadastrar Funcionário</li>
+<li>Remover Funcionário</li>
+<li>Editar Funcionário</li>
+<li>Listar Funcionários cadastrados</li>
+<li>Sair do sistema</li>
+</ol></li>
+<li><p>Faça um programa que solicite os dados de N funcionários (com atributos de código do funcionário e salário), configure através de métodos SET para preencher os dados do Funcionario(entrada pelo teclado).</p>
+<pre><code>                                                                                                  13</code></pre></li>
+</ul>
 </section>
 <section id="página-14" class="level2">
 <h2 class="anchored" data-anchor-id="página-14">Página 14</h2>
@@ -415,8 +442,14 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>Vamos praticar?</p>
-<p>• Crie também um método construtor para facilitar a criação dos registros. UTILIZEM a classe Pessoa (com atributos de nome, cpf e altura). Importante lembrar: Funcionário é uma pessoa certo? • Ao iniciar a execução é necessário já ter preenchido pelo menos 3 registros na lista manualmente (direto no código). • Para função de remoção e edição utilizem o código do funcionário ou cpf como parâmetro de busca. • Utilizem Collections (Lista) para armazenar os registros (ou seja, será um valor lido do teclado). • Para função de listagem, basta imprimir da lista de funcionários cadastrados no sistema no final, com todos os dados de cada um.</p>
-<pre><code>                                                                                                     14</code></pre>
+<ul>
+<li><p>Crie também um método construtor para facilitar a criação dos registros. UTILIZEM a classe Pessoa (com atributos de nome, cpf e altura). Importante lembrar: Funcionário é uma pessoa certo?</p></li>
+<li><p>Ao iniciar a execução é necessário já ter preenchido pelo menos 3 registros na lista manualmente (direto no código).</p></li>
+<li><p>Para função de remoção e edição utilizem o código do funcionário ou cpf como parâmetro de busca.</p></li>
+<li><p>Utilizem Collections (Lista) para armazenar os registros (ou seja, será um valor lido do teclado).</p></li>
+<li><p>Para função de listagem, basta imprimir da lista de funcionários cadastrados no sistema no final, com todos os dados de cada um.</p>
+<pre><code>                                                                                                  14</code></pre></li>
+</ul>
 </section>
 <section id="página-15" class="level2">
 <h2 class="anchored" data-anchor-id="página-15">Página 15</h2>

@@ -1,8 +1,8 @@
 ---
-title: "Aula13 Arrays"
+title: "Arrays"
 toc: true
 ---
-Arquivo original: `Aula13 Arrays.pdf`
+Arquivo original: `Arrays.pdf`
 
 ## Página 1
 
@@ -88,7 +88,7 @@ no Array e depois imprimindo em um laço:
 
 Arrays
 
-⚫Formas de percorrer um Array:
+- Formas de percorrer um Array:
 
                                                                                                            7
 
@@ -98,7 +98,7 @@ Arrays
 
 Arrays
 
-⚫Criando um Array inicializado:
+- Criando um Array inicializado:
 
                                                                                                            8
 
@@ -109,12 +109,12 @@ Arrays
 Arrays
 
 - Observações importantes:
-  ⚫O tamanho de um Array não pode ser alterado
-   ⚫Para percorrer um Array com um FOR, é preciso saber o seu
+  - O tamanho de um Array não pode ser alterado
+   - Para percorrer um Array com um FOR, é preciso saber o seu
     tamanho (.lenght)
-   ⚫Para percorrer um Array usando FOR EACH, do Java 5, não
+   - Para percorrer um Array usando FOR EACH, do Java 5, não
      precisamos saber seu tamanho.
-   ⚫Para criar um Array com um tamanho digitado em tempo de
+   - Para criar um Array com um tamanho digitado em tempo de
      execução, salve o valor em uma variável:
 
                                                                                                            9

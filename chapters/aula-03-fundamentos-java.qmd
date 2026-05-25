@@ -1,8 +1,8 @@
 ---
-title: "Aula 03 Fundamentos Java"
+title: "Fundamentos Java"
 toc: true
 ---
-Arquivo original: `Aula 03 Fundamentos Java.pdf`
+Arquivo original: `Fundamentos Java.pdf`
 
 ## Página 1
 

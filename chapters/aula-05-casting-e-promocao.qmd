@@ -1,8 +1,8 @@
 ---
-title: "Aula 05 Casting e Promoção"
+title: "Casting e Promoção"
 toc: true
 ---
-Arquivo original: `Aula 05 Casting e Promoção.pdf`
+Arquivo original: `Casting e Promoção.pdf`
 
 ## Página 1
 

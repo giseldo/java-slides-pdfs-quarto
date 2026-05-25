@@ -1,8 +1,8 @@
 ---
-title: "Aula14 Collections"
+title: "Collections"
 toc: true
 ---
-Arquivo original: `Aula14 Collections.pdf`
+Arquivo original: `Collections.pdf`
 
 ## Página 1
 
@@ -24,14 +24,14 @@ Collections (Coleções)
 
 Collections
 
-⚫Coleções são objetos do Java que podem agrupar vários outros
+- Coleções são objetos do Java que podem agrupar vários outros
   objetos.
-⚫As Coleções possuem métodos para facilitar a programação.
-⚫Estão no pacote java.util por isso!
-⚫Exemplos de Coleções:
-       ⚫Lists
-      ⚫Sets
-     ⚫Maps
+- As Coleções possuem métodos para facilitar a programação.
+- Estão no pacote java.util por isso!
+- Exemplos de Coleções:
+       - Lists
+      - Sets
+     - Maps
 
                                                                                                           2
 
@@ -72,7 +72,7 @@ tipo de objeto que esta coleção vai conter.
 
 ArrayList
 
-⚫Vejamos como é fácil criar um ArrayList de Strings, inserir nomes e
+- Vejamos como é fácil criar um ArrayList de Strings, inserir nomes e
   imprimi-los:
 
                                                                                                           5

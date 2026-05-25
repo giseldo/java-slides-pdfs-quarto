@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>aula13_Arrays atividade – Curso Java - Slides Convertidos</title>
+<title>aula13_Arrays atividade – Curso Java</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -100,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Curso Java - Slides Convertidos</a> 
+      <a href="../">Curso Java</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -269,7 +269,7 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>Arrays</p>
-<p>Em uma classe Java podemos declarar diversas variáveis. • Porém as vezes não se sabe ao certo a quantidade de variáveis necessárias. • Por exemplo ao solicitar vários salários para se fazer uma média, não se sabe quantos serão digitados. • Para este tipo de situação, utilizamos os Arrays, também conhecidos como Vetores.</p>
+<p>Em uma classe Java podemos declarar diversas variáveis. - Porém as vezes não se sabe ao certo a quantidade de variáveis necessárias. - Por exemplo ao solicitar vários salários para se fazer uma média, não se sabe quantos serão digitados. - Para este tipo de situação, utilizamos os Arrays, também conhecidos como Vetores.</p>
 <pre><code>                                                                                                       2</code></pre>
 </section>
 <section id="página-3" class="level2">
@@ -293,8 +293,12 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>Exceção em Arrays</p>
-<p>• É muito comum acessar uma posição do Array além do seu limite. • Lembrando que a contagem de um Array de 10 posições vai de 0 a 9, as vezes em um laço de repetição, tentamos acessar a posição 10 por descuido, lançando um ArrayIndexOutOfBoundsException. • Pode ser tratado com um try-catch ou sempre verificando o tamanho do Array.</p>
-<pre><code>                                                                                                       4</code></pre>
+<ul>
+<li><p>É muito comum acessar uma posição do Array além do seu limite.</p></li>
+<li><p>Lembrando que a contagem de um Array de 10 posições vai de 0 a 9, as vezes em um laço de repetição, tentamos acessar a posição 10 por descuido, lançando um ArrayIndexOutOfBoundsException.</p></li>
+<li><p>Pode ser tratado com um try-catch ou sempre verificando o tamanho do Array.</p>
+<pre><code>                                                                                                     4</code></pre></li>
+</ul>
 </section>
 <section id="página-5" class="level2">
 <h2 class="anchored" data-anchor-id="página-5">Página 5</h2>
@@ -353,8 +357,10 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>Arrays</p>
-<p>• Observações importantes: ⚫O tamanho de um Array não pode ser alterado ⚫Para percorrer um Array com um FOR, é preciso saber o seu tamanho (.lenght) ⚫Para percorrer um Array usando FOR EACH, do Java 5, não precisamos saber seu tamanho. ⚫Para criar um Array com um tamanho digitado em tempo de execução, salve o valor em uma variável:</p>
-<pre><code>                                                                                                       9</code></pre>
+<ul>
+<li><p>Observações importantes: ⚫O tamanho de um Array não pode ser alterado ⚫Para percorrer um Array com um FOR, é preciso saber o seu tamanho (.lenght) ⚫Para percorrer um Array usando FOR EACH, do Java 5, não precisamos saber seu tamanho. ⚫Para criar um Array com um tamanho digitado em tempo de execução, salve o valor em uma variável:</p>
+<pre><code>                                                                                                     9</code></pre></li>
+</ul>
 </section>
 <section id="página-10" class="level2">
 <h2 class="anchored" data-anchor-id="página-10">Página 10</h2>
@@ -366,13 +372,21 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Vamos praticar?</p>
 <ol type="1">
-<li><p>Implemente o programa CatalogoLivros, que gerencia até 10 livros. Cada livro possui as funcionalidades: • Cadastrar novo livro (até encher o array). • Listar todos os livros cadastrados. • Buscar livro por título (exibir posição ou “não encontrado”). • Mostrar estatísticas: total de livros e média de ano de publicação. • Sair do programa. Atributo Tipo Descrição • E os seguintes atributos: titulo String Título do livro (texto livre)</p>
+<li>Implemente o programa CatalogoLivros, que gerencia até 10 livros. Cada livro possui as funcionalidades:</li>
+</ol>
+<ul>
+<li><p>Cadastrar novo livro (até encher o array).</p></li>
+<li><p>Listar todos os livros cadastrados.</p></li>
+<li><p>Buscar livro por título (exibir posição ou “não encontrado”).</p></li>
+<li><p>Mostrar estatísticas: total de livros e média de ano de publicação.</p></li>
+<li><p>Sair do programa. Atributo Tipo Descrição</p></li>
+<li><p>E os seguintes atributos: titulo String Título do livro (texto livre)</p>
 <pre><code>                        autor        String  Nome do autor
 
                     ano          int     Ano de publicação
 
                                                                                                     10</code></pre></li>
-</ol>
+</ul>
 </section>
 <section id="página-11" class="level2">
 <h2 class="anchored" data-anchor-id="página-11">Página 11</h2>
@@ -399,10 +413,12 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>Vamos praticar?</p>
-<p>• A atividade poderá ser realizada em dupla.</p>
-<p>• Esta atividade vale 2 pontos.</p>
-<p>• Enviar o código compactado em um único arquivo.</p>
-<pre><code>                                                                                                     12</code></pre>
+<ul>
+<li><p>A atividade poderá ser realizada em dupla.</p></li>
+<li><p>Esta atividade vale 2 pontos.</p></li>
+<li><p>Enviar o código compactado em um único arquivo.</p>
+<pre><code>                                                                                                  12</code></pre></li>
+</ul>
 </section>
 <section id="página-13" class="level2">
 <h2 class="anchored" data-anchor-id="página-13">Página 13</h2>

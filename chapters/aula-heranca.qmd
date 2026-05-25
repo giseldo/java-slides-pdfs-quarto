@@ -1,8 +1,8 @@
 ---
-title: "Aula Herança"
+title: "Herança"
 toc: true
 ---
-Arquivo original: `Aula Herança.pdf`
+Arquivo original: `erança.pdf`
 
 ## Página 1
 

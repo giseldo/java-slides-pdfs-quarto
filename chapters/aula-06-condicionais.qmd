@@ -1,8 +1,8 @@
 ---
-title: "Aula 06 Condicionais"
+title: "Condicionais"
 toc: true
 ---
-Arquivo original: `Aula 06 Condicionais.pdf`
+Arquivo original: `Condicionais.pdf`
 
 ## Página 1
 
