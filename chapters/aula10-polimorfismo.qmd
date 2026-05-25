@@ -2,7 +2,7 @@
 title: "Polimorfismo"
 toc: true
 ---
-Arquivo original: `Polimorfismo.pdf`
+
 
 ## Página 1
 

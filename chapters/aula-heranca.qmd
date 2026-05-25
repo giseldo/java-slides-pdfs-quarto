@@ -2,7 +2,7 @@
 title: "Herança"
 toc: true
 ---
-Arquivo original: `erança.pdf`
+
 
 ## Página 1
 

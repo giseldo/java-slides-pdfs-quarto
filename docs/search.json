@@ -1164,7 +1164,7 @@
     "href": "chapters/aula-03-fundamentos-java.html#página-7",
     "title": "Fundamentos Java",
     "section": "Página 7",
-    "text": "Página 7\n\n\n\nPágina 7\n\n\nO Método ‘main( )’\nO método ‘main’ é onde começa a execução de um aplicativo java\n\n      Sintaxe:\n         public static void main( String[] args ) {\n                  // implementação do método main vai aqui\n                }\n\n  Classes que possuem um método ‘main’ declarado dentro servem\n  como ponto de partida da aplicação\n\n                                                                                                                         7",
+    "text": "Página 7\n\n\n\nPágina 7\n\n\nO Método ‘main( )’\n- O método ‘main’ é onde começa a execução de um aplicativo java\n\n      Sintaxe:\n         public static void main( String[] args ) {\n                  // implementação do método main vai aqui\n                }\n\n  - Classes que possuem um método ‘main’ declarado dentro servem\n  como ponto de partida da aplicação\n\n                                                                                                                         7",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fundamentos Java</span>"
     ]

@@ -1,8 +1,8 @@
 ---
-title: "ariáveis e Tipos Primitivos"
+title: "Variáveis e Tipos Primitivos"
 toc: true
 ---
-Arquivo original: `Variáveis e Tipos Primitivos.pdf`
+
 
 ## Página 1
 

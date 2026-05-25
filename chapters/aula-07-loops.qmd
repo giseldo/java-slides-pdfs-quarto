@@ -2,7 +2,7 @@
 title: "Loops"
 toc: true
 ---
-Arquivo original: `Loops.pdf`
+
 
 ## Página 1
 

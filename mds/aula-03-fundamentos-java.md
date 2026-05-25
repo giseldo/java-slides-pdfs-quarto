@@ -164,14 +164,14 @@ Estrutura do arquivo de código Java
 
 O Método ‘main( )’
 
-    O método ‘main’ é onde começa a execução de um aplicativo java
+    - O método ‘main’ é onde começa a execução de um aplicativo java
 
           Sintaxe:
              public static void main( String[] args ) {
                       // implementação do método main vai aqui
                     }
 
-      Classes que possuem um método ‘main’ declarado dentro servem
+      - Classes que possuem um método ‘main’ declarado dentro servem
       como ponto de partida da aplicação
 
                                                                                                                              7

@@ -2,7 +2,7 @@
 title: "Primeiros passos no ambiente de programação"
 toc: true
 ---
-Arquivo original: `Primeiros passos no ambiente de programação.pdf`
+
 
 ## Página 1
 

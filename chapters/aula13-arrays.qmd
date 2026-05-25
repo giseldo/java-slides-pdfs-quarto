@@ -2,7 +2,7 @@
 title: "Arrays"
 toc: true
 ---
-Arquivo original: `Arrays.pdf`
+
 
 ## Página 1
 

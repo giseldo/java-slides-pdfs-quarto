@@ -2,7 +2,7 @@
 title: "Modificadores de Classe, Encapsulamento e Atributos de Classe"
 toc: true
 ---
-Arquivo original: `Modificadores de Classe, Encapsulamento e Atributos de Classe.pdf`
+
 
 ## Página 1
 

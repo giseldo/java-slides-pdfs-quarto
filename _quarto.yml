@@ -7,7 +7,6 @@ book:
   language: "pt-BR"
   chapters:
     - index.qmd
-    - chapters/aula-00-orientacao-a-objetos.qmd
     - chapters/aula-01-introducao-a-programacao-orientada-a-objetos.qmd
     - chapters/aula-02-primeiros-passos-no-ambiente-de-programacao.qmd
     - chapters/aula-03-fundamentos-java.qmd

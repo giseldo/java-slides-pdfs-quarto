@@ -2,7 +2,7 @@
 title: "Conceitos de Orientação a Objetos"
 toc: true
 ---
-Arquivo original: `Conceitos de Orientação a Objetos.pdf`
+
 
 ## Página 1
 

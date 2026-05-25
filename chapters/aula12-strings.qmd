@@ -2,7 +2,7 @@
 title: "Strings"
 toc: true
 ---
-Arquivo original: `Strings.pdf`
+
 
 ## Página 1
 

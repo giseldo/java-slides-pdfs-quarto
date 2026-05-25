@@ -2,7 +2,7 @@
 title: "Condicionais"
 toc: true
 ---
-Arquivo original: `Condicionais.pdf`
+
 
 ## Página 1
 

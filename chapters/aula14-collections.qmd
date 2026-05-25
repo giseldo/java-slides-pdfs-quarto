@@ -2,13 +2,13 @@
 title: "Collections"
 toc: true
 ---
-Arquivo original: `Collections.pdf`
+
 
 ## Página 1
 
 ![Página 1](aula14-collections_images/page-001.png)
 
-Conteúdo 14:
+
 Collections (Coleções)
 
           Professor: Me. Alana Neo
